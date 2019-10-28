@@ -1,0 +1,346 @@
+[HEADER(key="title_test", is_skippable=true, fit_mode="BLACK_MASK")] 第一关（前）
+
+// Comments
+
+[Dialog]
+[Delay(time=1)]
+莱茵生命临时极地科考点，时间XX-XX-XX
+[name="装置"]  系统已解锁。
+[name="装置"]  确定年份：未知
+[name="装置"]  时间设置出现问题，现在转到手工控制。
+[name="装置"]  要进行下一步操作，请进行身份认证。
+[Dialog]
+[Character(name="char_248_mgllan",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="麦哲伦"] 唔，我想想......嗯，莱茵生命科学考察员，麦哲伦。
+[Character]
+[name="装置"]   认证中——
+[name="装置"]   认证完毕，声音样本已确认。
+[name="装置"]   哔哔——
+[name="装置"]   指纹已确认。
+[PlayMusic(intro="$m_dia_street_intro", key="$m_dia_street_loop", volume=0.8, crossfade=1.5)]
+[name="装置"]   （活泼的女声）嗨，你好呀麦麦，欢迎回来！
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"]   ......
+[name="麦哲伦"]   好怪哦！
+[name="麦哲伦"]   唉，早知道就不答应梅尔姐姐测试这个签到系统了，好奇怪的功能啊......
+[name="麦哲伦"]   呼，总而言之，开始干活吧！
+[name="麦哲伦"]   今年最后一个勘察点，确认没有新的发现。
+[name="麦哲伦"]   至此，本年度预定的勘查目标已经完成，确认其他各项任务完成后，将踏上返程。
+[name="麦哲伦"]   呼，搞定。
+[name="麦哲伦"]   写报告可真是我最不擅长的东西了，还是来听听梅尔姐姐的声音吧。
+[Character]
+[name="装置"]   （活泼的女声）你好，麦麦。今天，是你本次外出勘察的第1，8，7天了哦。
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"]  哇，这一次也已经出来这么久啦，我都没有感觉了。
+[Character]
+[name="装置"]   （活泼的女声）你已经出去很久了，也该回来了吧？大家都想你了。
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"]  欸？！之前有这一段吗......难道是梅尔姐姐偷偷录的然后设置了触发条件？
+[name="麦哲伦"]  呜哇，不管怎么样，居然还有这样的小惊喜，好开心啊！
+[name="麦哲伦"]  不过，说是说可以回去了，但是......
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_walk_n")]
+[Blocker(a=1, r=1, g=1, b=1, fadetime=2, block=true)]
+[Background(image="bg_bridge",screenadapt="coverall")]
+[Blocker(a=0.4, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"]  这场暴风雪，恐怕还要持续至少一周呢，唉，幸好物资储备还算充裕。
+[name="麦哲伦"]  算啦，还是来确认一遍任务表吧，我记得应该还有几个没有填的。
+[name="麦哲伦"]  让我看看，嗯，周边的样本采集，完成。遗迹线索的寻找，没有~也算完成。
+[name="麦哲伦"]  和去年比没有什么新发现呢，要是再来一个和大前年一样的发现就好了。
+[name="麦哲伦"]  虽然说这才是常态啦，要是缪缪在肯定要批评我贪心了。
+[name="麦哲伦"]  应该没有了吧......嗯？还有一项空着，新材料的低温性质测试......啊。
+[name="麦哲伦"]  我完全忘记了这件事！！！不如说这个新材料被我放哪儿去了来着！！！
+[name="麦哲伦"]  呜哇，赶紧找找，这个要是丢了我可要被梅尔姐姐杀掉了！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[name="麦哲伦"] 呼，好险好险，原来被我塞在防寒服的口袋里忘了。
+[name="麦哲伦"] 不过，我带在身上这么久没去管它都没出事，应该已经证明了它的低温耐性了......吧？
+[name="麦哲伦"] 唔，虽然这一项只是梅尔姐姐私下拜托我的任务，不过还是应该再严谨一点才行。
+[name="麦哲伦"] 好吧，反正现在是暴风雪，干脆把它放到门外去摆一天看看好了。
+[name="麦哲伦"] 现在外面的气温应该是最低的了。
+[Dialog]
+[PlaySound(key="$d_gen_walk_n")]
+[Delay(time=1)]
+[name="麦哲伦"] 听着，麦哲伦，你要深呼吸，在打开门的瞬间，把东西丢出去，然后立刻关门。
+[name="麦哲伦"] 要快，准，狠！不然暴风雪灌进来可就糟了。
+[name="麦哲伦"] 1,2,3！
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[Character(name="char_341_amona_2#2",fadetime=1,block=true)]
+[Delay(time=1)] 
+[name="？？？"] ......
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 请问......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[CameraShake(duration=1, xstrength=5, ystrength=3, vibrato=30, randomness=90, fadeout=true, block=false)]
+[name="麦哲伦"] 鬼啊！！！
+[Dialog]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"] 我刚才好像看到了一个超级漂亮的大姐姐，但是，这里可是极北之地，怎么可能会有人？
+[name="麦哲伦"] 难、难道说东国的雪女传说是真的？！
+[name="麦哲伦"] 不行不行，我要再开门看看，这可是惊天大发现！
+[Dialog]
+[Character]
+[PlaySound(key="$d_gen_dooropen")]
+[Character(name="char_341_amona_2#2")]
+[name="？？？"] ......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 哇，是真的雪女！
+[name="麦哲伦"] ......不对，这标志性的装束，加上耳朵，什么呀，原来只是萨米人吗。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 虽然不知道哪里让你失望了，不过我确实是萨米人。你好，小姑娘。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 你好，漂亮的姐姐。总之，虽然不知道你是怎么到这里来的，不过先进来吧。
+[name="麦哲伦"] 即使是萨米人，对这样的暴风雪也没辙吧。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 谢谢你。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=2, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=2, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 给，热茶。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 谢谢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 姐姐你叫什么？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="？？？"] 你可以叫我西蒙娜，你呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 我叫麦哲伦，是这座观测站的负责人......说是这么说，其实现在只有我一个人在用啦。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 原来如此。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 西蒙娜姐姐为什么你会来这样的地方？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我是受人所托来找人的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 找人？这里可是极北之地哦，别说人了，我一个月连生物都见不到几只呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 委托我的人说，她应该就在这一带活动。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 你找她要做什么呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 因为这场暴风雪将会持续很久很久，现在不回去，恐怕会有很久都回不去了，我是来接她的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 咦，是这样吗？！
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 萨米人......不，我了解雪。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 唔，虽然我也看得出这场暴风雪可能要持续一段时间，但没想到这么严峻。
+[name="麦哲伦"] 我还想等它弱一点了再走呢，这样的话，反而要趁现在它还没有变大先走了。
+[name="麦哲伦"] 好吧，既然这么决定了，那就开始整理行李吧！
+[name="麦哲伦"] 西蒙娜姐姐，不好意思，我要先准备一些东西。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 嗯，没关系，你去吧，不用管我。
+[Dialog]
+[Character(fadetime=1)]
+[delay(time=1)]
+[name="麦哲伦"] 行李箱，行李箱，行李箱去哪儿了来着？哦，想起来了，上个月被我拿来垫脚，放在厨房里了！
+[Dialog]
+[delay(time=1)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 测绘仪和无人机的状况......嗯，没有问题！
+[name="麦哲伦"] 不过得充一下电才行。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 麦哲伦，需要我帮忙吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 啊，不用，这些我一个人就能完成的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 好吧。你是在这里工作吗?
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嗯，我在这里做勘测工作。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 勘测什么？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 勘测这片冰原，寻找它过去的历史。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 只有你一个人？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嗯......一开始是有不少研究员一起过来的，不过最后他们都受不了这里的气候和枯燥，所以回去了。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 我习惯了，毕竟我已经做勘测工作好多年啦。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......你不讨厌那些抛弃你的人吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嗯......虽然没有能说话的人是有点遗憾，不过我也知道不是每个人都能像我一样乐在其中啦。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你还......真是相当乐观呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嘿嘿，借用一位前辈说的话，“探险家最好的朋友，就是孤独”！
+[name="麦哲伦"] 哦，不过梅尔姐姐说我好像养成了下意识自言自语的习惯。有吗？应该没有吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 就算是有，也没有问题，你就这样就很好。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嘿嘿，是这样吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 呵呵，是的。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嗯，观测站的能源储备应该也没有问题，只要设定好时间进入休眠状态就好，接下来......
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 麦哲伦，你知道我是感染者吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 欸，嗯，毕竟西蒙娜姐姐你也没有怎么去掩盖。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你不害怕吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 啊，这个不用担心哦，我们莱茵生命前年的研究表明，矿石病在人之间的传染其实条件很限定的，并没有人们想的那么可怕。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......是吗。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 啊，对了，我这次出发前，梅尔姐姐说接下来可能要和一个叫做“罗德岛”的组织合作了。
+[name="麦哲伦"] 听说对方有能够抑制矿石病的技术呢，这可厉害了，我们都没有这样的技术。
+[name="麦哲伦"] 西蒙娜姐姐你要是想的话，回去之后可以来莱茵生命找我，我带你去治病。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 你不怕我是坏人吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 西蒙娜姐姐是坏人吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......是啊，我是不是坏人呢。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 我觉得姐姐这么漂亮，一定是好人。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 是吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 嗯。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 麦哲伦，你有感觉到这里的温度降低了吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 温度？咦，这么一说，确实比刚才要冷了一些......等等，难道说......
+[Character]
+警报，检测到温控设施出现异常，即将关闭供暖功能。
+警报......
+[Character(name="char_248_mgllan")]
+[name="麦哲伦"] 让我看看监控系统。
+[Dialog]
+[delay(time=2)]
+[name="麦哲伦"] 糟了，好像是冰雹破开了供暖管道。
+[name="麦哲伦"] 这可不行，要立刻进行维修。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 快些收拾好行李直接离开不就好了吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 不行。就这么离开的话，暴风雪会彻底破坏供暖设备。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 修理很麻烦吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 唔嗯......管道被设置在比较高的地方，这个天气要爬上去的话，有点难。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 那么，等到明年再来重新维修不就好了吗？你每年都会来的对吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 不，这座观测站，并不是只是为我而存在的，它建立的意义，是为所有可能会来到这里的探险家提供一个居所。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 那么，从它建立开始直到今天，除了我，还有别的访客吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] ......没有。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 这样的话，你的坚持又有什么意义呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 有的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 为什么这么肯定？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 因为，总有一天，会有人经过这里。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 这只是毫无根据的想法而已。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 不是的。
+[name="麦哲伦"] 玻利维亚的黑流树海，卡西米尔的环山高地平原，伊比利亚的水下火山......这些地方，过去都没有人去过。
+[name="麦哲伦"] 但是，现在，已经有人去过了，在那里，已经插上了探险家们的旗帜。
+[name="麦哲伦"] 这片大地上还有许多我们未曾踏足的地方，但那也只是说，我们还没踏足。
+[name="麦哲伦"] 今天，这片冰原已经有我踏足了，那么，未来，总会有更多的人来到这里。
+[name="麦哲伦"] 即使只是为了这样的可能性，就已经值得我这么去做了。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 那如果终你一生，都没有后来者呢？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 那我就会告诉我的孩子，告诉我的接班人，告诉莱茵生命的其他人，让他们维护好这里。
+[name="麦哲伦"] 因为总有一天，我们的足迹会遍布这一整片大地。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......把希望寄托于可能不会发生的未来，真的不会失望吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 没关系的，对探险家来说，我们一生都在发现，我们也一生都在失望。
+[name="麦哲伦"] 没有探险家的发现是仅仅依靠自己完成的，每一个探险家都是站在前人的肩膀上，每一个重大的发现连接着遥远的过去。
+[name="麦哲伦"] 就好像我会来到这片冰原，一开始，只是因为在小时候听了一个故事，但是，现在我已经知道，我所追求的，或许是存在的。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] ......我知道了。
+[name="西蒙娜"] 那么，我替你去吧。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 欸，但是西蒙娜姐姐，你还要找人吧？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 小傻瓜，你难道还没发现，我要找的就是你吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 咦？找我？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 我不是说了吗，因为这片风雪太大了，预定的信使已经无法进入这里了，所以梅尔小姐委托我来迎接你回罗德岛。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 欸，梅尔姐姐？罗德岛？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 呵呵，是的。
+[name="西蒙娜"] 那么，容我重新自我介绍一下。
+[name="西蒙娜"] 罗德岛干员，代号“至霜”。当然，你可以继续叫我西蒙娜。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 这样啊......但是，真的可以拜托西蒙娜姐姐你吗？
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 放心，冰雪是我的挚友，是我的亲人。对我来说，现在的外面，如同春天一般温暖。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 哇，好厉害。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=1)]
+[name="西蒙娜"] 呵呵......那么，你可以告诉我，该怎么维修管道，然后在这里乖乖收拾你的行李。
+[Character(name="char_341_amona_2#2",name2="char_248_mgllan",focus=2)]
+[name="麦哲伦"] 好的！
+
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Blocker(a=0.3, r=1, g=1, b=1, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="西蒙娜"] 我们一生都在发现，也一生都在失望，吗。
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[name="？？？"] 愚蠢的萨米人，你们的抵抗没有意义，总有一天，乌萨斯会吞并你们。
+[name="？？？"] 恶魔，**，去死，去死啊！！！！
+[name="？？？"] 啐，恶魔，你的战争结束了，留着你那只瞎掉的眼睛滚回萨米去吧！
+[Dialog]
+[Character]
+[Blocker(a=1, r=0, g=0, b=0, fadetime=1, block=true)]
+[Background]
+[Blocker(a=0, r=0, g=0, b=0, fadetime=1, block=true)]
+[Character(name="char_341_amona_2#2")]
+[name="西蒙娜"]  谢谢你，麦哲伦。
+[name="西蒙娜"]  “暴风雪从脚下升起，寒风与霜雪遍布全境。”
+[name="西蒙娜"]  “留下纯白，生机还有那漆黑的种子。”
+[name="西蒙娜"]  “抵抗自然已经耗尽了人们的心力。”
+[name="西蒙娜"]  “但总有一些别有用心的家伙早已准备好尖刀，只为饱尝同伴的鲜血。”
+[name="西蒙娜"]  “歌唱吧，美丽的女孩。悲泣吧，美丽的女孩。”
+[name="西蒙娜"]  “你将变作霜雪，你将化成寒风，你永不灭。”
+
+
+[Delay(time=0.5)]
+[Dialog]
+[Blocker(fadetime=2,block=true)]
+[Image]
