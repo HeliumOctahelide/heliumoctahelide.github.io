@@ -2,7 +2,7 @@
  * @Author: dx3906
  * @Date: 2019-10-28 13:16:54
  * @LastEditors: dx3906
- * @LastEditTime: 2019-10-29 16:02:26
+ * @LastEditTime: 2019-10-29 16:32:56
  */
 
 // 实现自动换行和打字效果
@@ -240,23 +240,15 @@ function Playground() { // 立绘和文本
             // 设置焦点
             if (focus != undefined && focus != 1) {
                 // 这里放置一些代码
-                darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
-                
-                var pixelLen = 800 * 800; // 获得像素个数
-                for (var i = 0; i < pixelLen * 4; i += 4) {
-                    var redC = darkImg.data[i], // 第一个字节单位代表红色
-                        greenC = darkImg.data[i + 1], // 第二个字节单位代表绿色
-                        blueC = darkImg.data[i + 2]; // 第三个字节单位代表蓝色
+                console.log(usedImages[img].width, usedImages[img].height);
+                var darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
+                var pixelLen = usedImages[img].width * usedImages[img].height;
+                for (var i = 0; i < pixelLen * 4; i++) {
+                    if (i % 4 != 3) {
+                        darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
+                    }
                 }
-                for (var i = 0; i < pixelLen * 4; i += 4) {
-                    // ... 省略前面代码
-                    var grey = parseInt((redC + greenC + blueC) / 3); // 平均后获取灰度值
-                    darkImg.data[i] = grey; // 改变红色值
-                    darkImg.data[i + 1] = grey; // 改变绿色值
-                    darkImg.data[i + 2] = grey; // 改变蓝色值
-                }
-
-                cctx.putImageData(darkImg, place.x, place.y, usedImages[img].width, usedImages[img].height);
+                cctx.putImageData(darkImg, place.x, place.y); //, place.x + usedImages[img].width, place.y + usedImages[img].height);
 
             }
             // 淡入淡出
@@ -284,7 +276,7 @@ function Playground() { // 立绘和文本
                     "fadetime": fadetime / 1000,
                     "focus": focus == 1 ? 0 : 1,
                     "place": {
-                        "x": 900,
+                        "x": 700,
                         "y": 200
                     },
                     "keeping": 1
@@ -305,15 +297,20 @@ function Playground() { // 立绘和文本
             if (name) {
                 tctx.fillStyle = '#888888';
                 tctx.wrapText(name, 320, 510, 140, 40);
-                tctx.fillStyle = "#FFFFFF";
+                tctx.fillStyle = "#66CCFF";
+                tctx.wrapRollingText(text, 480, 510, 620, 40);
+            } else {
+                tctx.fillStyle = "#66CCFF";
                 tctx.wrapRollingText(text, 480, 510, 620, 40);
             }
         }, animationDelayTime);
     };
     this.clearDialog = function () {
+        this.drawCharacter({
+            "fadetime":1
+        });
         setTimeout(function () {
             tc.style.opacity = 0;
-            cc.style.opacity = 0;
         }, animationDelayTime);
     }
 }
@@ -335,7 +332,7 @@ if (true) { // 只是为了折叠方便
     var background = new Background();
     var playground = new Playground();
     var blocker = new Blocker();
-    var playto = 6;
+    var playto = 0;
     var usedImages = [
         "Kael.jpg",
         "saladelei.jpg",
@@ -493,6 +490,11 @@ function justclick() {
         playground.drawDialog({
             "name": "萨古纳尔男爵",
             "text": "因为保存这张图片的时候是按原始尺寸保存的。"
+        });
+    } else if (playto == 9) {
+        playground.clearDialog();
+        playground.drawDialog({
+            "text": "展示结束。"
         });
     }
     playto += 1;
