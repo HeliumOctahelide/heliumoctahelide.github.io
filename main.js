@@ -2,7 +2,7 @@
  * @Author: dx3906
  * @Date: 2019-10-28 13:16:54
  * @LastEditors: dx3906
- * @LastEditTime: 2019-10-28 21:27:06
+ * @LastEditTime: 2019-10-29 15:58:21
  */
 
 // 实现自动换行和打字效果
@@ -238,8 +238,26 @@ function Playground() { // 立绘和文本
             // 无论是否为淡入都绘制立绘1；
             cctx.drawImage(usedImages[img], place.x, place.y);
             // 设置焦点
-            if (focus == 1) {
+            if (focus != undefined && focus != 1) {
                 // 这里放置一些代码
+                darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
+                
+                var pixelLen = 800 * 800; // 获得像素个数
+                for (var i = 0; i < pixelLen * 4; i += 4) {
+                    var redC = darkImg.data[i], // 第一个字节单位代表红色
+                        greenC = darkImg.data[i + 1], // 第二个字节单位代表绿色
+                        blueC = darkImg.data[i + 2]; // 第三个字节单位代表蓝色
+                }
+                for (var i = 0; i < pixelLen * 4; i += 4) {
+                    // ... 省略前面代码
+                    var grey = parseInt((redC + greenC + blueC) / 3); // 平均后获取灰度值
+                    darkImg.data[i] = grey; // 改变红色值
+                    darkImg.data[i + 1] = grey; // 改变绿色值
+                    darkImg.data[i + 2] = grey; // 改变蓝色值
+                }
+
+                cctx.putImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
+
             }
             // 淡入淡出
             if (fadetime != 0 && img != undefined) {
@@ -317,7 +335,7 @@ if (true) { // 只是为了折叠方便
     var background = new Background();
     var playground = new Playground();
     var blocker = new Blocker();
-    var playto = 0;
+    var playto = 6;
     var usedImages = [
         "Kael.jpg",
         "saladelei.jpg",
@@ -327,6 +345,7 @@ if (true) { // 只是为了折叠方便
     for (i in usedImages) {
         var thisImg = new Image();
         thisImg.src = usedImages[i];
+        thisImg.crossOrigin = "Anonymous";
         usedImages[i] = thisImg;
     }
     console.log("INITIAL FINISHED...")
@@ -458,7 +477,8 @@ function justclick() {
     } else if (playto == 7) {
         playground.drawCharacter({
             "image": 0,
-            "image2": 3
+            "image2": 3,
+            "focus": 1
         });
         playground.drawDialog({
             "name": "凯尔萨斯·逐日者",
@@ -467,7 +487,8 @@ function justclick() {
     } else if (playto == 8) {
         playground.drawCharacter({
             "image": 0,
-            "image2": 3
+            "image2": 3,
+            "focus": 2
         });
         playground.drawDialog({
             "name": "萨古纳尔男爵",
