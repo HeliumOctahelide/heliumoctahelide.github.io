@@ -2,7 +2,7 @@
  * @Author: dx3906
  * @Date: 2019-10-28 13:16:54
  * @LastEditors: dx3906
- * @LastEditTime: 2019-10-29 15:58:21
+ * @LastEditTime: 2019-10-29 16:02:26
  */
 
 // 实现自动换行和打字效果
@@ -256,7 +256,7 @@ function Playground() { // 立绘和文本
                     darkImg.data[i + 2] = grey; // 改变蓝色值
                 }
 
-                cctx.putImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
+                cctx.putImageData(darkImg, place.x, place.y, usedImages[img].width, usedImages[img].height);
 
             }
             // 淡入淡出
