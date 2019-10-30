@@ -6,14 +6,24 @@
  -->
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="canvas.css" />
 <title>风 暴 要 塞（25人）</title>
 <div>
-    <canvas id='charactercanvas' width=1440 height=720 style="position: absolute; border:1px solid #000000;"></canvas>
-    <canvas id='textcanvas' width=1440 height=720 style="position: absolute; border:1px solid #000000;"></canvas>
-    <canvas id='blockcanvas' width=1440 height=720 style="position: absolute; border:1px solid #000000;"></canvas>
-    <canvas id='backgroundcanvas' width=1440 height=720 style="border:1px solid #000000;"></canvas>
+    <canvas id='backgroundcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #000000; left: 0; top: 0;"></canvas>
+    <canvas id='charactercanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #000000; left: 0; top: 0;"></canvas>
+    <canvas id='blockcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #000000; left: 0; top: 0;"></canvas>
+    <canvas id='textcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #000000; left: 0; top: 0;"></canvas>
+    <!--position: absolute;-->
 </div>
-<input id='button1' style="height:200px;width:200px" type="submit" value='下一步' onclick="justclick()"></button>
+<div style="position: fixed; border:1px solid #000000; left: 0px; top: 800px;">
+    <input id='button1' style="height:100;width:200px" type="submit" value='下一步' onclick="clickme()"></button>
+    <p id='loading'></p>
+</div>
 
 </html>
+<script src="./story1.js" type="text/javascript"></script>
 <script src='./main.js' type='text/javascript'></script>
