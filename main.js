@@ -127,7 +127,7 @@ function Blocker() { // 遮罩类；showitem也放置在此类中
         var fromr = paras.rfrom != undefined ? paras.rfrom : r;
         var fromg = paras.gfrom != undefined ? paras.gfrom : g;
         var fromb = paras.bfrom != undefined ? paras.bfrom : b;
-        var fadetime = paras.fadetime ? paras.fadetime : 0;
+        var fadetime = paras.fadetime ? paras.fadetime : 0.2; // 为遮罩消失/产生设置最低0.2秒的过渡时间
         //this.block = paras.block != undefined ? paras.block : this.block;
         var block = this.block;
         fadetime *= 1000;
@@ -158,7 +158,8 @@ function Blocker() { // 遮罩类；showitem也放置在此类中
                 }
             } else if (fadetime == 0) {
                 blctx.fillStyle = getRGB(r, g, b);
-                blctx.globalAlpha = a;
+                //blctx.globalAlpha = a;
+                blc.style.opacity = a;
                 blctx.fillRect(0, 0, blc.width, blc.height);
             } else {
                 // 淡入
@@ -174,14 +175,16 @@ function Blocker() { // 遮罩类；showitem也放置在此类中
                 setTimeout(function () {
                     var fading = setInterval(function () {
                         blctx.fillStyle = getRGB(fromr + rStep * n, fromg + gStep * n, fromb + bStep * n);
-                        blctx.globalAlpha = froma + aStep * n;
+                        //blctx.globalAlpha = froma + aStep * n;
+                        blc.style.opacity = froma + aStep * n;
                         //console.log(blctx.fillStyle, blctx.globalAlpha);
                         blctx.clearRect(0, 0, blc.width, blc.height);
                         blctx.fillRect(0, 0, blc.width, blc.height);
                         n++;
                         if (n >= leng) {
                             blctx.fillStyle = getRGB(r, g, b);
-                            blctx.globalAlpha = a;
+                            //blctx.globalAlpha = a;
+                            blc.style.opacity = a;
                             blctx.clearRect(0, 0, blc.width, blc.height);
                             blctx.fillRect(0, 0, blc.width, blc.height);
                             animationPlaying -= 100;
@@ -215,7 +218,7 @@ function Background() { // 背景类；相机震动
             if (img == undefined && fadetime != 0) {
                 var leng = fadetime / 50;
                 var step = 1.0 / leng;
-                var opacity = 1.0;
+                var opacity = bc.style.opacity;
                 animationPlaying += 1234;
                 setTimeout(function () {
                     var fading = setInterval(function () {
@@ -233,6 +236,8 @@ function Background() { // 背景类；相机震动
             } else if (img == undefined && fadetime == 0) {
                 bctx.clearRect(0, 0, bc.width, bc.height);
                 return 0;
+            } else {
+                bctx.clearRect(0, 0, bc.width, bc.height);
             }
 
             // 如果为淡入
@@ -270,6 +275,8 @@ function Background() { // 背景类；相机震动
 
 function Playground() { // 立绘和文本
     this.drawingImage = 0;
+    this.img = '';
+    this.img2 = '';
     this.drawImage = function (paras) { // 绘制图片
         // 参数处理
         var img = paras.image;
@@ -379,18 +386,34 @@ function Playground() { // 立绘和文本
         // 参数处理
         var img = paras.name;
         var img2 = paras.name2;
-        var fadetime = paras.fadetime ? paras.fadetime : 0;
+        var fadetime = paras.fadetime != undefined ? paras.fadetime : 0.2; // 为淡入/淡出设置一个默认的时间，而非直接消失或产生
         var block = paras.block;
         var focus = paras.focus;
-        var place = { "x": img2 == undefined ? 400 : 200, "y": 100 };
-        var place2 = img2 != undefined ? { "x": 700, "y": 100 } : NaN;
+        var place = { "x": img2 == undefined ? 361 : 200, "y": 50 };
+        var place2 = img2 != undefined ? { "x": 524, "y": 50 } : NaN;
+
+        if (this.img != undefined && img != undefined) { // 判断立绘是否有切换；如果未切换则取消淡入淡出时间
+            if (this.img2 != undefined && img2 != undefined) {
+                var keepingImg = (img[img.length - 2] == '_' ? this.img.slice(0, -1) == img.slice(0, -1) : this.img == img) & (img2[img2.length - 2] == '_' ? this.img2.slice(0, -1) == img2.slice(0, -1) : this.img2 == img2);
+                //var keepingImg = ((this.img.slice(0, -1) == img.slice(0, -1) && img[img.length - 2] == '_') && (this.img2.slice(0, -1) == img2.slice(0, -1) && img2[img2.length - 2] == '_')) ? true : false;
+            }
+            else if (this.img2 == undefined && img2 == undefined) {
+                var keepingImg = (img[img.length - 2] == '_' ? this.img.slice(0, -1) == img.slice(0, -1) : this.img == img);
+            }
+        }
+        
+        fadetime = keepingImg ? 0 : fadetime;
+        console.log(keepingImg, img, this.img, img2, this.img2);
+        this.img = img;
+        this.img2 = img2;
+
         fadetime *= 1000;
         setTimeout(() => {
             // 如果为淡出
             if (img == undefined && fadetime != 0) {
                 var leng = fadetime / 50;
                 var step = 1.0 / leng;
-                var opacity = 1.0;
+                var opacity = cc.style.opacity;
                 animationPlaying += 100000;
                 setTimeout(function () {
                     var fading = setInterval(function () {
@@ -399,7 +422,7 @@ function Playground() { // 立绘和文本
                         //console.log(cc.style.opacity);
                         if (cc.style.opacity <= 0.0) {
                             animationPlaying -= 100000;
-                            cctx.clearRect(0, 0, cc.width, cc.height);
+                            //cctx.clearRect(0, 0, cc.width, cc.height);
                             clearInterval(fading);
                         }
                     }, 50);
@@ -409,7 +432,7 @@ function Playground() { // 立绘和文本
             } else if (img == undefined && fadetime == 0) {
                 cctx.clearRect(0, 0, cc.width, cc.height);
                 return 0;
-            } else {
+            } else if (!keepingImg) {
                 // 如果不是淡出，就先清除上一次绘制的人物
                 cctx.clearRect(0, 0, cc.width, cc.height);
             }
@@ -424,10 +447,11 @@ function Playground() { // 立绘和文本
             if (img2 != undefined) {
                 // 设置焦点
                 if (focus != undefined) {
-                    if (focus == 2) { // 焦点为人物2的情况下则变暗人物1
+                    if (focus == 2) { // 焦点为人物2的情况下则绘制并变暗人物1， 然后绘制人物2
+                        cctx.drawImage(usedImages[img], place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
                         console.log(usedImages[img].width, usedImages[img].height);
-                        var darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
-                        var pixelLen = usedImages[img].width * usedImages[img].height;
+                        var darkImg = cctx.getImageData(place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
+                        var pixelLen = 0.7 * usedImages[img].width * 0.7 * usedImages[img].height;
                         for (var i = 0; i < pixelLen * 4; i++) {
                             if (i % 4 != 3) {
                                 darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
@@ -435,10 +459,11 @@ function Playground() { // 立绘和文本
                         }
                         cctx.putImageData(darkImg, place.x, place.y);//, place.x + usedImages[img].width, place.y + usedImages[img].height);
                         cctx.drawImage(usedImages[img2], place2.x, place2.y, 0.7 * usedImages[img2].width, 0.7 * usedImages[img2].height);
-                    } else { // 焦点为人物1的情况下则变暗人物2
+                    } else { // 焦点为人物1的情况下亦然
+                        cctx.drawImage(usedImages[img2], place2.x, place2.y, 0.7 * usedImages[img2].width, 0.7 * usedImages[img2].height);
                         console.log(usedImages[img2].width, usedImages[img2].height);
-                        var darkImg = cctx.getImageData(place2.x, place2.y, usedImages[img2].width, usedImages[img2].height);
-                        var pixelLen = usedImages[img2].width * usedImages[img2].height;
+                        var darkImg = cctx.getImageData(place2.x, place2.y, 0.7 * usedImages[img2].width, 0.7 * usedImages[img2].height);
+                        var pixelLen = 0.7 * usedImages[img2].width * 0.7 * usedImages[img2].height;
                         for (var i = 0; i < pixelLen * 4; i++) {
                             if (i % 4 != 3) {
                                 darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
@@ -448,15 +473,15 @@ function Playground() { // 立绘和文本
                         cctx.drawImage(usedImages[img], place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
                     }
                 }
-                //设置好焦点之后再绘制立绘1和2
-
             } else {
                 // 不存在立绘2则直接绘制立绘1；
+                console.log("绘制人物1", img, cc.style.opacity);
                 cctx.drawImage(usedImages[img], place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
             }
 
             // 淡入
             if (fadetime != 0 && img != undefined) {
+                console.log("人物淡入");
                 var fadeStep = fadetime / 20;
                 var opacity = 0.0;
                 animationPlaying += 10000000;
@@ -467,25 +492,12 @@ function Playground() { // 立绘和文本
                         //console.log(cc.style.opacity);
                         if (cc.style.opacity >= 1.0) {
                             animationPlaying -= 10000000;
+                            console.log("人物淡入结束", cc.style.opacity);
                             clearInterval(fading);
                         }
                     }, fadeStep);
                 }, 0);
             }
-            // 递归调用绘制后续立绘；
-            if (img2 != undefined) {
-                this.drawCharacter({
-                    "name": img2,
-                    "fadetime": fadetime / 1000,
-                    "focus": focus == 1 ? 0 : 1,
-                    "place": {
-                        "x": 700,
-                        "y": 100
-                    },
-                    "keeping": 1
-                })
-            }
-
         }, animationDelayTime);
         animationDelayTime += fadetime;
     };
@@ -539,7 +551,7 @@ if (true) { // 只是为了折叠方便
     var playground = new Playground();
     var blocker = new Blocker();
     var audio = new Audio();
-    var playto = 24;
+    var playto = 0;
     /*var usedImagesFileName = [
         "Kael.jpg",
         "saladelei.jpg",
