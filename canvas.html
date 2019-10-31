@@ -8,7 +8,7 @@
 <html style='background-color: #333333;'>
 <link rel="stylesheet" type="text/css" href="canvas.css" />
 <title>GT-1 日正当中 / 前</title>
-<div>
+<div onclick='clickme()'>
     <canvas id='backgroundcanvas' width=1440 height=720
         style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px; background-color: #000000;"></canvas>
     <canvas id='charactercanvas' width=1440 height=720
@@ -21,8 +21,8 @@
         style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
     <!--position: absolute;-->
 </div>
-<div style="position: fixed; border:1px solid #000000; left: 0px; top: 720px; background-color: #FFFFFF;">
-    <input id='button1' style="height:100px;width:200px" type="submit" value='下一步' onclick="clickme()"></button>
+<div id="loadingdiv" style="position: fixed; border:1px solid #000000; left: 400px; top: 300px; background-color: #FFFFFF;">
+    <!--<input id='button1' style="height:100px;width:200px" type="submit" value='下一步' onclick="clickme()"></button>-->
     <p id='loading'>加载资源：0/?</p>
 </div>
 

@@ -544,7 +544,7 @@ if (true) { // 只是为了折叠方便
     ictx = ic.getContext("2d");
     tctx.textAlign = 'start';
     tctx.textBaseline = "top";
-    var animationPlaying = 0;
+    var animationPlaying = 1;
     var animationDelayTime = 0;
     var clearImg = false;
     var background = new Background();
@@ -576,9 +576,14 @@ if (true) { // 只是为了折叠方便
         usedImages[usedImagesFileName[i]].onload = function () {
             loadedResource += 1;
             document.getElementById("loading").innerHTML = "加载资源：" + loadedResource + "/" + resourceAmount;
+            if (loadedResource >= resourceAmount) {
+                document.getElementById("loadingdiv").style.display = 'none';
+                animationPlaying = 0;
+                console.log("INITIAL FINISHED...");
+            }
         };
     }
-    console.log("INITIAL FINISHED...");
+    
 }
 
 function clickme() {
