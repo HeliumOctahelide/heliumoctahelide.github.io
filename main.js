@@ -269,6 +269,7 @@ function Background() { // 背景类；相机震动
 }
 
 function Playground() { // 立绘和文本
+    this.drawingImage = 0;
     this.drawImage = function (paras) { // 绘制图片
         // 参数处理
         var img = paras.image;
@@ -281,7 +282,7 @@ function Playground() { // 立绘和文本
         fadetime *= 1000;
         clearImg = true;
         setTimeout(() => {
-            
+
             // 如果为淡出
             if (img == undefined && fadetime != 0) {
                 var leng = fadetime / 50;
@@ -291,11 +292,12 @@ function Playground() { // 立绘和文本
                 setTimeout(function () {
                     var fading = setInterval(function () {
                         opacity -= step;
-                        cc.style.opacity = opacity;
+                        ic.style.opacity = opacity;
                         //console.log(cc.style.opacity);
-                        if (cc.style.opacity <= 0.0) {
+                        if (ic.style.opacity <= 0.0) {
                             animationPlaying -= 1000;
-                            cctx.clearRect(0, 0, cc.width, cc.height);
+                            ictx.clearRect(0, 0, ic.width, ic.height);
+                            this.drawingImage = 0;
                             clearInterval(fading);
                         }
                     }, 50);
@@ -303,18 +305,19 @@ function Playground() { // 立绘和文本
                 animationDelayTime += fadetime;
                 return 0;
             } else if (img == undefined && fadetime == 0) {
-                cctx.clearRect(0, 0, cc.width, cc.height);
+                ictx.clearRect(0, 0, ic.width, ic.height);
+                this.drawingImage = 0;
                 return 0;
             }
 
             // 如果为淡入
             if (fadetime != 0 && img != undefined) {
-                cc.style.opacity = 0;
+                ic.style.opacity = 0;
             } else {
-                cc.style.opacity = 1;
+                ic.style.opacity = 1;
             }
             // 无论是否为淡入都绘制图片；
-            cctx.drawImage(usedImages[img], x, y, xScale * usedImages[img].width, yScale * usedImages[img].height);
+            ictx.drawImage(usedImages[img], x, y, xScale * usedImages[img].width, yScale * usedImages[img].height);
             // 淡入淡出
             if (fadetime != 0 && img != undefined) {
                 // 淡入
@@ -324,9 +327,9 @@ function Playground() { // 立绘和文本
                 setTimeout(function () {
                     var fading = setInterval(function () {
                         opacity += 0.05;
-                        cc.style.opacity = opacity;
+                        ic.style.opacity = opacity;
                         //console.log(cc.style.opacity);
-                        if (cc.style.opacity >= 1.0) {
+                        if (ic.style.opacity >= 1.0) {
                             animationPlaying -= 10000;
                             clearInterval(fading);
                         }
@@ -356,12 +359,12 @@ function Playground() { // 立绘和文本
             var n = 0;
             setTimeout(function () {
                 var fading = setInterval(function () {
-                    cctx.clearRect(0, 0, cc.width, cc.height);
+                    ictx.clearRect(0, 0, ic.width, ic.height);
                     thisx = xFrom + (xTo - xFrom) * n / fadeStep;
                     thisy = yFrom + (yTo - yFrom) * n / fadeStep;
                     thisScalex = xScaleFrom + (xScaleTo - xScaleFrom) * n / fadeStep;
                     thisScaley = yScaleFrom + (yScaleTo - yScaleFrom) * n / fadeStep;
-                    cctx.drawImage(usedImages[img], thisx, thisy, thisScalex * usedImages[img].width, thisScaley * usedImages[img].height);
+                    ictx.drawImage(usedImages[img], thisx, thisy, thisScalex * usedImages[img].width, thisScaley * usedImages[img].height);
                     //console.log(cc.style.opacity);
                     if (n >= fadeStep || clearImg == true) {
                         clearImg == false;
@@ -379,14 +382,10 @@ function Playground() { // 立绘和文本
         var fadetime = paras.fadetime ? paras.fadetime : 0;
         var block = paras.block;
         var focus = paras.focus;
-        var place = paras.place ? paras.place : {
-            "x": img2 == undefined ? 500 : 200,
-            "y": 100
-        };
-        var removeLastImage = paras.keeping == undefined ? true : false;
+        var place = { "x": img2 == undefined ? 400 : 200, "y": 100 };
+        var place2 = img2 != undefined ? { "x": 700, "y": 100 } : NaN;
         fadetime *= 1000;
         setTimeout(() => {
-
             // 如果为淡出
             if (img == undefined && fadetime != 0) {
                 var leng = fadetime / 50;
@@ -410,8 +409,8 @@ function Playground() { // 立绘和文本
             } else if (img == undefined && fadetime == 0) {
                 cctx.clearRect(0, 0, cc.width, cc.height);
                 return 0;
-            } else if (removeLastImage) {
-                // 如果不是淡出或者多重绘制，就先清除上一次绘制的人物
+            } else {
+                // 如果不是淡出，就先清除上一次绘制的人物
                 cctx.clearRect(0, 0, cc.width, cc.height);
             }
 
@@ -421,22 +420,41 @@ function Playground() { // 立绘和文本
             } else {
                 cc.style.opacity = 1;
             }
-            // 无论是否为淡入都绘制立绘1；
-            cctx.drawImage(usedImages[img], place.x, place.y, 0.5 * usedImages[img].width, 0.5 * usedImages[img].height);
-            // 设置焦点
-            if (focus != undefined && focus != 1) {
-                // 这里放置一些代码
-                console.log(usedImages[img].width, usedImages[img].height);
-                var darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
-                var pixelLen = usedImages[img].width * usedImages[img].height;
-                for (var i = 0; i < pixelLen * 4; i++) {
-                    if (i % 4 != 3) {
-                        darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
+            // 存在立绘2的情况下
+            if (img2 != undefined) {
+                // 设置焦点
+                if (focus != undefined) {
+                    if (focus == 2) { // 焦点为人物2的情况下则变暗人物1
+                        console.log(usedImages[img].width, usedImages[img].height);
+                        var darkImg = cctx.getImageData(place.x, place.y, usedImages[img].width, usedImages[img].height);
+                        var pixelLen = usedImages[img].width * usedImages[img].height;
+                        for (var i = 0; i < pixelLen * 4; i++) {
+                            if (i % 4 != 3) {
+                                darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
+                            }
+                        }
+                        cctx.putImageData(darkImg, place.x, place.y);//, place.x + usedImages[img].width, place.y + usedImages[img].height);
+                        cctx.drawImage(usedImages[img2], place2.x, place2.y, 0.7 * usedImages[img2].width, 0.7 * usedImages[img2].height);
+                    } else { // 焦点为人物1的情况下则变暗人物2
+                        console.log(usedImages[img2].width, usedImages[img2].height);
+                        var darkImg = cctx.getImageData(place2.x, place2.y, usedImages[img2].width, usedImages[img2].height);
+                        var pixelLen = usedImages[img2].width * usedImages[img2].height;
+                        for (var i = 0; i < pixelLen * 4; i++) {
+                            if (i % 4 != 3) {
+                                darkImg.data[i] = parseInt(darkImg.data[i] * 0.4);
+                            }
+                        }
+                        cctx.putImageData(darkImg, place2.x, place2.y);//, place2.x + usedImages[img2].width, place2.y + usedImages[img2].height);
+                        cctx.drawImage(usedImages[img], place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
                     }
                 }
-                cctx.putImageData(darkImg, place.x, place.y); //, place.x + usedImages[img].width, place.y + usedImages[img].height);
+                //设置好焦点之后再绘制立绘1和2
 
+            } else {
+                // 不存在立绘2则直接绘制立绘1；
+                cctx.drawImage(usedImages[img], place.x, place.y, 0.7 * usedImages[img].width, 0.7 * usedImages[img].height);
             }
+
             // 淡入
             if (fadetime != 0 && img != undefined) {
                 var fadeStep = fadetime / 20;
@@ -510,7 +528,8 @@ if (true) { // 只是为了折叠方便
     cctx = cc.getContext("2d");
     tc = document.getElementById("textcanvas");
     tctx = tc.getContext("2d");
-
+    ic = document.getElementById("imgcanvas");
+    ictx = ic.getContext("2d");
     tctx.textAlign = 'start';
     tctx.textBaseline = "top";
     var animationPlaying = 0;
@@ -520,7 +539,7 @@ if (true) { // 只是为了折叠方便
     var playground = new Playground();
     var blocker = new Blocker();
     var audio = new Audio();
-    var playto = 0;
+    var playto = 24;
     /*var usedImagesFileName = [
         "Kael.jpg",
         "saladelei.jpg",
