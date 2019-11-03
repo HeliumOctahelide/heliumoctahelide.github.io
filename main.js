@@ -103,30 +103,90 @@ function delay(time) { // 延时
 
 //类声明
 
-function Audio() { // 声音类
+function Voice() { // 声音类
+    this.audio = new Audio();
+    this.sound = new Audio();
+    this.looping = NaN;
     this.playMusic = function (paras) {
-        console.log("播放音乐");
+        var intro = paras.intro;
+        var loop = paras.key;
+        var crossfade = paras.crossfade;
+        var volume = paras.volume;
+        var delay = paras.delay;
+        setTimeout(() => {
+            this.audio = usedAudios[intro];
+            this.looping = usedAudios[loop];
+            this.audio.play();
+            this.audio.onended = function () {
+                //console.log("INTRO ENDED...");
+                voice.audio = voice.looping;
+                voice.audio.play();
+            };
+            this.audio.volume = 0;
+            var fading = setInterval(() => {
+                this.audio.volume = this.audio.volume + 0.05 * volume > 1 ? 1 : this.audio.volume + 0.05 * volume;
+                //console.log(this.audio.volume);
+                if (this.audio.volume >= volume) {
+                    this.audio.volume = volume;
+                    clearInterval(fading);
+                }
+            }, crossfade * 50);
+        }, delay * 1000 + animationDelayTime);
     };
     this.playSound = function (paras) {
-        console.log("播放声音");
+        var key = paras.key;
+        var volume = paras.volume;
+        var loop = paras.loop ? paras.loop : false;
+        var delay = paras.delay;
+        setTimeout(() => {
+            this.sound = usedAudios[key];
+            this.sound.loop = loop;
+            this.sound.play();
+        }, delay * 1000 + animationDelayTime);
+
     };
     this.stopMusic = function (paras) {
-        console.log("停止音乐");
+        var fadetime = paras.fadetime;
+        setTimeout(() => {
+            this.audio.addEventListener('ended', function () {
+                this.audio = this.looping;
+                this.audio.play();
+            });
+            this.looping = NaN;
+            var volume = this.audio.volume;
+            var fading = setInterval(() => {
+                this.audio.volume = (this.audio.volume - 0.025 * volume < 0) ? 0 : this.audio.volume - 0.025 * volume;
+                //console.log(this.audio.volume);
+                if (this.audio.volume <= 0) {
+                    this.audio.pause();
+                    clearInterval(fading);
+                }
+            }, fadetime * 25);
+        }, animationDelayTime);
+
     }
 }
 
 function Blocker() { // 遮罩类；showitem也放置在此类中
     //this.block = true;
+    this.r = 0;
+    this.g = 0;
+    this.b = 0;
+    this.a = 0;
     this.blocker = function (paras) {
         var a = paras.a != undefined ? paras.a : 1;
         var r = paras.r != undefined ? paras.r : 0;
         var g = paras.g != undefined ? paras.g : 0;
         var b = paras.b != undefined ? paras.b : 0;
-        var froma = paras.afrom != undefined ? paras.afrom : 1 - a;
+        var froma = paras.afrom != undefined ? paras.afrom : this.a;
         console.log(a, froma);
-        var fromr = paras.rfrom != undefined ? paras.rfrom : r;
-        var fromg = paras.gfrom != undefined ? paras.gfrom : g;
-        var fromb = paras.bfrom != undefined ? paras.bfrom : b;
+        var fromr = paras.rfrom != undefined ? paras.rfrom : this.r;
+        var fromg = paras.gfrom != undefined ? paras.gfrom : this.g;
+        var fromb = paras.bfrom != undefined ? paras.bfrom : this.b;
+        this.r = r;
+        this.g = g;
+        this.b = b;
+        this.a = a;
         var fadetime = paras.fadetime ? paras.fadetime : 0.2; // 为遮罩消失/产生设置最低0.2秒的过渡时间
         //this.block = paras.block != undefined ? paras.block : this.block;
         var block = this.block;
@@ -269,8 +329,51 @@ function Background() { // 背景类；相机震动
         animationDelayTime += fadetime;
     };
     this.cameraShake = function (paras) {
-        delay(paras.duration);
-    };
+        var duration = paras.duration;
+        var xStrength = paras.xstrength;
+        var yStrength = paras.ystrength;
+        var randomness = paras.randomness;
+        setTimeout(function () {
+            var shakeDirection = 0;
+            var shakeStep = 0;
+            var shakex = 0;
+            var shakey = 0;
+            duration *= 1000;
+            animationPlaying += 514;
+            setTimeout(() => {
+                var fading = setInterval(() => {
+                    if (shakeStep % 10 == 0) {
+                        shakeDirection += parseInt(Math.random() * 100 < randomness ? parseInt(Math.random() * 4) : 0);
+                        shakeDirection++;
+                    }
+                    //console.log((-Math.abs(shakeStep % 10 - 5) + 5) / 5)
+                    if (shakeDirection % 4 == 0) {
+                        shakex = - (-Math.abs(shakeStep % 10 - 5) + 5) / 5 * xStrength;
+                        shakey = 0;
+                    } else if (shakeDirection % 4 == 1) {
+                        shakex = 0;
+                        shakey = (-Math.abs(shakeStep % 10 - 5) + 5) / 5 * yStrength;
+                    } else if (shakeDirection % 4 == 2) {
+                        shakex = (-Math.abs(shakeStep % 10 - 5) + 5) / 5 * xStrength;
+                        shakey = 0;
+                    } else if (shakeDirection % 4 == 3) {
+                        shakex = 0;
+                        shakey = - (-Math.abs(shakeStep % 10 - 5) + 5) / 5 * yStrength;
+                    }
+                    document.getElementById("playground").style.left = shakex + 'px';
+                    document.getElementById("playground").style.top = shakey + 'px';
+                    shakeStep++;
+                    if (shakeStep * 10 >= duration) {
+                        animationPlaying -= 514;
+                        document.getElementById("playground").style.left = '0px';
+                        document.getElementById("playground").style.top = '0px';
+                        clearInterval(fading);
+                    }
+                }, 10);
+            }, 0);
+        }, animationDelayTime);
+        animationDelayTime += duration;
+    }
 }
 
 function Playground() { // 立绘和文本
@@ -401,7 +504,7 @@ function Playground() { // 立绘和文本
                 var keepingImg = (img[img.length - 2] == '_' ? this.img.slice(0, -1) == img.slice(0, -1) : this.img == img);
             }
         }
-        
+
         fadetime = keepingImg ? 0 : fadetime;
         console.log(keepingImg, img, this.img, img2, this.img2);
         this.img = img;
@@ -415,13 +518,15 @@ function Playground() { // 立绘和文本
                 var step = 1.0 / leng;
                 var opacity = cc.style.opacity;
                 animationPlaying += 100000;
+                console.log("开始淡出人物...", animationPlaying);
                 setTimeout(function () {
                     var fading = setInterval(function () {
                         opacity -= step;
                         cc.style.opacity = opacity;
-                        //console.log(cc.style.opacity);
+                        console.log("淡出人物中...", cc.style.opacity, animationPlaying);
                         if (cc.style.opacity <= 0.0) {
                             animationPlaying -= 100000;
+                            console.log("淡出人物结束...", animationPlaying);
                             //cctx.clearRect(0, 0, cc.width, cc.height);
                             clearInterval(fading);
                         }
@@ -544,55 +649,63 @@ if (true) { // 只是为了折叠方便
     ictx = ic.getContext("2d");
     tctx.textAlign = 'start';
     tctx.textBaseline = "top";
-    var animationPlaying = 1;
+    var animationPlaying = '还没好';
     var animationDelayTime = 0;
     var clearImg = false;
     var background = new Background();
     var playground = new Playground();
     var blocker = new Blocker();
-    var audio = new Audio();
+    var voice = new Voice();
     var playto = 0;
-    /*var usedImagesFileName = [
-        "Kael.jpg",
-        "saladelei.jpg",
-        "image1.jpg",
-        "sagunaer.jpg"
-        "./background/Sprite/bg_cher_1.png",
-        "./characters/char_130_doberm_ex.png",
-        "./images/Sprite/avg_2_2.png"
-    ];*/
+    var nicknamepool = ['东北龙卷风跳跳猴', '猪叫', 'Ediart', 'zerg', '清蒸鲈鱼', 'Mr.quin', 'ywwuyi', '凯露', '奥尔加·伊兹卡', '黎笋', '彩崎优', '庞巨血口龙', '魔血提勃', '窃冠瓯柯', 'OG.Ana', '徐志雷', 'UMP45', '扑热息痛', '氧氟沙星', '庆大霉素'];
+    var nickname = nicknamepool[Math.floor((Math.random() * nicknamepool.length))];
+
     var usedImagesFileName = story[0];
     var usedImages = {};
-    var usedMusics = [
-
-    ];
-    var resourceAmount = usedImagesFileName.length + usedMusics.length;
-    var loadedResource = 0;
+    var usedAudiosFileName = story[1];
+    var usedAudios = {};
+    var loadedImg = 0;
+    var loadedAudio = 0;
 
     for (i in usedImagesFileName) {
         var thisImg = new Image();
-        thisImg.src = './resources/' + usedImagesFileName[i] + '.png';
         usedImages[usedImagesFileName[i]] = thisImg;
+        usedImages[usedImagesFileName[i]].src = './resources/' + usedImagesFileName[i] + '.png';
         usedImages[usedImagesFileName[i]].onload = function () {
-            loadedResource += 1;
-            document.getElementById("loading").innerHTML = "加载资源：" + loadedResource + "/" + resourceAmount;
-            if (loadedResource >= resourceAmount) {
+            loadedImg += 1;
+            document.getElementById("loadingimg").innerHTML = "加载图像：" + loadedImg + "/" + usedImagesFileName.length;
+            if (loadedImg >= usedImagesFileName.length && loadedAudio >= usedAudiosFileName.length && animationPlaying == '还没好') {
                 document.getElementById("loadingdiv").style.display = 'none';
                 animationPlaying = 0;
                 console.log("INITIAL FINISHED...");
             }
         };
     }
-    
+
+    for (i in usedAudiosFileName) {
+        var thisAudio = new Audio();
+        usedAudios[usedAudiosFileName[i]] = thisAudio;
+        usedAudios[usedAudiosFileName[i]].src = './audio/' + usedAudiosFileName[i];
+        usedAudios[usedAudiosFileName[i]].oncanplaythrough = function () {
+            loadedAudio += 1;
+            document.getElementById("loadingaudio").innerHTML = "加载音频：" + loadedAudio + "/" + usedAudiosFileName.length;
+            if (loadedImg >= usedImagesFileName.length && loadedAudio >= usedAudiosFileName.length && animationPlaying == '还没好') {
+                document.getElementById("loadingdiv").style.display = 'none';
+                animationPlaying = 0;
+                console.log("INITIAL FINISHED...");
+            }
+        };
+    }
+
 }
 
 function clickme() {
     if (animationPlaying) {
         return 0;
-    };
+    }
     console.log(playto);
     animationDelayTime = 0;
-    eval(story[1][playto]);
+    eval(story[2][playto]);
     playto++;
 }
 

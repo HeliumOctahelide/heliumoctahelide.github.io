@@ -1,0 +1,32 @@
+<!--
+ * @Author: dx3906
+ * @Date: 2019-10-21 13:07:34
+ * @LastEditors: dx3906
+ * @LastEditTime: 2019-10-31 17:53:01
+ -->
+<!DOCTYPE html>
+<html style='background-color: #333333;'>
+<link rel="stylesheet" type="text/css" href="canvas.css" />
+<title>STORY 07 和光同尘</title>
+<div onclick='clickme()' id="playground" style="position: relative;">
+    <canvas id='backgroundcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px; background-color: #000000;"></canvas>
+    <canvas id='charactercanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+    <canvas id='imgcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+    <canvas id='blockcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+    <canvas id='textcanvas' width=1440 height=720
+        style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+    <!--position: absolute;-->
+</div>
+<div id="loadingdiv" style="position: fixed; border:1px solid #000000; left: 400px; top: 300px; background-color: #FFFFFF;">
+    <!--<input id='button1' style="height:100px;width:200px" type="submit" value='下一步' onclick="clickme()"></button>-->
+    <p id='loadingimg'>加载图像：0/?</p>
+    <p id='loadingaudio'>加载音频：0/?</p>
+</div>
+
+</html>
+<script src="./story-level_act4d0_st07.js" type="text/javascript"></script>
+<script src='./main.js' type='text/javascript'></script>
