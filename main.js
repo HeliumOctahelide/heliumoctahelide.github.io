@@ -50,7 +50,7 @@ CanvasRenderingContext2D.prototype.wrapRollingText = function (text, x, y, maxWi
                 animationPlaying -= 1;
                 clearInterval(showText);
             }
-        }, 10);
+        }, 20);
     }, 0);
 };
 
@@ -106,25 +106,32 @@ function delay(time) { // 延时
 function Voice() { // 声音类
     this.audio = new Audio();
     this.sound = new Audio();
+    this.soundPool = [];
     this.looping = NaN;
+    this.volume = 0;
     this.playMusic = function (paras) {
-        var intro = paras.intro;
+        var intro = paras.intro ? paras.intro : paras.key;
         var loop = paras.key;
         var crossfade = paras.crossfade;
-        var volume = paras.volume;
+        this.volume = paras.volume;
+        var volume = this.volume;
         var delay = paras.delay;
         setTimeout(() => {
+            this.audio.pause();
             this.audio = usedAudios[intro];
             this.looping = usedAudios[loop];
+            this.audio.volume = this.volume;
             this.audio.play();
             this.audio.onended = function () {
                 //console.log("INTRO ENDED...");
                 voice.audio = voice.looping;
+                voice.audio.loop = "loop";
+                voice.audio.volume = voice.volume;
                 voice.audio.play();
             };
             this.audio.volume = 0;
             var fading = setInterval(() => {
-                this.audio.volume = this.audio.volume + 0.05 * volume > 1 ? 1 : this.audio.volume + 0.05 * volume;
+                this.audio.volume = this.audio.volume + 0.05 * volume > this.volume ? this.volume : this.audio.volume + 0.05 * volume;
                 //console.log(this.audio.volume);
                 if (this.audio.volume >= volume) {
                     this.audio.volume = volume;
@@ -136,17 +143,21 @@ function Voice() { // 声音类
     this.playSound = function (paras) {
         var key = paras.key;
         var volume = paras.volume;
-        var loop = paras.loop ? paras.loop : false;
-        var delay = paras.delay;
+        var loop = paras.loop ? "loop" : NaN;
+        var delay = paras.delay ? paras.delay : 0;
         setTimeout(() => {
-            this.sound = usedAudios[key];
+            //const origAudio = usedAudios[key];
+            this.sound = usedAudios[key].cloneNode();
+            //const newAudio = origAudio.cloneNode();
+            //this.sound.play();
+            this.sound.volume = volume;
             this.sound.loop = loop;
             this.sound.play();
         }, delay * 1000 + animationDelayTime);
-
+        console.log("播放声音 in " + animationDelayTime);
     };
     this.stopMusic = function (paras) {
-        var fadetime = paras.fadetime;
+        var fadetime = paras.fadetime ? paras.fadetime : 0.2;
         setTimeout(() => {
             this.audio.addEventListener('ended', function () {
                 this.audio = this.looping;
@@ -163,7 +174,26 @@ function Voice() { // 声音类
                 }
             }, fadetime * 25);
         }, animationDelayTime);
+    }
 
+    this.stopSound = function (paras) {
+        var fadetime = paras.fadetime ? paras.fadetime : 0.2;
+        setTimeout(() => {
+            this.sound.addEventListener('ended', function () {
+                this.sound = this.looping;
+                this.sound.play();
+            });
+            this.looping = NaN;
+            var volume = this.sound.volume;
+            var fading = setInterval(() => {
+                this.sound.volume = (this.sound.volume - 0.025 * volume < 0) ? 0 : this.sound.volume - 0.025 * volume;
+                //console.log(this.audio.volume);
+                if (this.sound.volume <= 0) {
+                    this.sound.pause();
+                    clearInterval(fading);
+                }
+            }, fadetime * 25);
+        }, animationDelayTime);
     }
 }
 
@@ -259,8 +289,11 @@ function Blocker() { // 遮罩类；showitem也放置在此类中
         //console.log(animationDelayTime);
     };
     this.showItem = function (paras) {
+        var img = paras.image;
+        blctx.drawImage(usedImages[img], 361, 50);
     };
     this.hideItem = function (paras) {
+        blctx.clearRect(0, 0, 1440, 720);
     };
 }
 
@@ -273,7 +306,6 @@ function Background() { // 背景类；相机震动
 
         fadetime *= 1000;
         setTimeout(() => {
-
             // 如果为淡出
             if (img == undefined && fadetime != 0) {
                 var leng = fadetime / 50;
@@ -372,7 +404,17 @@ function Background() { // 背景类；相机震动
                 }, 10);
             }, 0);
         }, animationDelayTime);
-        animationDelayTime += duration;
+        console.log("窗口震动 in " + animationDelayTime);
+        //animationDelayTime += duration; //cameraShake不等待；
+    };
+    this.cameraEffect = function (para) {
+        var effect = para.effect;
+        var amount = para.amount;
+        if (amount == 1) {
+            document.getElementById("playground").style.filter = "grayscale(100%)";
+        } else {
+            document.getElementById("playground").style.filter = "";
+        }
     }
 }
 
@@ -537,7 +579,8 @@ function Playground() { // 立绘和文本
             } else if (img == undefined && fadetime == 0) {
                 cctx.clearRect(0, 0, cc.width, cc.height);
                 return 0;
-            } else if (!keepingImg) {
+            //} else if (!keepingImg) {
+            } else if (true) { // 测试修改：无论如何都清除上一次绘制
                 // 如果不是淡出，就先清除上一次绘制的人物
                 cctx.clearRect(0, 0, cc.width, cc.height);
             }
@@ -610,6 +653,7 @@ function Playground() { // 立绘和文本
         setTimeout(function () {
             var name = paras.name;
             var text = paras.text;
+            tctx.clearRect(0, 0, tc.width, tc.height);
             tc.style.opacity = 1;
             tctx.font = "30px 黑体";
             tctx.fillStyle = "#000000";
@@ -619,9 +663,13 @@ function Playground() { // 立绘和文本
                 tctx.wrapText(name, 320, 510, 140, 40);
                 tctx.fillStyle = "#FFFFFF";
                 tctx.wrapRollingText(text, 480, 510, 620, 40);
+                document.getElementById("textbox").textContent += '[' + name + '] ' + text + '\n\n';
+                document.getElementById("textbox").scrollTop = document.getElementById("textbox").scrollHeight;
             } else {
                 tctx.fillStyle = "#FFFFFF";
                 tctx.wrapRollingText(text, 480, 510, 620, 40);
+                document.getElementById("textbox").textContent += text + '\n\n';
+                document.getElementById("textbox").scrollTop = document.getElementById("textbox").scrollHeight;
             }
         }, animationDelayTime);
     };
@@ -632,6 +680,38 @@ function Playground() { // 立绘和文本
         setTimeout(function () {
             tc.style.opacity = 0;
         }, animationDelayTime);
+    };
+    this.Decision = function (paras) {
+        var options = paras.options[0];
+        globalOptions = options;
+        // 这个函数只需要将选项显示在页面上；
+        tc.style.opacity = 1;
+        tctx.font = "30px 黑体";
+        tctx.fillStyle = "#000000";
+        tctx.clearRect(0, 0, tc.width, tc.height);
+        if (options.length == 1) {
+            tctx.fillRect(310, 300, 820, 50);
+            tctx.fillStyle = "#FFFFFF";
+            tctx.wrapText(options[0], 380, 310, 600, 40);
+            optionsMount = 1;
+        } else if (options.length == 2) {
+            tctx.fillRect(310, 200, 820, 50);
+            tctx.fillRect(310, 400, 820, 50);
+            tctx.fillStyle = "#FFFFFF";
+            tctx.wrapText(options[0], 380, 210, 820, 40);
+            tctx.wrapText(options[1], 380, 410, 820, 40);
+            optionsMount = 2;
+        } else if (options.length == 3) {
+            tctx.fillRect(310, 150, 820, 50);
+            tctx.fillRect(310, 300, 820, 50);
+            tctx.fillRect(310, 450, 820, 50);
+            tctx.fillStyle = "#FFFFFF";
+            tctx.wrapText(options[0], 380, 160, 600, 40);
+            tctx.wrapText(options[1], 380, 310, 600, 40);
+            tctx.wrapText(options[2], 380, 460, 600, 40);
+            optionsMount = 3;
+        }
+        console.log(options);
     }
 }
 
@@ -657,15 +737,20 @@ if (true) { // 只是为了折叠方便
     var blocker = new Blocker();
     var voice = new Voice();
     var playto = 0;
-    var nicknamepool = ['东北龙卷风跳跳猴', '猪叫', 'Ediart', 'zerg', '清蒸鲈鱼', 'Mr.quin', 'ywwuyi', '凯露', '奥尔加·伊兹卡', '黎笋', '彩崎优', '庞巨血口龙', '魔血提勃', '窃冠瓯柯', 'OG.Ana', '徐志雷', 'UMP45', '扑热息痛', '氧氟沙星', '庆大霉素'];
+    var nicknamepool = ['东北龙卷风跳跳猴', '猪叫', 'Ediart', 'zeg', '清蒸鲈鱼', 'Mr.quin', 'ywwuyi', '凯露', '奥尔加·伊兹卡', '黎笋', '彩崎优', '庞巨血口龙', '魔血提勃', '窃冠瓯柯', 'OG.Ana', '徐志雷', 'UMP45', '氧氟沙星'];
     var nickname = nicknamepool[Math.floor((Math.random() * nicknamepool.length))];
-
+    document.getElementById("inputname").value = nickname;
+    var decisionValue = '0';
+    var predicate = ['0'];
+    var decising = false;
     var usedImagesFileName = story[0];
     var usedImages = {};
     var usedAudiosFileName = story[1];
     var usedAudios = {};
     var loadedImg = 0;
     var loadedAudio = 0;
+    var optionsMount = 0;
+    var globalOptions = [];
 
     for (i in usedImagesFileName) {
         var thisImg = new Image();
@@ -685,7 +770,7 @@ if (true) { // 只是为了折叠方便
     for (i in usedAudiosFileName) {
         var thisAudio = new Audio();
         usedAudios[usedAudiosFileName[i]] = thisAudio;
-        usedAudios[usedAudiosFileName[i]].src = './audio/' + usedAudiosFileName[i];
+        usedAudios[usedAudiosFileName[i]].src = './audio/' + usedAudiosFileName[i] + '.wav';
         usedAudios[usedAudiosFileName[i]].oncanplaythrough = function () {
             loadedAudio += 1;
             document.getElementById("loadingaudio").innerHTML = "加载音频：" + loadedAudio + "/" + usedAudiosFileName.length;
@@ -699,261 +784,89 @@ if (true) { // 只是为了折叠方便
 
 }
 
-function clickme() {
+function setname() {
+    nickname = document.getElementById("inputname").value;
+}
+
+function showText() {
+    document.getElementById("textbox").style.display = document.getElementById("textbox").style.display == 'inline' ? 'none' : 'inline';
+}
+
+function setRandomName() {
+    nickname = nicknamepool[Math.floor((Math.random() * nicknamepool.length))];
+    document.getElementById("inputname").value = nickname;
+}
+
+function clickme(event) {
+    console.log(event);
     if (animationPlaying) {
         return 0;
     }
     console.log(playto);
     animationDelayTime = 0;
-    eval(story[2][playto]);
+    // 判断分歧；Decision语句必然伴随分段，因此可以这样写
+    if (story[2][playto].indexOf('Decision') != -1) {
+        // 写入判断语句：点击到选框则修改decisionValue并继续，否则直接return 0
+        if (optionsMount == 0) {
+            console.log("条件分歧", story[2][playto]);
+            eval(story[2][playto]);
+            return 0;
+            //decisionValue = prompt();
+        } else {
+            console.log("分歧选择");
+            if (optionsMount == 1) {
+                if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 300 && event.offsetY <= 350)) {
+                    decisionValue = '1';
+                } else {
+                    return 0;
+                }
+            } else if (optionsMount == 2) {
+                if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 200 && event.offsetY <= 250)) {
+                    decisionValue = '1';
+                } else if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 400 && event.offsetY <= 450)) {
+                    decisionValue = '2';
+                } else {
+                    return 0;
+                }
+            } else if (optionsMount == 3) {
+                if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 150 && event.offsetY <= 200)) {
+                    decisionValue = '1';
+                } else if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 300 && event.offsetY <= 350)) {
+                    decisionValue = '2';
+                } else if ((event.offsetX >= 310 && event.offsetX <= 1130) && (event.offsetY >= 450 && event.offsetY <= 500)) {
+                    decisionValue = '3';
+                } else {
+                    return 0;
+                }
+            };
+            document.getElementById("textbox").textContent += '[' + nickname + '] ' + globalOptions[parseInt(decisionValue) - 1] + '\n\n';
+            document.getElementById("textbox").scrollTop = document.getElementById("textbox").scrollHeight;
+            optionsMount = 0;
+            playto++;
+            clickme();
+            return 0;
+        }
+    };
+    if (story[2][playto].indexOf('predicate') != -1) { // 处理分歧点
+        console.log(story[2][playto]);
+        eval(story[2][playto]);
+        playto++;
+        clickme(); // 执行下一步事件；
+        return 0; // 避免执行再下一步；
+    };
+    if (predicate.indexOf(decisionValue) != -1) {
+        console.log("进入分歧" + decisionValue, story[2][playto]);
+        eval(story[2][playto]);
+    } else {
+        while (story[2][playto].indexOf('predicate') == -1) {
+            playto++;
+        }
+        console.log("跳过未选择的分歧" + story[2][playto]);
+        eval(story[2][playto]);
+        playto++;
+        clickme();
+        return 0;
+    }
     playto++;
-}
 
-/*
-function clickme() {
-    if (animationPlaying) {
-        return 0;
-    };
-    console.log(playto);
-    animationDelayTime = 0;
-    if (playto == 0) {
-        blocker.blocker({
-            "r": 0,
-            "g": 0,
-            "b": 0
-        });
-        background.showImage({
-            "image": "./background/Sprite/bg_cher_1.png",
-        });
-        blocker.blocker({
-            "r": 0,
-            "g": 0,
-            "b": 0,
-            "a": 0,
-            "afrom": 1,
-            "fadetime": 1
-        });
-        playground.drawCharacter({
-            "name": "./characters/char_130_doberm_ex.png",
-            "fadetime": 1
-        });
-        playground.drawDialog({
-            "name": "杜宾",
-            "text": "可恶......"
-        });
-    };
-    if (playto == 1) {
-        playground.drawDialog({
-            "name": "杜宾",
-            "text": "这里，究竟怎么了？"
-        });
-    };
-    if (playto == 2) {
-        blocker.blocker({
-            "r": 0,
-            "g": 0,
-            "b": 0,
-            "a": 1,
-            "fadetime": 0.6
-        });
-        playground.drawCharacter({
-            "fadetime": 0
-        });
-        playground.drawImage({
-            "image": "./images/Sprite/avg_2_2.png",
-            "x": 0,
-            "y": 0,
-            "xscale": 1,
-            "yscale": 1,
-            "fadetime": 0,
-        });
-        blocker.blocker({
-            "a": 0,
-            "fadetime": 0.6,
-            "block": false
-        });
-        playground.imageTween({
-            "xfrom": 0,
-            "yfrom": 0,
-            "xto": 0,
-            "yto": -20,
-            "xscalefrom": 1,
-            "yscalefrom": 1,
-            "xscaleto": 1.1,
-            "yscaleto": 1.1,
-            "duration": 15
-        });
-        playground.drawDialog({
-            "name": "整合运动成员",
-            "text": "这边的屋子，也都给我搜干净！"
-        });
-    };
-    if (playto == 3) {
-        playground.drawDialog({
-            "name": "女性",
-            "text": "放开他......不！你们......"
-        });
-    };
-    if (playto == 4) {
-        playground.drawDialog({
-            "name": "整合运动成员",
-            "text": "反抗？太迟了！可恨的切尔诺伯格人！"
-        });
-    };
-    playto += 1;
 }
-
-function justclick() {
-    if (animationPlaying) {
-        return 0;
-    }
-    animationDelayTime = 0;
-    if (playto == 0) {
-        blocker.blocker({
-            "r": 0,
-            "g": 0,
-            "b": 0
-        })
-        background.showImage({
-            "image": "image1.jpg"
-        });
-        delay(1);
-        blocker.blocker({
-            "r": 0,
-            "g": 0,
-            "b": 0,
-            "a": 0,
-            "afrom": 1,
-            "fadetime": 1
-        })
-    } else if (playto == 1) {
-        playground.drawCharacter({
-            "image": "Kael.jpg",
-            "fadetime": 1
-        });
-        playground.drawDialog({
-            "name": "凯尔萨斯·逐日者",
-            "text": "魔法，能量，我的人民陷入其中不能自拔……自从太阳之井被摧毁之后就是如此。欢迎来到未来。真遗憾，你们无法阻止什么，没有人可以阻止我了！Selama ashal'anore！！"
-        });
-    } else if (playto == 2) {
-        playground.drawCharacter({
-            "image": "Kael.jpg"
-        });
-        playground.drawDialog({
-            "name": "凯尔萨斯·逐日者",
-            "text": "那么我们来看看你们如何面对亵渎者萨拉德雷？"
-        });
-    } else if (playto == 3) {
-        playground.drawCharacter({
-            "image": "saladelei.jpg",
-            "fadetime": 1
-        });
-        playground.drawDialog({
-            "name": "亵渎者萨拉德雷",
-            "text": "我来了！"
-        });
-    } else if (playto == 4) {
-        playground.clearDialog();
-        blocker.blocker({
-            "a": 0.3,
-            "r": 1,
-            "g": 0.4,
-            "b": 0.4,
-            "afrom": 0,
-            "rfrom": 0,
-            "gfrom": 0,
-            "bfrom": 0,
-            "fadetime": 0.1
-        });
-        blocker.blocker({
-            "a": 0.1,
-            "r": 1,
-            "g": 0.4,
-            "b": 0.1,
-            "afrom": 1,
-            "rfrom": 1,
-            "gfrom": 0.4,
-            "bfrom": 0.4,
-            "fadetime": 0.2
-        });
-        blocker.blocker({
-            "a": 0.1,
-            "r": 0,
-            "g": 0,
-            "b": 0,
-            "afrom": 0.8,
-            "rfrom": 1,
-            "gfrom": 1,
-            "bfrom": 1,
-            "fadetime": 0.3
-        });
-        blocker.blocker({
-            "a": 1,
-            "r": 0,
-            "g": 0,
-            "b": 0,
-            "afrom": 0,
-            "rfrom": 0,
-            "gfrom": 0,
-            "bfrom": 0,
-            "fadetime": 0.3
-        });
-        blocker.blocker({
-            "a": 0,
-            "fadetime": 3
-        })
-        playground.drawDialog({
-            "name": "亵渎者萨拉德雷",
-            "text": "原谅我，王子殿下……我失败了……"
-        });
-        playground.drawCharacter({
-            "fadetime": 1
-        });
-    } else if (playto == 5) {
-        playground.drawCharacter({
-            "image": "Kael.jpg",
-            "fadetime": 1
-        });
-        playground.drawDialog({
-            "name": "凯尔萨斯·逐日者",
-            "text": "你们击败了我最强大的顾问，可是没有人能战胜鲜血之锤。出来吧，萨古纳尔男爵！"
-        });
-    } else if (playto == 6) {
-        playground.drawCharacter({
-            "image": "sagunaer.jpg",
-            "fadetime": 1
-        });
-        playground.drawDialog({
-            "name": "萨古纳尔男爵",
-            "text": "血债血偿！"
-        });
-    } else if (playto == 7) {
-        playground.drawCharacter({
-            "image": "Kael.jpg",
-            "image2": "sagunaer.jpg",
-            "focus": 1
-        });
-        playground.drawDialog({
-            "name": "凯尔萨斯·逐日者",
-            "text": "等一下，你他妈的怎么这么大？"
-        });
-    } else if (playto == 8) {
-        playground.drawCharacter({
-            "image": "Kael.jpg",
-            "image2": "sagunaer.jpg",
-            "focus": 2
-        });
-        playground.drawDialog({
-            "name": "萨古纳尔男爵",
-            "text": "因为保存这张图片的时候是按原始尺寸保存的。"
-        });
-    } else if (playto == 9) {
-        playground.drawCharacter({
-            "fadetime": 3
-        });
-        playground.drawDialog({
-            "text": "展示结束。"
-        });
-    }
-    playto += 1;
-}*/

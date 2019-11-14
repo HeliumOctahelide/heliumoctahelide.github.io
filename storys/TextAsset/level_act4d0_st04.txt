@@ -16,6 +16,9 @@
 [Delay(time=1)]
 [PlayMusic(intro="$mist_intro", key="$mist_loop", volume=0.6,crossfade=1)]
 [Background(image="bg_towerinside",screenadapt="coverall",fadetime=2,block=true)]
+10:37 A.M.    天气/多云
+叙拉古天灾低发区，荒野，某林中小屋
+[Dialog]
 [Character(name="char_190_clour",fadetime=2,block=true)]
 [Delay(time=2)]
 [name="红云"]     唔......？
@@ -23,7 +26,7 @@
 [Character(name="char_279_excu_4#6")]
 [name="？？？"]     我已经听见了歌声，躲藏是不必要的，我没有恶意。
 [Character(name="char_190_clour")]
-[name="红云"]     ......每个刽子手都这么说的。但最后，总是见血。
+[name="红云"]     ......每个刽子手都是这么说的。但最后，总是见血。
 [Character(name="char_279_excu_4#6")]
 [name="？？？"]     刽子手？我不明白你的用词。我是拉特兰公证所——
 [Character(name="char_190_clour")]
@@ -125,7 +128,7 @@
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
 [name="？？？"]     如果能方便交流，可以。
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
-[name="红云"]     你是什么人？\
+[name="红云"]     你是什么人？
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
 [name="？？？"]     拉特兰公证所的执行者，本次的遗嘱执行人。可以称呼我“送葬人”。
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
@@ -365,7 +368,7 @@
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
 [name="送葬人"]  这里很危险，仇恨并不会因为一方的妥协而终结。
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=1)]
-[name="红云"]  哼......你知道的很清楚。
+[name="红云"]  哼......你知道得很清楚。
 [name="红云"]  无论你怎么说，别妨碍我。等到一切结束，我会去那个......罗德岛的，这样就行了吧？
 [Character(name="char_190_clour",name2="char_279_excu_4",focus=2)]
 [name="送葬人"]  我在考虑。

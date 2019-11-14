@@ -19,7 +19,9 @@
 
 [Dialog]
 [Background(image="bg_cher_3", width=1, height=1, fadetime=1, screenadapt="coverall",block=true)]
-切尔诺伯格
+01:13 P.M.    天气/晴
+切尔诺伯格，郊外，荒野
+
 [Dialog]
 [Character(name="char_1504_cqbw",fadetime=2,block=true)]
 [Delay(time=2)]
@@ -141,7 +143,7 @@
 [name="整合运动刀兵"]     W，小队已经分散到了指定点，已经彻底切断了敌人的退路，他逃不掉的。
 [Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
 [name="炎客"]     我也没想到你能成为这些家伙的领导者，大家都在改变。
-[Character(name="char_1504_cqbw",name2="char_131_flameb_5",focus=1)]
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
 [name="W"]   这些家伙？啊......你是说整合运动？
 [name="W"]   还是说......萨卡兹们？
 [Character(name="char_1002_nsabr_2")]
@@ -254,15 +256,15 @@
 [Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
 [name="炎客"]     无序的破坏，带着某种目的的集团暴行，我看不出能从这样的组织里得到什么。
 [name="炎客"]     战争？现在的你们不过是摩擦迸发出的点点火种，你应该知道真正的战争是什么样的。
-[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=1)]
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
 [name="W"]   别这么说，我们也是有在努力工作的，何况整合运动之间也有区别嘛。
 [name="W"]   虽然我的前任上司喜欢更纯粹些的东西，但我可是无论什么都乐在其中啊。
-[Character(name="char_1504_cqbw#4",name2="char_131_flameb_5",focus=2)]
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
 [name="炎客"]     如果非要说的话......是呢，我想领教一下塔露拉的剑术。
-[Character(name="char_1504_cqbw#1",name2="char_131_flameb_5",focus=1)]
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=1)]
 [name="W"]   那个龙女？虽然我不想称赞她，但你基本没有一丁点胜算喔。
 [name="W"]   而且她那个，能算剑术吗？你在靠近她之前就会变成一块炭吧？
-[Character(name="char_1504_cqbw#1",name2="char_131_flameb_5",focus=2)]
+[Character(name="char_1504_cqbw#3",name2="char_131_flameb_5",focus=2)]
 [name="炎客"]     我知道。
 [name="炎客"]     当然，我也知道，如果我拒绝你的条件，我突围的机会同样小之又小。
 [name="炎客"]     可这又何妨？只有在令人窒息的枷锁中挣脱，我才有可能更进一步。
@@ -339,7 +341,7 @@
 //对话内容此处填入
 [name="炎客"]     久违的死局。我很兴奋。
 [name="W"]   久违的？这么说来，也许你佣兵队的全灭并没让你变得冷酷，反而让你变得快乐起来了？
-[name="炎客"]     我和你没有相像之处，W. 快乐不是值得追求的目标。
+[name="炎客"]     我和你没有相像之处，W，快乐不是值得追求的目标。
 [name="炎客"]     “上一次”让我失去了很多东西，但我眼前的道路却变得明晰而清澈。
 [name="炎客"]     这一次，希望你们不要让我失望。
 [name="W"]   你居然在笑哎。

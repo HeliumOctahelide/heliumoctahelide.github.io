@@ -1,0 +1,53 @@
+var story = [
+    [
+        "bg_towerinside",
+        "avg_npc_003",
+        "char_220_grani_3",
+        "char_220_grani_5",
+        "char_220_grani_4",
+        "char_220_grani_2",
+        "char_220_grani_1"
+    ],
+    [
+        "m_dia_street_loop",
+        "m_dia_street_intro"
+    ],
+    [
+        "background.showImage({});playground.clearDialog();playground.drawCharacter({});playground.drawDialog({name:'格拉尼',text:'走廊好黑！而且好挤！'});",
+        "playground.drawDialog({name:'可萝尔',text:'不、不好意思，虽然方便藏身，可毕竟这里只是个小阁楼而已！'});",
+        "playground.drawDialog({name:'可萝尔',text:'磨坊，粮仓，电房，村子里的很多设施都被赏金猎人破坏了，他们不会在乎这种小地方的。'});",
+        "playground.drawDialog({name:'格拉尼',text:'是这样没错......唔，我们两个居然刚好能挤进这种缝隙里？！'});",
+        "playground.drawDialog({name:'格拉尼',text:'可萝尔，脸是不是贴的太近了！'});",
+        "playground.drawDialog({name:'可萝尔',text:'抱歉......那个，骑警大人？'});",
+        "playground.drawDialog({name:'格拉尼',text:'别叫我骑警大人啦，叫我格拉尼就好。'});",
+        "playground.clearDialog();delay(1);blocker.blocker({a:0.5, fadetime:0.6, block:true});voice.playMusic({intro:'m_dia_street_intro', key:'m_dia_street_loop', volume:0.6,crossfade:1});background.showImage({image:'bg_towerinside',fadetime:2,block:true});playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:1,fadetime:1});delay(1);playground.drawDialog({name:'可萝尔',text:'那，格拉尼，你刚才说你接到了我们村子希望找到骑士宝藏的委托......'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:2});playground.drawDialog({name:'格拉尼',text:'对，而且委托里还提到，你确实已经拥有完整的宝藏信息了？'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:1});playground.drawDialog({name:'可萝尔',text:'打开宝藏必要的钥匙和宝藏的位置，都是历代村长口口相传的秘密。'});",
+        "playground.drawDialog({name:'可萝尔',text:'具体的我暂时还不能说......抱歉，我不是有意要向你隐瞒。'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:2});playground.drawDialog({name:'格拉尼',text:'没问题的，至少等到你完全相信我之后再说吧。'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_5',focus:1});playground.drawDialog({name:'可萝尔',text:'那些赏金猎人得知了这些情报，就一直在威胁着村民们。'});",
+        "playground.drawDialog({name:'可萝尔',text:'他们破坏村子的田地，抢走越冬的储粮，骚扰村民——如果那时我不站出来，村子就真的要完了。'});",
+        "playground.drawDialog({name:'可萝尔',text:'只要让他们知道宝藏的情报在我这里，至少他们不再去伤害其他村民们了。'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_5',focus:2});playground.drawDialog({name:'格拉尼',text:'但就算你受了那样的苦......'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_5',focus:1});playground.drawDialog({name:'可萝尔',text:'......嗯，我很清楚，这不过是权宜之计。'});",
+        "playground.drawDialog({name:'可萝尔',text:'还好，你来了。'});",
+        "playground.drawCharacter({name:'char_220_grani_4'});playground.drawDialog({name:'格拉尼',text:'呜，可萝尔小姐......'});",
+        "playground.drawCharacter({name:'avg_npc_003'});playground.drawDialog({name:'可萝尔',text:'虽然委托内容是希望有人能来帮我们找到宝藏，但其实我们希望的也只是驱逐那些赏金猎人、让村子恢复安宁。'});",
+        "playground.drawDialog({name:'可萝尔',text:'宝藏对我们来说，是现在唯一的解决手段而已。'});",
+        "playground.drawDialog({name:'可萝尔',text:'金币什么的，总会有花光的一天，但我们一直要在这片土地上生活下去，土地是我们唯一的故乡......'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:2});playground.drawDialog({name:'格拉尼',text:'用宝藏去雇佣别人驱逐赏金猎人，也可以。'});",
+        "playground.drawDialog({name:'格拉尼',text:'有足够的活动资金的话，甚至能雇佣一小支佣军呢！'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:1});playground.drawDialog({name:'可萝尔',text:'嗯。'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:2});playground.drawDialog({name:'格拉尼',text:'既然目的已经明确，那当务之急，果然还是要先离开这个满是流氓的村子。'});",
+        "playground.drawDialog({name:'格拉尼',text:'这边有窗子，能看到外——呃，好像有点高。'});",
+        "playground.drawDialog({name:'格拉尼',text:'可萝尔小姐，你能试试从这个窗户看到外面吗，赏金猎人还在找我们吗？'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_3',focus:1});playground.drawDialog({name:'可萝尔',text:'我，我也够不到，窗户还是太高了......'});",
+        "playground.drawCharacter({name:'avg_npc_003',name2:'char_220_grani_2',focus:2});playground.drawDialog({name:'格拉尼',text:'让我抱你起来......'});",
+        "playground.drawCharacter({});playground.clearDialog();blocker.blocker({a:1, r:0,g:0, b:0, fadetime:1, block:true});blocker.blocker({a:0.5, fadetime:0.6, block:true});voice.stopMusic({fadetime:1});playground.drawCharacter({name:'char_220_grani_3'});playground.drawDialog({name:'格拉尼',text:'嘿！现在能看到了吗？'});",
+        "playground.drawCharacter({name:'avg_npc_003'});playground.drawDialog({name:'可萝尔',text:'好的，我能看到了————'});",
+        "background.cameraShake({duration:0.5, xstrength:10, ystrength:12, vibrato:30, randomness:20, block:false});playground.drawDialog({name:'可萝尔',text:'咦？！'});",
+        "playground.drawCharacter({name:'char_220_grani_1'});background.cameraShake({duration:0.5, xstrength:10, ystrength:12, vibrato:30, randomness:20, block:false});playground.drawDialog({name:'格拉尼',text:'可萝尔小姐！别乱动呀！'});",
+        "playground.drawCharacter({name:'avg_npc_003'});playground.drawDialog({name:'可萝尔',text:'可、可那个，那是什么呀......'});",
+        "playground.drawDialog({name:'可萝尔',text:'刚才，有个人，从窗户外飞了过去......?'});"
+    ]
+];

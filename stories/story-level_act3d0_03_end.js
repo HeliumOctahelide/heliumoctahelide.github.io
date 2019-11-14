@@ -1,0 +1,51 @@
+var story = [
+    [
+        "bg_beach",
+        "char_134_ifrit_summer_1",
+        "char_348_ceylon_8",
+        "char_348_ceylon_2",
+        "bg_hotel",
+        "char_188_helage_1",
+        "char_348_ceylon_5"
+    ],
+    [
+        "m_dia_farce_loop",
+        "m_dia_farce_intro",
+        "d_amb_beach",
+        "d_gen_soldiersrun",
+        "d_gen_runsand"
+    ],
+    [
+        "background.showImage({image:'bg_beach', fadetime:1});voice.playMusic({intro:'m_dia_farce_intro', key:'m_dia_farce_loop', volume:0.8, crossfade:1.5});voice.playSound({key:'d_amb_beach',volume:0.8, channel:'beach'});delay(1);playground.drawCharacter({});playground.drawDialog({name:'保镖A',text:'烫烫烫！焦了焦了！'});",
+        "playground.drawDialog({name:'保镖B',text:'噫！我的头发！'});",
+        "playground.drawDialog({name:'保镖A',text:'啧，撤退，撤退！'});",
+        "playground.clearDialog();voice.playSound({key:'d_gen_soldiersrun',volume:0.5});blocker.blocker({a:1, r:0,g:0, b:0, fadetime:0.8, block:true});playground.drawCharacter({});blocker.blocker({a:0, fadetime:0.8, block:true});playground.drawCharacter({name:'char_134_ifrit_summer_1'});playground.drawDialog({name:'伊芙利特',text:'哈哈哈，果然还是打架有意思啊，博士！'});",
+        "playground.drawDialog({name:'伊芙利特',text:'啊，对了，博士，我这是为了救你，而且也听你的话没有下重手了，你可不许告诉赫默我打架的事！'});",
+        "playground.drawDialog({name:'伊芙利特',text:'要是被她知道了我的作业肯定又要变多了！'});",
+        "playground.Decision({options:[['没问题。', '作业你要自己努力。']]});",
+        "predicate = ['1'];",
+        "playground.drawDialog({name:'伊芙利特',text:'嘿嘿，我就知道博士是个好人！'});",
+        "predicate = ['2'];",
+        "playground.drawDialog({name:'伊芙利特',text:'哼，那我可不管！'});",
+        "predicate = ['1', '2'];",
+        "playground.drawCharacter({name:'char_134_ifrit_summer_1',name2:'char_348_ceylon_8',focus:2});playground.drawDialog({name:'锡兰',text:'源石驱动的火焰喷射器......而且这个功率，好厉害的术师。'});",
+        "playground.drawCharacter({name:'char_134_ifrit_summer_1',name2:'char_348_ceylon_8',focus:1});playground.drawDialog({name:'伊芙利特',text:'大姐，你的眼光不错欸，我超厉害的！'});",
+        "playground.drawCharacter({name:'char_134_ifrit_summer_1',name2:'char_348_ceylon_2',focus:2});playground.drawDialog({name:'锡兰',text:'我叫锡兰。'});",
+        "playground.drawDialog({name:'锡兰',text:'谢谢你救了我们。'});",
+        "playground.drawCharacter({name:'char_134_ifrit_summer_1',name2:'char_348_ceylon_2',focus:1});playground.drawDialog({name:'伊芙利特',text:'哦、哦......没关系。这，这是我该做的。'});",
+        "playground.drawDialog({name:'伊芙利特',text:'喂，博士，这个姐姐好懂礼貌啊，这种时候我该怎么做来着？'});",
+        "playground.Decision({options:[['微笑。', '鞠躬。', '跳舞。']]});",
+        "predicate = ['1', '2', '3'];",
+        "playground.drawCharacter({name:'char_134_ifrit_summer_1'});playground.drawDialog({name:'伊芙利特',text:'噢，好吧，那我试......'});",
+        "playground.drawDialog({name:'伊芙利特',text:'啊？我忘记我的烤肉还在架子上了！我不跟你们多说了！'});",
+        "playground.drawDialog({name:'伊芙利特',text:'博士，锡兰，你们之后要是想吃烧烤记得来找我啊！'});",
+        "voice.playSound({key:'d_gen_runsand', volume:0.7});playground.clearDialog();playground.drawCharacter({fadetime:1,block:true});delay(1);playground.Decision({options:[['竟然直接就跑开了。']]});",
+        "predicate = ['1'];",
+        "playground.drawCharacter({name:'char_348_ceylon_2'});playground.drawDialog({name:'锡兰',text:'博士，我们也赶紧回去吧。'});",
+        "playground.clearDialog();blocker.blocker({a:1, r:0,g:0, b:0, fadetime:2, block:true});playground.drawCharacter({});background.showImage({image:'bg_hotel'});voice.stopMusic({fadetime:1});voice.stopSound({key:'$beach',channel:'beach',fadetime:1});blocker.blocker({a:0, fadetime:2, block:false});playground.drawCharacter({name:'char_188_helage_1'});playground.drawDialog({name:'？？？',text:'博士，你们平安无事，很好。'});",
+        "playground.drawCharacter({name:'char_188_helage_1',name2:'char_348_ceylon_5',focus:2});playground.drawDialog({name:'锡兰',text:'十分感谢您的相助，请问......'});",
+        "playground.drawCharacter({name:'char_188_helage_1',name2:'char_348_ceylon_5',focus:1});playground.drawDialog({name:'赫拉格',text:'你可以叫我赫拉格。'});",
+        "playground.drawDialog({name:'赫拉格',text:'和博士一样，我也来自罗德岛。'});",
+        "playground.drawCharacter({name:'char_188_helage_1'});playground.drawDialog({name:'赫拉格',text:'博士，你现在有时间吗，有些话我要单独告诉你。'});"
+    ]
+];

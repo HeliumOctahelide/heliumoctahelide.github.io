@@ -1,0 +1,45 @@
+var story = [
+    [
+        "bg_uptown_2",
+        "char_136_hsguma",
+        "char_010_chen_1",
+        "char_015_lmg",
+        "char_010_chen_5"
+    ],
+    [
+        "d_gen_soldiersrun",
+        "m_dia_darkness01_loop",
+        "m_dia_darkness01_intro"
+    ],
+    [
+        "voice.playSound({key:'d_gen_soldiersrun',volume:0.5});background.showImage({screenadapt:'coverall', image:'bg_uptown_2',fadetime:1,screenadapt:'coverall'});voice.playMusic({intro:'m_dia_darkness01_intro', key:'m_dia_darkness01_loop', volume:0.8, crossfade:1.5, delay:0.5});delay(1);playground.drawDialog({name:'',text:'11:11 A.M. 天气/小雨'});",
+        "playground.drawDialog({name:'',text:'龙门中城区，三窗仔，木禾仓库外，'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'大致侦查完毕。我们的观察点够隐蔽，仓库四周空无一人。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'大量堆砌的建材，荒废的建筑工地，拖动和摆放的痕迹很明显。'});",
+        "playground.drawDialog({name:'陈',text:'可以肯定整合运动已经布置了埋伏。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'老陈，你的线人是阿发。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'......是。所以你还是听到了。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'我已经尽力不去听了。'});",
+        "playground.drawDialog({name:'星熊',text:'我认识他很久很久，到今天为止至少十年。我不可能听不出来。'});",
+        "playground.drawDialog({name:'星熊',text:'你是什么时候把他发展成线人的？'});",
+        "playground.drawDialog({name:'星熊',text:'他一年多前就感染了，从他营生的酒吧里忽然消失，留下他每天擦得干干净净的酒杯在那落灰。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'可能更早。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'至少这个，你应该告诉我。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'可能要下雨了。立刻开始排查，把敌人从埋伏点轰出来。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'——唉。'});",
+        "playground.drawDialog({name:'星熊',text:'来不及。他没剩下多少血可流。'});",
+        "playground.drawDialog({name:'星熊',text:'我去吸引火力，把所有整合运动都引出来。你们包围他们，结束这场战斗。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'很危险。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'这样做是最快的。这一次，你可以信任我。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:2});playground.drawDialog({name:'陈',text:'我一直都信任你。'});",
+        "playground.drawCharacter({name:'char_010_chen_1'});playground.drawDialog({name:'陈',text:'按星熊督察说的部署。动作快。'});",
+        "playground.drawCharacter({name:'char_015_lmg'});playground.drawDialog({name:'近卫局成员',text:'是！'});",
+        "playground.clearDialog();playground.drawCharacter({});voice.playSound({key:'d_gen_soldiersrun',volume:0.5});blocker.blocker({a:1, r:0,g:0, b:0, fadetime:1,block:true});blocker.blocker({a:0, fadetime:1, block:true});playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',fadetime:1,block:true,focus:2});delay(1);playground.drawDialog({name:'陈',text:'星熊，我准备好了。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_1',focus:1});playground.drawDialog({name:'星熊',text:'这才像话！我会把所有埋伏点都毁掉，把他们全都逼出来。给我三分钟。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_5',focus:2});playground.drawDialog({name:'陈',text:'乱来，你要独自作战三分钟，毁掉所有埋伏点？别被冲昏头脑！'});",
+        "playground.drawDialog({name:'陈',text:'如果你出了任何差错，我会立刻指挥进攻！'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_5',focus:1});playground.drawDialog({name:'星熊',text:'不。给我三分钟。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_5',focus:2});playground.drawDialog({name:'陈',text:'......只有三分钟。'});",
+        "playground.drawCharacter({name:'char_136_hsguma',name2:'char_010_chen_5',focus:1});playground.drawDialog({name:'星熊',text:'我去了。'});"
+    ]
+];
