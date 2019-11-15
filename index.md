@@ -81,14 +81,132 @@ OF-8 汐斯塔狂想曲：[[前](./canvas.html?02-8beg)]，[[后](./canvas.html?
 
 ## 主线剧情
 
+### 新手教程
+
+[序幕-0](./canvas.html?0)
+
+[序幕-1a](./canvas.html?1a)，[序幕-1b](./canvas.html?1b)
+
+[序幕-2](./canvas.html?2)
+
 ### 序章 黑暗时代（上）
+
+0-1 坍塌：[前](./canvas.html?0-1beg)，[后](./canvas.html?0-1end)
+
+0-2 守卫：[前](./canvas.html?0-2beg)，[后](./canvas.html?0-2end)
+
+0-4 混战：[前](./canvas.html?0-4beg)
+
+0-6 强击：[后](./canvas.html?0-6end)
+
+0-7 感染：[前](./canvas.html?0-7beg)，[后](./canvas.html?0-7end)
+
+0-7 感染：[前](./canvas.html?0-7beg)，[后](./canvas.html?0-7end)
+
+0-8 狩猎：[前](./canvas.html?0-8beg)
+
+0-9 临光：[后](./canvas.html?0-9end)
+
+0-10 困境：[前](./canvas.html?0-10beg)
+
+0-11 突围：[后](./canvas.html?0-11end)
 
 ### 第一章 黑暗时代（下）
 
+1-1 孤岛：[前](./canvas.html?1-1beg)，[后](./canvas.html?1-1end)
+
+1-3 狂奔：[前](./canvas.html?1-3beg)，[后](./canvas.html?1-3end)
+
+1-4 先兆：[前](./canvas.html?1-4beg)
+
+1-6 灾难：[后](./canvas.html?1-6end)
+
+1-7 暴君：[前](./canvas.html?1-7beg)，[后](./canvas.html?1-7end)
+
+1-8 意志：[前](./canvas.html?1-8beg)，[后](./canvas.html?1-8end)
+
+1-10 残留：[前](./canvas.html?1-10beg)，[后](./canvas.html?1-10end)
+
+1-12 代价：[前](./canvas.html?1-12beg)，[后](./canvas.html?1-12end)
+
 ### 第二章 异卵同生
+
+2-1 龙门之行：[前](./canvas.html?2-1beg)，[后](./canvas.html?2-1end)
+
+2-2 兵不接刃：[前](./canvas.html?2-2beg)，[后](./canvas.html?2-2end)
+
+2-3 无罪推定：[前](./canvas.html?2-3beg)，[后](./canvas.html?2-3end)
+
+2-4 企鹅物流：[前](./canvas.html?2-4beg)，[后](./canvas.html?2-4end)
+
+2-5 高空坠物：[前](./canvas.html?2-5beg)，[后](./canvas.html?2-5end)
+
+2-6 握紧扶手：[前](./canvas.html?2-6beg)，[后](./canvas.html?2-6end)
+
+2-7 注意卫生：[前](./canvas.html?2-7beg)，[后](./canvas.html?2-7end)
+
+2-8 不做约定：[前](./canvas.html?2-8beg)，[后](./canvas.html?2-8end)
+
+2-9 操作暗箱：[前](./canvas.html?2-9beg)，[后](./canvas.html?2-9end)
+
+2-10 病入膏肓：[前](./canvas.html?2-10beg)，[后](./canvas.html?2-10end)
 
 ### 第三章 二次呼吸
 
+3-1 会合：[前](./canvas.html?3-1beg)，[后](./canvas.html?3-1end)
+
+3-2 记忆：[前](./canvas.html?3-2beg)，[后](./canvas.html?3-2end)
+
+3-3 回旋：[前](./canvas.html?3-3beg)，[后](./canvas.html?3-3end)
+
+3-4 龟裂：[前](./canvas.html?3-4beg)，[后](./canvas.html?3-4end)
+
+3-5 呼叫：[前](./canvas.html?3-5beg)，[后](./canvas.html?3-5end)
+
+3-6 决定：[前](./canvas.html?3-6beg)，[后](./canvas.html?3-6end)
+
+3-7 轰鸣：[前](./canvas.html?3-7beg)，[后](./canvas.html?3-7end)
+
+3-8 黄昏：[前](./canvas.html?3-8beg)，[后](./canvas.html?3-8end)
+
 ### 第四章 急性衰竭
 
+4-1 免费拥抱：[前](./canvas.html?4-1beg)，[后](./canvas.html?4-1end)
+
+4-2 雨中漫步：[前](./canvas.html?4-2beg)，[后](./canvas.html?4-2end)
+
+4-3 人工制冷：[前](./canvas.html?4-3beg)，[后](./canvas.html?4-3end)
+
+4-4 不要恐慌：[前](./canvas.html?4-4beg)，[后](./canvas.html?4-4end)
+
+4-5 官僚主义：[前](./canvas.html?4-5beg)，[后](./canvas.html?4-5end)
+
+4-6 少见多怪：[前](./canvas.html?4-6beg)，[后](./canvas.html?4-6end)
+
+4-7 各取所需：[前](./canvas.html?4-7beg)，[后](./canvas.html?4-7end)
+
+4-8 应激反应：[前](./canvas.html?4-8beg)，[后](./canvas.html?4-8end)
+
+4-9 彻入骨髓：[前](./canvas.html?4-9beg)，[后](./canvas.html?4-9end)
+
+4-10 灯火将熄：[前](./canvas.html?4-10beg)，[后](./canvas.html?4-10end)
+
 ### 第五章 靶向药物
+
+5-1 冤家易结：[前](./canvas.html?5-1beg)，[后](./canvas.html?5-1end)
+
+5-2 有口难言：[前](./canvas.html?5-2beg)，[后](./canvas.html?5-2end)
+
+5-3 义胆凡躯：[前](./canvas.html?5-3beg)，[后](./canvas.html?5-3end)
+
+5-4 没人在家：[前](./canvas.html?5-4beg)，[后](./canvas.html?5-4end)
+
+5-6 疑兵之计：[前](./canvas.html?5-6beg)，[后](./canvas.html?5-6end)
+
+5-7 生死与共：[前](./canvas.html?5-7beg)，[后](./canvas.html?5-7end)
+
+5-9 孽生恶物：[前](./canvas.html?5-9beg)，[后](./canvas.html?5-9end)
+
+5-10 长夜终尽：[前](./canvas.html?5-10beg)，[后](./canvas.html?5-10end)
+
+[5-11 棋胜后着](./canvas.html?5-11)
