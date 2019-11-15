@@ -10,7 +10,8 @@ var story = [
         "char_002_amiya_6",
         "char_002_amiya_2",
         "char_148_nearl_2",
-        "char_002_amiya_1 ",
+        "char_002_amiya_3",
+        "char_002_amiya_1",
         "char_014_riope"
     ],
     [
@@ -41,7 +42,7 @@ var story = [
         "playground.drawCharacter({name:'char_148_nearl_2', name2:'char_016_medic', focus:2});playground.drawDialog({name:'医疗干员',text:'唔唔唔......没，没事......'});",
         "playground.drawDialog({name:'医疗干员',text:'反而是憋笑有点难受......！'});",
         "playground.drawDialog({name:'医疗干员',text:'唔，抱歉......明明是很紧要的时期，我却......'});",
-        "playground.drawCharacter({name:'char_002_amiya_1 '});playground.drawCharacter({name:'char_002_amiya_1 '});playground.drawDialog({name:'阿米娅',text:'没关系的。'});",
+        "playground.drawCharacter({name:'char_002_amiya_3 '});playground.drawCharacter({name:'char_002_amiya_1 '});playground.drawDialog({name:'阿米娅',text:'没关系的。'});",
         "playground.drawDialog({name:'阿米娅',text:'我们不是为了让大家都哭丧着脸才建立起罗德岛的。'});",
         "playground.drawDialog({name:'阿米娅',text:'罗德岛，本来就希望各位，都能绽放笑容。'});",
         "playground.drawCharacter({name:'char_002_amiya_1 ',name2:'char_016_medic',focus:2});playground.drawDialog({name:'医疗干员',text:'阿，阿米娅......'});",

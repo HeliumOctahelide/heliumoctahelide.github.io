@@ -108,12 +108,13 @@ function Voice() { // 声音类
     this.sound = new Audio();
     this.soundPool = [];
     this.looping = NaN;
-    this.volume = 0;
+    this.volume = 1;
+    this.soundvolume = 1;
     this.playMusic = function (paras) {
         var intro = paras.intro ? paras.intro : paras.key;
         var loop = paras.key;
         var crossfade = paras.crossfade;
-        this.volume = paras.volume;
+        this.volume = paras.volume ? paras.volume : 1;
         var volume = this.volume;
         var delay = paras.delay;
         setTimeout(() => {
@@ -142,7 +143,8 @@ function Voice() { // 声音类
     };
     this.playSound = function (paras) {
         var key = paras.key;
-        var volume = paras.volume;
+        this.soundvolume = paras.volume ? paras.volume : 1;
+        var volume = this.soundvolume;
         var loop = paras.loop ? "loop" : NaN;
         var delay = paras.delay ? paras.delay : 0;
         setTimeout(() => {
@@ -804,6 +806,10 @@ function clickme(event) {
     }
     console.log(playto);
     animationDelayTime = 0;
+    if (playto >= story[2].length) {
+        alert("本段剧情结束。");
+        return 0;
+    }
     // 判断分歧；Decision语句必然伴随分段，因此可以这样写
     if (story[2][playto].indexOf('Decision') != -1) {
         // 写入判断语句：点击到选框则修改decisionValue并继续，否则直接return 0

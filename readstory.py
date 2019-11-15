@@ -295,7 +295,7 @@ for filename in os.listdir("C:\\Users\\Helium\\OneDrive\\dreamweaver\\heliumocta
         elif '[character' in line:
             temp = get_paras(line)
             if re.findall(r'name=\"(.*?)\"', line):
-                oldimgname = re.findall(r'name=\"(.*?)\"', line)[0]
+                oldimgname = re.findall(r'name=\"(.*?)\"', line)[0].strip().lower()
                 if oldimgname.count('_') == 3:
                     imgname = oldimgname if '#' not in oldimgname else oldimgname[:-3] + oldimgname[-1]
                 else:
@@ -304,7 +304,7 @@ for filename in os.listdir("C:\\Users\\Helium\\OneDrive\\dreamweaver\\heliumocta
                     usedimg.append(imgname)
                 temp=temp.replace(oldimgname, imgname)
             if re.findall(r'name2=\"(.*?)\"', line):
-                oldimgname2 = re.findall(r'name2=\"(.*?)\"', line)[0]
+                oldimgname2 = re.findall(r'name2=\"(.*?)\"', line)[0].strip().lower()
                 if oldimgname2.count('_') == 3:
                     imgname2 = oldimgname2 if '#' not in oldimgname2 else oldimgname2[:-3] + oldimgname2[-1]
                 else:

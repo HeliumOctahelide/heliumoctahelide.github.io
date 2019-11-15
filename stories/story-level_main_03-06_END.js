@@ -2,7 +2,6 @@ var story = [
     [
         "bg_wild_a",
         "char_1002_nsabr_2",
-        "",
         "char_1504_cqbw",
         "char_012_misa_5",
         "char_012_misa_1"
@@ -20,7 +19,7 @@ var story = [
         "playground.drawDialog({name:'整合运动成员',text:'可恶，梅菲斯特为什么不肯来，他在干什么！'});",
         "playground.drawDialog({name:'整合运动成员',text:'说什么另有计划......究竟在搞什么鬼！'});",
         "playground.drawDialog({name:'整合运动成员',text:'如果有他在的话，我们能救回很多人啊！'});",
-        "playground.drawCharacter({name:''});playground.drawCharacter({name:'char_1504_cqbw', name2:'char_1002_nsabr_2', focus:1});playground.drawDialog({name:'W',text:'指望那个不重视同伴的家伙，有点不太现实吧。'});",
+        "playground.drawCharacter({fadetime:0});playground.drawCharacter({name:'char_1504_cqbw', name2:'char_1002_nsabr_2', focus:1});playground.drawDialog({name:'W',text:'指望那个不重视同伴的家伙，有点不太现实吧。'});",
         "playground.drawCharacter({name:'char_1504_cqbw', name2:'char_1002_nsabr_2', focus:2});playground.drawDialog({name:'整合运动成员',text:'......'});",
         "playground.drawCharacter({name:'char_1504_cqbw', name2:'char_1002_nsabr_2', focus:1});playground.drawDialog({name:'W',text:'没办法的事情，别太自责。'});",
         "playground.drawCharacter({name:'char_1504_cqbw', name2:'char_1002_nsabr_2', focus:2});playground.drawDialog({name:'整合运动成员',text:'谢谢你掩护我们，W......'});",

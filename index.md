@@ -4,7 +4,13 @@
  * @LastEditors: dx3906
  * @LastEditTime: 2019-11-14 20:42:50
  -->
-# 《明日方舟》剧情回放工具
+# 《明日方舟》剧情回放
+
+欢迎使用 *明日方舟* 剧情回放工具；此工具旨在为错过活动剧情或没有条件浏览游戏内剧情的玩家提供尽量还原游戏的剧情体验。
+
+相当多的内容未经测试。如果在使用中遇到问题，你可以在[Github页面](https://github.com/HeliumOctahelide/heliumoctahelide.github.io)提交Issue，或在NGA论坛联系作者[@\_江天万里霜\_]。
+
+由于本网页架设在Github博客上，访问速度可能会较慢；欢迎其他网站收留。
 
 ## 活动剧情
 
@@ -58,9 +64,9 @@ OF-8 汐斯塔狂想曲：[[前](./canvas.html?02-8beg)]，[[后](./canvas.html?
 
 [OF-EX1 预热活动](./canvas.html?02-e1)
 
-[OF-EX3 采访环节](./canvas.html?02-e2)
+[OF-EX3 采访环节](./canvas.html?02-e3)
 
-[OF-EX6 完美落幕](./canvas.html?02-e3)
+[OF-EX6 完美落幕](./canvas.html?02-e6)
 
 ### 战地秘闻
 
@@ -101,7 +107,6 @@ OF-8 汐斯塔狂想曲：[[前](./canvas.html?02-8beg)]，[[后](./canvas.html?
 
 0-7 感染：[前](./canvas.html?0-7beg)，[后](./canvas.html?0-7end)
 
-0-7 感染：[前](./canvas.html?0-7beg)，[后](./canvas.html?0-7end)
 
 0-8 狩猎：[前](./canvas.html?0-8beg)
 
@@ -123,9 +128,9 @@ OF-8 汐斯塔狂想曲：[[前](./canvas.html?02-8beg)]，[[后](./canvas.html?
 
 1-7 暴君：[前](./canvas.html?1-7beg)，[后](./canvas.html?1-7end)
 
-1-8 意志：[前](./canvas.html?1-8beg)，[后](./canvas.html?1-8end)
+1-8 意志：[前](./canvas.html?1-8beg)
 
-1-10 残留：[前](./canvas.html?1-10beg)，[后](./canvas.html?1-10end)
+1-10 残留：[后](./canvas.html?1-10end)
 
 1-12 代价：[前](./canvas.html?1-12beg)，[后](./canvas.html?1-12end)
 
@@ -210,3 +215,7 @@ OF-8 汐斯塔狂想曲：[[前](./canvas.html?02-8beg)]，[[后](./canvas.html?
 5-10 长夜终尽：[前](./canvas.html?5-10beg)，[后](./canvas.html?5-10end)
 
 [5-11 棋胜后着](./canvas.html?5-11)
+
+***
+
+<center>Powered by myself</center>

@@ -17,7 +17,7 @@
 [name="整合运动成员"]   说什么另有计划......究竟在搞什么鬼！
 [name="整合运动成员"]   如果有他在的话，我们能救回很多人啊！
 
-[Character(name="")]
+[Character(fadetime=0)]
 [Character(name="char_1504_cqbw", name2="char_1002_nsabr_2", focus=1)]
 
 [name="W"]   指望那个不重视同伴的家伙，有点不太现实吧。
