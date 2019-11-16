@@ -25,16 +25,20 @@ CanvasRenderingContext2D.prototype.wrapRollingText = function (text, x, y, maxWi
     }
 
     // 字符分隔为数组
-    var arrText = text.split('');
+    // richText[i].text : 单个字符
+    // richText[i].style: fillStyle
+    var richText = [];
+    parseRichText(richText, text, [context.fillStyle]);
+
     var line = '';
     var textWidth = 0;
     var typex = x;
     var typey = y;
-    var metrics = context.measureText(arrText[0]).width;
+    var metrics = context.measureText(richText[0].text).width;
     typex -= metrics;
     var n = 0;
     animationPlaying += 1;
-    console.log(arrText);
+    //console.log(richText);
     setTimeout(function () {
         var showText = setInterval(function () {
             if (typex + metrics - x >= maxWidth) {
@@ -43,10 +47,11 @@ CanvasRenderingContext2D.prototype.wrapRollingText = function (text, x, y, maxWi
             } else {
                 typex += metrics;
             }
-            context.fillText(arrText[n], typex, typey);
-            metrics = context.measureText(arrText[n]).width;
+            context.fillStyle = richText[n].style;
+            context.fillText(richText[n].text, typex, typey);
+            metrics = context.measureText(richText[n].text).width;
             n++;
-            if (n >= arrText.length) {
+            if (n >= richText.length) {
                 animationPlaying -= 1;
                 clearInterval(showText);
             }
@@ -581,7 +586,7 @@ function Playground() { // 立绘和文本
             } else if (img == undefined && fadetime == 0) {
                 cctx.clearRect(0, 0, cc.width, cc.height);
                 return 0;
-            //} else if (!keepingImg) {
+                //} else if (!keepingImg) {
             } else if (true) { // 测试修改：无论如何都清除上一次绘制
                 // 如果不是淡出，就先清除上一次绘制的人物
                 cctx.clearRect(0, 0, cc.width, cc.height);
@@ -876,3 +881,30 @@ function clickme(event) {
     playto++;
 
 }
+
+// 提取格式信息并生成richText
+//
+// 当前支持的格式:
+// <color=#123456>Text Content</color>
+//
+function parseRichText(richText, text, richStyleStack) {
+    const start = text.indexOf('<color=#');
+    if (start !== -1 &&
+        text.length >= start + 14 && text[start + 14] === '>') {
+        const color = text.substring(start + 8, start + 14);
+        const end = text.indexOf('</color>', start + 15);
+        if (end !== -1) {
+            parseRichText(richText, text.substring(0, start), richStyleStack);
+            richStyleStack.push(text.substring(start + 7, start + 14));
+            parseRichText(richText, text.substring(start + 15, end), richStyleStack);
+            richStyleStack.pop();
+            parseRichText(richText, text.substring(end + 8), richStyleStack);
+            return;
+        }
+    }
+
+    for (const ch of text.split('')) {
+        richText.push({ text: ch, style: richStyleStack[richStyleStack.length - 1] });
+    }
+}
+
