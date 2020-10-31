@@ -1,0 +1,67 @@
+<!--
+ * @Author: dx3906
+ * @Date: 2020-10-31 20:48:08
+ * @LastEditors: dx3906
+ * @LastEditTime: 2020-10-31 21:32:43
+-->
+<!DOCTYPE html>
+<html style='background-color: #333333;'>
+
+<head>
+    <meta charset="utf-8">
+    <title>加载内容...</title>
+    <link rel="stylesheet" type="text/css" href="canvas.css" />
+</head>
+
+<body>
+    <div id="headbar" style="position: relative; color: #FFFFFF">
+        你的名字：<input type="text" id="inputname">
+        <input type="button" id="setname" onclick="setname()" value='确定'>
+        <input type="button" id="randomname" onclick="setRandomName()" value='随机名字'>
+        <input type="button" id="showtext" onclick="showText()" value='显示/隐藏文本'>
+        <input type="button" id="auto" onclick="auto()" value='自动播放'>
+
+    </div>
+    <hr>
+    <div onclick='clickme(event)' id="playground" style="position: relative;">
+        <canvas id='backgroundcanvas' width=1280 height=720
+            style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px; background-color: #000000;"></canvas>
+        <canvas id='charactercanvas' width=1280 height=720
+            style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+        <canvas id='imgcanvas' width=1280 height=720
+            style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+        <canvas id='blockcanvas' width=1280 height=720
+            style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+        <canvas id='textcanvas' width=1280 height=720
+            style="position: absolute; border:1px solid #FFFFFF; left: 0px; top: 0px;"></canvas>
+    </div>
+    <div id="loadingdiv"
+        style="position: fixed; border:1px solid #000000; left: 400px; top: 300px; background-color: #FFFFFF;">
+        <p id='loadingimg'>加载图像：0/?</p>
+        <p id='loadingaudio'>加载音频：0/?</p>
+    </div>
+    <pre id="textbox"
+        style="top: 0px; left: 500px; height: 720px; position: absolute; overflow: auto; color: #FFFFFF; display: none;border-style:solid; border-color: #ffffff; background-color: #000000;"></pre>
+</body>
+<script type='text/javascript'>
+    function getQueryVariable(variable) {
+        let query = window.location.search.substring(1);
+        let vars = query.split("&");
+        for (let i = 0; i < vars.length; i++) {
+            let pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
+
+    function auto() {
+        window.location = 'https://www.bilibili.com/video/av55831634';
+    }
+    document.title = decodeURI(getQueryVariable("storyname"));
+    document.write("<scr" + "ipt src='" + './stories/story-' + getQueryVariable("story").substring(getQueryVariable("story").lastIndexOf('/')+1) + '.js' + "'></scr" + "ipt>");
+    document.write("<scr" + "ipt src='./main.js' type='text/javascript'></scr" + "ipt>");
+</script>
+
+</html>

@@ -1,0 +1,5076 @@
+<!--
+ * @Author: dx3906
+ * @Date: 2020-10-28 13:47:20
+ * @LastEditors: dx3906
+ * @LastEditTime: 2020-10-28 19:14:40
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>《明日方舟》剧情回放</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="story.js"></script>
+    <link rel="stylesheet" type="text/css" href="story.css" />
+    
+</head>
+
+<body>
+    <h1>《明日方舟》剧情回放</h1>
+    你可以在这里观看已有的SideStory剧情、故事集剧情、主线剧情和未列出的剧情。
+    <br>
+    上一次更新：2020-10-31 21:33:45
+    <hr>
+    <h3>设置</h3>
+    <div class="options">
+        素材源
+        <br>
+        <input type="radio" id="resource_coding" name="resource" checked>CODING
+        <br>
+        <input type="radio" id="resource_github" name="resource">Github（备用，速度较慢）
+        <br>
+        <input type="radio" id="resource_local" name="resource">本地（测试用）
+    </div>
+    <div class="options">
+        剧情简介
+        <br>
+        <input type="radio" id="storyinfo_off" name="storyinfo" checked>关闭
+        <br>
+        <input type="radio" id="storyinfo_on" name="storyinfo">打开
+    </div>
+    <div class="options">
+        你的名字：
+        <br>
+        Dr. <input type="text" id="doctorname" style="width:100px" value="博士">
+        <br>
+        <input type="button" id="randomname" value="随机名字">
+    </div>
+    <hr>
+    
+<h1>公共事务实录 - SIDESTORY 剧情</h1>
+<div class="block" id="side">
+
+<div class="act" id="1stact">
+<h2>骑兵与猎人</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>GT-1</p>
+        <p>日正当中</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">因为宝藏传说而动荡不安的滴水村，迎来了一位来自维多利亚的潇洒骑警：格拉尼。在救下了被严刑拷打的可萝尔后，格拉尼承诺会帮助滴水村。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_01_beg', 'GT-1 日正当中')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-1</p>
+        <p>日正当中</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">躲藏在阁楼之中的格拉尼和可萝尔详细讨论了关于宝藏的情报，可萝尔并没有全盘托出。就在二人打算行动之时，窗外竟然有人飞了出去？</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_01_end', 'GT-1 日正当中')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-2</p>
+        <p>察言观色</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">同样来自罗德岛的神秘干员为了寻找“她”而与赏金猎人交战，随后格拉尼也决定离开阁楼，却意外遇见了躲藏的赏金猎人们。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_02_beg', 'GT-2 察言观色')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-2</p>
+        <p>察言观色</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">被源石虫纠缠不清的格拉尼与可萝尔被突然出现的赏金猎人所救，而这位自称大鲍勃的赏金猎人竟然主动提出要与格拉尼合作。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_02_end', 'GT-2 察言观色')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-3</p>
+        <p>意外之旅</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">有了大鲍勃帮助，格拉尼二人得以顺利前行，并遭遇了神秘干员斯卡蒂后，却没料到斯卡蒂直接拔剑相向，众人被卷入了一场大乱斗中。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_03_beg', 'GT-3 意外之旅')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-3</p>
+        <p>意外之旅</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">交战中大鲍勃意外负伤，腿部结晶暴露了他是感染者的事实。而格拉尼完全不在意，为大鲍勃进行包扎。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_03_end', 'GT-3 意外之旅')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-4</p>
+        <p>污点证人</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">安全之后，大鲍勃与格拉尼就斯卡蒂与罗德岛的问题展开争论，但尚未得出结果，突兀出现的整合运动就打断了对话。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_04_beg', 'GT-4 污点证人')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-4</p>
+        <p>污点证人</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对整合运动的猛攻，大鲍勃主动提出殿后来为格拉尼与可萝尔创造一线生机。而宝藏越发近在眼前，战斗也将越发频繁。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_04_end', 'GT-4 污点证人')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-5</p>
+        <p>各抒己见</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">为了让可萝尔顺利拿到宝藏，格拉尼选择一人一枪驻守洞口。此时，整合运动，赏金猎人以及斯卡蒂的三方混战也正式拉开帷幕。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_05_beg', 'GT-5 各抒己见')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-5</p>
+        <p>各抒己见</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对难以匹敌的斯卡蒂和涌入的赏金猎人，格拉尼只好撤退接应可萝尔。然而在洞穴深处等待她的，却是熟悉的战友。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_05_end', 'GT-5 各抒己见')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-6</p>
+        <p>黄金三角</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">斯卡蒂，大鲍勃与格拉尼三方对峙，互不相让，他们各自都有坚持的东西。而可萝尔发现宝藏的惊喜呼喊打破了僵局，战斗一触即发。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_06_beg', 'GT-6 黄金三角')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-6</p>
+        <p>黄金三角</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">格拉尼选择主动献出血液开启宝藏，并拖着斯卡蒂帮村庄解决了游荡的赏金猎人。大鲍勃也在分得剩下的宝藏后，得以远走哥伦比亚。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_06_end', 'GT-6 黄金三角')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-EX-1</p>
+        <p>大地惊雷</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">从古老的歌声中惊醒的幽灵鲨，面前是正准备出发的斯卡蒂。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_ex01_end', 'GT-EX-1 大地惊雷')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-EX-3</p>
+        <p>与狼共舞</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">卡西米尔出身的临光不放心格拉尼，而为她写了一份有关卡西米尔骑士宝藏的嘱咐信件。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_ex03_end', 'GT-EX-3 与狼共舞')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-HX-1</p>
+        <p>碧血金沙</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">准备离开滴水村的格拉尼这才收到临光的信件，但事件早已解决，是时候踏上归途。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_ex04_end', 'GT-HX-1 碧血金沙')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>GT-HX-3</p>
+        <p>西部往事</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">斯卡蒂试图用“宝藏钥匙”从凯尔希那里换来有关幽灵鲨的信息。
+但凯尔希显然对斯卡蒂擅自行动的结果略显不快。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/a001/level_a001_ex06_end', 'GT-HX-3 西部往事')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act3d0">
+<h2>火蓝之心</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>ENTRY</p>
+        <p>演出开始</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">一年一度的黑曜石音乐节开始了，享受节日，并为自己心爱的艺人投票吧！</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/ui_act3d0_campselect', 'ENTRY 演出开始')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST1</p>
+        <p>摇滚起来</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">罗德岛一行来到了旅游都市汐斯塔，每个人似乎都在这里找到了乐趣。
+然而，就在博士也打算融入其中时，却收到了紧急通讯。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_st01', 'OF-ST1 摇滚起来')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-1</p>
+        <p>火山制造</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">前往火山脚下实地考察的天火和普罗旺斯认为火山有些异常。
+不过，没等她们进一步判断，就听到了求救声。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_01_beg', 'OF-1 火山制造')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-1</p>
+        <p>火山制造</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">两人救下的竟是市长的女儿，锡兰•道尔科斯。
+而随着三人的讲述与论证，火山即将爆发的可能性浮出水面。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_01_end', 'OF-1 火山制造')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST2</p>
+        <p>冲破藩篱</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">艾雅法拉通过远程通讯印证了众人的猜想。
+一番讨论后，众人决定了接下来的行动方针。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_st02', 'OF-ST2 冲破藩篱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-2</p>
+        <p>演出继续</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">博士与锡兰前往市政厅，试图说服市长秘书克洛宁。
+然而，交谈中对方却反而认为博士蒙骗锡兰，并要抓捕博士。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_02_beg', 'OF-2 演出继续')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-2</p>
+        <p>演出继续</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">博士和锡兰破门而出，锡兰此前介绍过的黑这时出现，却站在了两人的对立面。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_02_end', 'OF-2 演出继续')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-3</p>
+        <p>竞走赛</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">危急时刻，一名老年剑士出现拦住了黑。
+而后，在沙滩上，伊芙利特出现为两人解围。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_03_beg', 'OF-3 竞走赛')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-3</p>
+        <p>竞走赛</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">危机解除后，博士与锡兰回到旅馆与名为赫拉格的老年剑士汇合。
+而赫拉格似乎有话要说。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_03_end', 'OF-3 竞走赛')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-4</p>
+        <p>他是将军</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">在与黑的交锋中，赫拉格似乎发现了什么，这让他改变了主意，反而向敌人发起冲锋。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_04_beg', 'OF-4 他是将军')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-4</p>
+        <p>他是将军</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">赫拉格指出，黑的身份恐怕不只是市长保镖这么简单，而这番猜测被锡兰听到。
+锡兰不禁对自己的家人产生了动摇。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_04_end', 'OF-4 他是将军')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST3</p>
+        <p>压力之下</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">博士和锡兰一边散步一边谈心，最终，锡兰坚定了自己的想法，并制定了一个计划。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_st03', 'OF-ST3 压力之下')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-5</p>
+        <p>别阻止我</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">广播塔下，黑已经等待多时，但是她立刻发现，锡兰不过是诱饵。
+而另一边，红豆和博士顺利进入了市政厅。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_05_beg', 'OF-5 别阻止我')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-5</p>
+        <p>别阻止我</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">黑和锡兰的交谈还在继续。
+不过这一次，黑理解了锡兰的坚持，也发现了自己遭受蒙骗。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_05_end', 'OF-5 别阻止我')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-6</p>
+        <p>杀手女皇</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">两人的交谈终于迎来了结果。
+黑与锡兰互相理解，而后，黑终于重新站到了锡兰这边。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_06_beg', 'OF-6 杀手女皇')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-6</p>
+        <p>杀手女皇</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">博士和红豆的突击也获得了成果，正在准备逃亡的克洛宁变了脸色，并打算不顾一切逃跑。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_06_end', 'OF-6 杀手女皇')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST4</p>
+        <p>爱某个人</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">热闹的live之中，市长的提前回归让克洛宁彻底撕破了脸皮，他决定孤注一掷。
+但另一边，种种迹象显示，时间可能不多了。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_st04', 'OF-ST4 爱某个人')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-7</p>
+        <p>一锤定音</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">被逼入绝境的克洛宁状若疯狂，指使手下向罗德岛一行发动了袭击。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_07_beg', 'OF-7 一锤定音')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-7</p>
+        <p>一锤定音</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">虽然打败了克洛宁，但一切似乎无法挽回。
+所幸，普罗旺斯带了好消息，为了制止这场火山爆发，所有人都开始了行动。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_07_end', 'OF-7 一锤定音')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-8</p>
+        <p>汐斯塔狂想曲</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">火山溶洞中，天火向众人解释了阻止火山爆发的方法。
+而后，在溶洞深处，众人终于见到了火山之主——一只巨型源石虫。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_08_beg', 'OF-8 汐斯塔狂想曲')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-8</p>
+        <p>汐斯塔狂想曲</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">打败巨型源石虫后，虽然只是喷发被暂缓，但事情终于暂时告一段落。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_08_end', 'OF-8 汐斯塔狂想曲')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST5</p>
+        <p>此生挚爱</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">火山延缓爆发，汐斯塔将被放弃，黑和锡兰前往罗德岛，事情迎来了相对可以接受的结果。
+虽然不甚完美，但是至少还有未来可以期待。
+
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_st05', 'OF-ST5 此生挚爱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-ST6</p>
+        <p>邂逅潮声</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">干员棘刺随罗德岛来到汐斯塔，度过休闲一日。
+而当日落临近，离乡的阿戈尔人在沙滩旁，偶然遭遇了未知的敌人</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d7/level_act11d7_st01', 'OF-ST6 邂逅潮声')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-EX1</p>
+        <p>预热活动</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">֪知名DJ D.D.D.在旅馆中与TA的经纪人聊天，他对音乐高涨的热情令人动容。而聊到最后，TA居然收到了来自可露希尔的短讯——</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_ex01_end', 'OF-EX1 预热活动')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-EX3</p>
+        <p>采访环节</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">大帝突然出现在了舞台上，让观众们更加狂热，但也有不欢迎它的人。
+面对危机，大帝毫不介意，因为企鹅物流早已等候多时。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_ex03_end', 'OF-EX3 采访环节')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>OF-EX6</p>
+        <p>完美落幕</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在罗德岛的医疗室，应当留在汐斯塔的知名乐队成员与凯尔希发生了一段意味深长的对话，对话的意义恐怕要在很久以后才能判明。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act3d0/level_act3d0_ex06_end', 'OF-EX6 完美落幕')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act5d0">
+<h2>喧闹法则</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>ENTRY</p>
+        <p>序章</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">酒吧内，一场牌局，两个咄咄相逼的西西里人卡彭与甘比诺，招惹到了全龙门最麻烦的酒店老板。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/ui_act5d0_firstenter', 'ENTRY 序章')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-1</p>
+        <p>6:44P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">年轻的信使拜松遭到了叙拉古黑手党的袭击，而企鹅物流的能天使与可颂及时出手相救。废弃的小巷内，敌人落入了大帝嚣张的陷阱中。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_01_beg', 'CB-1 6:44P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-1</p>
+        <p>6:44P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">被带到据点的拜松被迫接受了企鹅物流“优秀的企业文化”，然而在一片七嘴八舌之中，能天使不小心触发了敌人留下的炸弹陷阱......</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_01_end', 'CB-1 6:44P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-2</p>
+        <p>7:15P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">因为蒙受了巨大损失，企鹅物流一行人驾车与敌人展开了一场追逐战，并成功把自己也卷入了车祸。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_02_beg', 'CB-2 7:15P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-2</p>
+        <p>7:15P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">公园内，摆摊的孑正在与友人槐琥正在闲聊，迎接了一位神秘的“萨科塔”客人。另一面，擅自追击的拜松也遭到了神秘狙击，并跌落了立交桥。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_02_end', 'CB-2 7:15P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-3</p>
+        <p>7:22P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">摔落的拜松遇到了自称企鹅物流一员的神秘信使莫斯提马。在莫斯提马的帮助下，二人混入街道，躲避着黑手党的追捕。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_03_beg', 'CB-3 7:22P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-3</p>
+        <p>7:22P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">优哉游哉的拜松与莫斯提马路过了一家糖果店，却也在此时被黑手党盯上。为了顺利摆脱追踪，拜松跳上了货船，莫斯提马却不知所踪。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_03_end', 'CB-3 7:22P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-4</p>
+        <p>7:59P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">迷路的拜松在空的带领下抄小道回到了公园。正好遇上在拷问黑手党的企鹅物流众人，因为失手把人质炸了，所以再度引来乱斗。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_04_beg', 'CB-4 7:59P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-4</p>
+        <p>7:59P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">企鹅物流分组离开，却忘记了临时加入的拜松，迫不得已，拜松只能骑自行车去追其他人。而再一次失手的甘比诺与卡彭，发生了分歧。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_04_end', 'CB-4 7:59P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-5</p>
+        <p>8:31P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">眼看着拜松就要跟上众人，甘比诺横插一手打晕了拜松，并以此为要挟，逼迫企鹅物流众人正面决战。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_05_beg', 'CB-5 8:31P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-5</p>
+        <p>8:31P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">敌人为了取得鼠王的情报而在贫民区殴打居民，路过的槐琥与孑路见不平，出手相助，却得知对方的下一个目标正是鱼丸师傅董阿伯。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_05_end', 'CB-5 8:31P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-ST1</p>
+        <p>晚风轻拂</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">卡彭背叛了甘比诺。莫斯提马救下了拜松。鼠王露出了真面目。龙门晚风轻拂。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_st01', 'CB-ST1 晚风轻拂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-6</p>
+        <p>10:26P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">大地的尽头，企鹅物流正进行着无意义的品酒派对。面对追击而来的黑手党，众人选择抄起酒瓶，斗殴正式开始。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_06_beg', 'CB-6 10:26P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-6</p>
+        <p>10:26P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对全力以赴的企鹅物流，甘比诺家族迅速败下阵来，但酒吧也已经被破坏殆尽，恼怒的大帝终于下定决心，正面决战拉开帷幕。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_06_end', 'CB-6 10:26P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-7</p>
+        <p>11:08P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">就在甘比诺决心要与叛徒卡彭做了断的同时，全面铺开情报网络的企鹅物流也找到了卡彭的据点，战斗一触即发。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_07_beg', 'CB-7 11:08P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-7</p>
+        <p>11:08P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">战局一片混乱，莫斯提马也再次现身并加入战局，游刃有余地牵制住了敌方领袖。然而沙暴突然出现，鼠王毫无征兆地出手打散了众人。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_07_end', 'CB-7 11:08P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-8</p>
+        <p>11:41P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">能天使与莫斯提马久别重逢，不过好景不长，莫斯提马很快就告别离开。而能天使与拜松，以及德克萨斯一行，都分别陷入了新的危机。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_08_beg', 'CB-8 11:41P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-8</p>
+        <p>11:41P.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">伊斯遭到了某位黎博利的监视，而莫斯提马也早已知晓鼠王存在。重新汇合的企鹅物流众人得到了大帝的联络，前往派对现场。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_08_end', 'CB-8 11:41P.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-ST2</p>
+        <p>午夜龙门</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">甘比诺与卡彭的决斗再次被槐琥与孑打断。这两位龙门年轻人一定要让肆意妄为的黑手党付出代价。同时，鼠王在墓地约见了一位老友。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_st02', 'CB-ST2 午夜龙门')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-9</p>
+        <p>0:01A.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">鼠王出现并救下了槐琥与孑。卡彭也刺伤了甘比诺，并希望以此投诚，却遭到鼠王拒绝。黑手党早已被鼠王吞噬，这一切尽在他的掌握。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_09_beg', 'CB-9 0:01A.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-9</p>
+        <p>0:01A.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">槐琥二人与企鹅物流一行在露天派对相遇，出于发泄目的，槐琥与德克萨斯打成一团。大帝的演出正值高潮，却突然被鼠王刺穿了身体。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_09_end', 'CB-9 0:01A.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-10</p>
+        <p>1:11A.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">鼠王统领的本地帮派和收编的黑手党一起对企鹅物流发起了猛攻，莫斯提马亲自牵制鼠王，拜松也终于打开心结，加入战局。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_10_beg', 'CB-10 1:11A.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-10</p>
+        <p>1:11A.M.</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">企鹅物流全员联手，最终靠着拜松管家的偷袭击败了鼠王，为了解除鼠王留下的炸弹，拜松选择舍命一搏，而真相却让人大跌眼镜。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_10_end', 'CB-10 1:11A.M.')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-ST3</p>
+        <p>破晓时分</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">废弃的酒吧里，把酒言欢，畅所欲言，来自拉特兰的苦难陈述者（？）将会带走莫斯提马，而新一轮的斗殴也蓄势待发，日出了。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_st03', 'CB-ST3 破晓时分')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-EX1</p>
+        <p>群架诀窍</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">看似闹剧的背后，真正的幕后人们相聚在废弃的酒吧。当日出时，老友们并肩而立，看着新的事物缓缓前进。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_ex01_end', 'CB-EX1 群架诀窍')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-EX2</p>
+        <p>南辕北辙</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">负伤逃离龙门的甘比诺与卡彭再次在小径相遇，而他们的决斗依然惯例般的中断——有不速之客出现在了二人面前。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_ex02_end', 'CB-EX2 南辕北辙')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>CB-EX3</p>
+        <p>林中小屋</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">你会错过关于大帝不死之谜的讨论。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act5d0/level_act5d0_ex03_end', 'CB-EX3 林中小屋')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act9d0">
+<h2>生于黑夜</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>DM-1</p>
+        <p>埋藏</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">卡兹戴尔混乱的战场上，雇佣兵赫德雷与伊内丝接纳了这位来历不明的战士——一个W死去 ，一个W加入。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_01_beg', 'DM-1 埋藏')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-1</p>
+        <p>埋藏</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">数月后，在一场徒劳的刺杀结束后，从卡兹戴尔归来的信使带来的是“巴别塔”的任务，在不安之中，雇佣兵们接受了命运。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_01_end', 'DM-1 埋藏')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-2</p>
+        <p>偶然</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">解决了“同伴”后，W与赫德雷、伊内丝决定兵分三路。率先汇合的W和伊内丝因口角而刀剑相向，而运输队也在此时悄然抵达。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_02_beg', 'DM-2 偶然')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-2</p>
+        <p>偶然</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">敌人迅速打散了雇佣兵队伍，醒来的伊内丝被迫与W并肩作战。伊内丝假意抛弃W来埋伏追兵，但她们依旧落入了强敌的包围。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_02_end', 'DM-2 偶然')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-3</p>
+        <p>挤压</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">当W恢复意识时，雇佣兵们已经被转移到了昔日的罗德岛号上。赫德雷参与了一场会议，而小心翼翼侦查环境的W，则遇到了她的王。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_03_beg', 'DM-3 挤压')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-5</p>
+        <p>旗帜</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">赫德雷依旧选择脱离巴别塔，与凯尔希道别后，两位老兵在撤离的途中聊了许多，而留在那里的W正为了赢得王的赞许而努力。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_03_end', 'DM-5 旗帜')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-6</p>
+        <p>远遁</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">一夜之间，战争倾斜。得知情报的赫德雷被迫重回战场，找到了疯狂复仇中的W。赫德雷邀请W回到队伍，而他们将前往乌萨斯的冻土。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_04_beg', 'DM-6 远遁')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-6</p>
+        <p>远遁</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">雇佣兵队伍转移的途中遭遇了天灾，被迫后退的途中，W依旧展现出她疯狂的态度想要观赏天灾——而这只是为了遮掩她与信使的会面。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_04_end', 'DM-6 远遁')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-7</p>
+        <p>龟裂</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">Scout在斩首了佣兵领袖后，如约遭到了W小队的追杀。尽管伊内丝有放过老战友的心思，但Scout早已做出了抉择。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_05_beg', 'DM-7 龟裂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-7</p>
+        <p>龟裂</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">为了将自己的见闻告知W，伊内丝铤而走险，并遭遇了整合运动的拦截，最后的时刻，她的眼前唯有阴影。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_05_end', 'DM-7 龟裂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-8</p>
+        <p>离散</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">爱国者曾向W询问卡兹戴尔的过往，而眼下，赫德雷也不得不为了蒙蔽敌手而前往维多利亚。孑然一身的W将要决定自己的命运。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_06_beg', 'DM-8 离散')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-8</p>
+        <p>离散</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对王庭与赦罪师，赫德雷惊恐地发现摄政王始终掌握这一切。他和身边的信使必须想办法提醒W。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_06_end', 'DM-8 离散')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>DM-ST-1</p>
+        <p>求生</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">颐气指使的孩子，卑微怯懦的孩子，他们的心中隐藏着隔阂，他们也不得不依靠对方。W看到了可能性，也看到了自己。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act9d0/level_act9d0_st01', 'DM-ST-1 求生')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act11d0">
+<h2>沃伦姆德的薄暮</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>TW-ST-1</p>
+        <p>老栎树下</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">火灾夺走了无辜者的生命，神秘的感染者正伺机待发。
+亚叶与铃兰两位干员苦苦等待于莱塔尼亚失踪的干员安托的回音，得到的却是当地天灾的消息。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_st01', 'TW-ST-1 老栎树下')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-1</p>
+        <p>缄默不言</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">抵达莱塔尼亚城镇沃伦姆德后，亚叶与铃兰遭遇了当地的宪兵队长塞弗林。然而后者显然有什么隐瞒着罗德岛。交谈之际，城镇中竟然出现了感染者发起了暴乱。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_01_beg', 'TW-1 缄默不言')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-1</p>
+        <p>缄默不言</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在解决了暴乱的感染者后，罗德岛一行得到了沃伦姆德的接待。但各怀心思的隐瞒似乎成为了隔阂，亚叶开始心生疑虑，希望赶紧去寻找干员安托的下落。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_01_end', 'TW-1 缄默不言')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-2</p>
+        <p>叛乱前哨</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">在寻访沃伦姆德街道的途中，亚叶询问着当地少女塔佳娜有关安托的事情，但众人却不小心撞入了感染者集会的现场引起了感染者的攻击。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_02_beg', 'TW-2 叛乱前哨')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-2</p>
+        <p>叛乱前哨</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">潜入沃伦姆德的外来者煽动了叛乱，在罗德岛的帮助下，叛乱暂且平息。消除了双方的隔阂，塔佳娜决定将二人带往安托设立的医疗点进行探查。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_02_end', 'TW-2 叛乱前哨')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-3</p>
+        <p>高塔烟火</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">没想到的是，医疗点不久前被人烧毁，种种表现意味着安托凶多吉少。失落的亚叶想要回去确认安托的遗体，却在这时遭遇了正在进攻城市的泥岩小队的感染者。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_03_beg', 'TW-3 高塔烟火')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-3</p>
+        <p>高塔烟火</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">塞弗林一度想要对感染者痛下杀手，却因为亚叶等人的归来而中断。众人以为可以松一口气的时候，城镇的动力炉缺遭到了敌人的破坏。城镇的移动受到了严重的影响，天灾的威胁近在眼前。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_03_end', 'TW-3 高塔烟火')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-4</p>
+        <p>复仇之魂</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">塞弗林在亚叶的逼问之下，答应带众人去往临时停尸房。在那里，老友得以相见。与此同时，在市民中发现了冬灵人的身影，很有可能他们就是煽动暴乱的真凶。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_04_beg', 'TW-4 复仇之魂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-4</p>
+        <p>复仇之魂</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">得知安托之死而陷入焦虑的亚叶，被铃兰说服，两人开始为了寻找冬灵人相关的线索东奔西走。与此同时，灰喉等人也遭遇了武装感染者的领袖：整合运动，泥岩。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_04_end', 'TW-4 复仇之魂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-5</p>
+        <p>冬灵挽歌</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">落日中的街道忽然回响起歌声，塞弗林认为这是敌人串通的信号而展开搜捕。到底是应该阻止战斗展开救援，还是继续寻找真凶，铃兰和亚叶此时也产生了分歧。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_05_beg', 'TW-5 冬灵挽歌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-5</p>
+        <p>冬灵挽歌</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">为了掩护民众，塔佳娜冒着生命危险冲入暴乱正中。所幸灰喉与断崖及时加入，但暴乱依然在失控边缘。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_05_end', 'TW-5 冬灵挽歌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-6</p>
+        <p>怒意漫延</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">灰喉救出了陷入危机的塔佳娜。亚叶在审问一名叛乱者后得知了沃伦姆德骚乱的部分真相，也得知了“整合运动”的存在。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_06_beg', 'TW-6 怒意漫延')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-6</p>
+        <p>怒意漫延</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">泥岩对事态感到不安，铃兰也遇见了自称“最后一个冬灵人”的老人，灰喉发现线索对不上号。群情激奋，冲突似乎已经难以避免。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_06_end', 'TW-6 怒意漫延')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-7</p>
+        <p>群峦崩塌</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">铃兰将新的线索分享给众人。在众人思考之际，愤怒的民众擅自包围了十二音街道。同样受到民众威胁的泥岩小队开始向城镇出动，事态进一步恶化。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_07_beg', 'TW-7 群峦崩塌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-7</p>
+        <p>群峦崩塌</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">三方在城镇中展开混战，塞弗林因为自身的病症倒下。灰喉找到的嫌疑人也已死去，线索已断，这也动摇了亚叶的内心。泥岩下定了决心，准备展现真正的实力。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_07_end', 'TW-7 群峦崩塌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-8</p>
+        <p>月光沉沦</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">被烧死的镇民触动了塔佳娜的神经，因为嫌疑人之死感到迷茫的亚叶被迫走上战场。罗德岛面对整合运动的萨卡兹，泥岩小队。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_08_beg', 'TW-8 月光沉沦')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-8</p>
+        <p>月光沉沦</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">苦战以塞弗林的突入终结，塞弗林试图以死平息动乱，却被罗德岛制止。泥岩改变了自己的想法，平息了战斗。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_08_end', 'TW-8 月光沉沦')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-ST-2</p>
+        <p>余烬之上</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">暴乱结束后，众人意识到真相已经遥不可及。为了城镇的安宁，只能任其深藏。城镇的人们重新团结起来，通过迁移逃离天灾。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_st02', 'TW-ST-2 余烬之上')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-S-1</p>
+        <p>三座巨像</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">毕德曼看着门外，恐慌的感觉自内心溢出。那不是纵火犯，那只是一个可怕的提案。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_sub-1-1_end', 'TW-S-1 三座巨像')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>TW-S-2</p>
+        <p>一束哀悼</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在火灾现场，亚叶与铃兰遇见了同样前来献花的泥岩。所有人都希望能阻止什么，所有人都没能做到。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act11d0/level_act11d0_sub-1-2_end', 'TW-S-2 一束哀悼')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act12d0">
+<h2>密林悍将归来</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>RI-1</p>
+        <p>高空坠物</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">前往嘉维尔家乡的途中，飞行器遭到了不明攻击。
+嘉维尔与刻俄柏将博士唤醒，三人一同前往飞行器的坠落点，却发现飞行器被围住了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_01_beg', 'RI-1 高空坠物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-1</p>
+        <p>高空坠物</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">解决后，嘉维尔发现对方是自己旧识的手下，随后，引擎被发现抢走了。
+同时，嘉维尔的崇拜者特米米出现，一行决定分头行动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_01_end', 'RI-1 高空坠物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-2</p>
+        <p>粗细有别</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">一路上，特米米向博士解释了这一带的情况。
+路上，一场围绕尾巴起的争执引起了嘉维尔的注意。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_02_beg', 'RI-2 粗细有别')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-2</p>
+        <p>粗细有别</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">小插曲后，一行终于接近了目的地——祭典举办场地。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_02_end', 'RI-2 粗细有别')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-3</p>
+        <p>往昔</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">观看祭典时，特米米向博士讲述了嘉维尔小时候的英姿。
+这时，刻俄柏闯入了祭典现场。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_03_beg', 'RI-3 往昔')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-3</p>
+        <p>往昔</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">刻俄柏的精神状态尚未恢复，大闹一场后跑走，嘉维尔追寻无果后返回。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_03_end', 'RI-3 往昔')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-4</p>
+        <p>机兽咆哮</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">嘉维尔的旧识——祖玛玛的出现，将气氛推往了最高潮。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_04_beg', 'RI-4 机兽咆哮')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-4</p>
+        <p>机兽咆哮</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">祖玛玛在台上所向披靡，引得嘉维尔忍不住跳上台与她比试。
+祖玛玛眼看要落败，用出了准备已久的底牌——机械巨兽“巨大的丑东西”！
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_04_end', 'RI-4 机兽咆哮')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-ST-1</p>
+        <p>悍将之心</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">嘉维尔从昏迷中醒来，爽快地接受了自己的失败。
+但是祖玛玛无视矿石病的风险开采铁矿的可能性让她决心去问个清楚。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_st01', 'RI-ST-1 悍将之心')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-5</p>
+        <p>各有所长</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">特米米有事暂时离开，嘉维尔与博士在依娜姆的部族遇到了失散的可颂。
+而与依娜姆谈话时，她的部族却遭到了袭击，袭击者竟是宴。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_05_beg', 'RI-5 各有所长')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-5</p>
+        <p>各有所长</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">击败宴后，她的理由令人啼笑皆非。依娜姆口中的特米米令嘉维尔有些动容。
+壮大的队伍继续前进。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_05_end', 'RI-5 各有所长')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-6</p>
+        <p>邂逅</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">返回自己部族的路上，祖玛玛得知嘉维尔要找她的消息。
+名叫克玛尔的战士主动请缨去拦住嘉维尔，却在路上遭遇了煌。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_06_beg', 'RI-6 邂逅')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-6</p>
+        <p>邂逅</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">预料之外的计划在众人不知道的地方偷偷酝酿着。
+另一边，扛着克玛尔的煌终于与博士一行汇合。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_06_end', 'RI-6 邂逅')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-ST-2</p>
+        <p>休息时间</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">特米米的部族里，驾驶员迪伦与Lancet-2百无聊赖地聊着天。
+瀑布下，博士一行正在休整，刻俄柏却突然闯入，并向着祖玛玛的部族冲去。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_st02', 'RI-ST-2 休息时间')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-7</p>
+        <p>有客先来</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">祖玛玛的部族中，装备了引擎的大丑终于启动。
+这时，刻俄柏一个人冲进了部族，祖玛玛下令手下去对付她。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_07_beg', 'RI-7 有客先来')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-7</p>
+        <p>有客先来</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">嘉维尔到来后，看准时机让刻俄柏清醒，场面才算平复。
+一番交谈后，嘉维尔发现自己错怪了祖玛玛，而战斗却似乎无法避免。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_07_end', 'RI-7 有客先来')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-8</p>
+        <p>嘉维尔之拳</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">祖玛玛向嘉维尔诉说了自己必须要战胜她的理由。
+而她还未说完，大丑却因为引擎的功率过猛开始暴动，众人为了阻止大丑开始行动。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_08_beg', 'RI-8 嘉维尔之拳')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>IR-8</p>
+        <p>嘉维尔之拳</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">大丑倒下后，祖玛玛认输，并将大酋长之位交给了嘉维尔。
+嘉维尔决定将这个位置转交给特米米，但这反而让她踏出了最后一步。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_08_end', 'IR-8 嘉维尔之拳')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-9</p>
+        <p>走出密林</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">特米米的反叛为整个事件拼上了最后一块拼图，她的计谋眼看即将成功......
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_09_beg', 'RI-9 走出密林')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-9</p>
+        <p>走出密林</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">特米米使出了杀手锏，却早已被博士识破，尘埃落定。
+最终，特米米、祖玛玛、克玛尔都决定前往罗德岛。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_09_end', 'RI-9 走出密林')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>RI-EX-1</p>
+        <p>声东击西</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">因为行动工具的抛锚，AUS不得不进入丛林求助。
+她们和她们带来的音乐引起了当地人剧烈的反响。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act12d0/level_act12d0_ex01_end', 'RI-EX-1 声东击西')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act13d5">
+<h2>玛莉娅·临光</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>MN-ST-1</p>
+        <p>亮相</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">帮助老朋友们修好车辆的玛莉娅·临光，紧接着却出现在了骑士竞技的赛场上。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_st01', 'MN-ST-1 亮相')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-1</p>
+        <p>艾伦精选</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">愤怒的佐菲娅找到了玛莉娅，试图让她放弃骑士竞赛。却反而被说服成为了玛莉娅的教练。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_01_beg', 'MN-1 艾伦精选')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-1</p>
+        <p>艾伦精选</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">尽管遭到了叔叔的反对，玛莉娅依旧在佐菲娅的训练下度过了数周光阴，小有所成。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_01_end', 'MN-1 艾伦精选')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-2</p>
+        <p>呼啸守卫</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">玛莉娅的名声吸引来了不少对手，这一战，对阵呼啸骑士团大先锋“塑料”瑟奇亚克。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_02_beg', 'MN-2 呼啸守卫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-2</p>
+        <p>呼啸守卫</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在发现了塑料骑士的弱点后，玛莉娅成功反败为胜，也为她吸引来了更多目光。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_02_end', 'MN-2 呼啸守卫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-3</p>
+        <p>玫瑰报业</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">在赛后的庆功宴上，众人聊起了各自的过往，以及一份来自企业的赞助邀请。下一场比赛近在眼前。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_03_beg', 'MN-3 玫瑰报业')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-3</p>
+        <p>玫瑰报业</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对残暴的锈铜骑士，玛莉娅竭力战平，却因为负伤收到了呵斥。另一面，无胄盟似乎开始有所行动。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_03_end', 'MN-3 玫瑰报业')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-4</p>
+        <p>辉煌盾工业</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">终于浮出水面的发言人开始私下联络赛事，佐菲娅也与玛莉娅敲定了接下来的战略——参加大混战。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_04_beg', 'MN-4 辉煌盾工业')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-4</p>
+        <p>辉煌盾工业</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">玛莉娅与焰尾骑士有了一番畅快对决，最终得到了一个好成绩。然而与此同时，坏消息也传到了佐菲娅耳中。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_04_end', 'MN-4 辉煌盾工业')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-5</p>
+        <p>斯沃玛视频</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">玛莉娅人气水涨船高，也给她带来许多麻烦。佐菲娅劝她见好就收，二人发生分歧，佐菲娅摔门而去。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_05_beg', 'MN-5 斯沃玛视频')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-5</p>
+        <p>斯沃玛视频</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">塑料骑士遭到了发言人的算计，焰尾骑士也遭遇了某些意外，玛莉娅与叔叔再起争执，骑士们的生活都不平静。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_05_end', 'MN-5 斯沃玛视频')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-6</p>
+        <p>蓝耳酒窖</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">发言人竟亲自找来了酒吧与玛莉娅对峙，就在发言人离开没多久，负伤的焰尾骑士带着灰豪骑士狼狈闯入。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_06_beg', 'MN-6 蓝耳酒窖')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-6</p>
+        <p>蓝耳酒窖</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">佐菲娅久违地来到酒吧，得知玛莉娅的对手后大感惊讶——同时，左手骑士无匹的实力令玛莉娅陷入绝境。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_06_end', 'MN-6 蓝耳酒窖')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-7</p>
+        <p>梅什科集团</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">将玛莉娅的心意看在眼里的佐菲娅也改变了心意。在众人的注视下，玛莉娅似乎下定了决心。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_07_beg', 'MN-7 梅什科集团')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-7</p>
+        <p>梅什科集团</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">轻敌的左手给了玛莉娅一击制胜的机会。然而获胜的玛莉娅并无喜悦，深感迷茫。随着左手骑士溃败，暗流开始涌动。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_07_end', 'MN-7 梅什科集团')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-ST-2</p>
+        <p>酒杯</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">随着玛莉娅的获胜，发言人与无胄盟也开始有所动作。一切阴谋都指向下一场大赛。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_st02', 'MN-ST-2 酒杯')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-8</p>
+        <p>商业联合</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">原定的搭档唐突失踪，迫不得已站上赛场的玛莉娅，酝酿的阴谋开花结果，让玛莉娅遇到了远超预料的敌人。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_08_beg', 'MN-8 商业联合')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-8</p>
+        <p>商业联合</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在最后的险要关头，耀骑士冲入战场，奔涌的光芒遮蔽了苦难，姐妹同心，荣耀之战一触即发。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_08_end', 'MN-8 商业联合')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>MN-ST-3</p>
+        <p>缄默启程</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">收拾残局，骑士们将重新踏上征程。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d5/level_act13d5_st03', 'MN-ST-3 缄默启程')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+</div>
+<hr>
+
+<h1>特别行动记述 - 故事集剧情</h1>
+<div class="block" id="mini">
+
+<div class="act" id="act4d0">
+<h2>战地秘闻</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>无名氏的战争</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">罗德岛近卫干员被Scout救下，醒来时恰巧赫拉格与爱国者正在交谈。
+面对Scout留下的嘱托，近卫干员也做出了自己的决定。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st01', ' 无名氏的战争')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>破局者</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">W带队拦截佣兵队伍中的叛逃者，在冲突后，炎客突围离开整合运动。
+而来到罗德岛的炎客，将会遇见另一位故人。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st02', ' 破局者')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>射击训练</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">杰西卡在雷蛇与芙兰卡的指导下，完成她的训练。
+她其实一直很优秀，只是还稍稍缺乏自信。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st03', ' 射击训练')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>存续公正</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">拉特兰公证所派出执行者送葬人，前往叙拉古执行委托。
+送葬人找到了委托目标红云，遵循委托，他将带其前往罗德岛接受治疗。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st04', ' 存续公正')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>课后作业</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">伊芙利特与红在作业问题上产生争执，伊芙利特情绪再度失控，险些暴走。
+但她最终还是在周围的帮助下，努力控制住了自己。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st05', ' 课后作业')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>北极星</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">北地的观测站出现设备异常，为了今后可能会来的探险家，麦哲伦坚持冒险外出维修。
+然而来接她的干员寒檀，却在此时拦住了她。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st06', ' 北极星')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>和光同尘</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">罗德岛内走廊断电，可露希尔邀请凯尔希共同检查电路。
+在可露希尔的引导下，就算是凯尔希，也会吐露出自己的真实想法。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act4d0/level_act4d0_st07', ' 和光同尘')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act6d5">
+<h2>洪炉示岁</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>洪炉示岁·迎春</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">又到岁末，年关将至，龙门声势浩大地进行着筹备，等待着名为“年”的不知名敌人......</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act6d5/level_act6d5_st01', ' 洪炉示岁·迎春')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>洪炉示岁·贺岁</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">敌人造成了巨大的混乱，好在有热心市民和近卫局共同御敌。不过真正的幕后黑手已经伸出爪牙，她面前的，是灾害专家炎熔。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act6d5/level_act6d5_st02', ' 洪炉示岁·贺岁')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>洪炉示岁·拜年</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">为了夺回被年控制的城区，罗德岛与龙门不得不联手孤注一掷。就在战斗接近最高潮的时刻......导演打断了这一切。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act6d5/level_act6d5_st03', ' 洪炉示岁·拜年')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act7d5">
+<h2>午间逸话</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>来办联欢会吧</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">香草托玫兰莎与史都华德照料宠物，路上遇到感染者小女孩和煌。
+几人约好，任务后一起去看望接受治疗的孩子们，并筹备联欢会。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st01', ' 来办联欢会吧')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>日记本</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">白面枭在写日记，她总是用日记记录下所有她不想忘记的、重要的事。
+只是现在，或许比起写字，她更想直接和那些她重视的人聊聊天。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st02', ' 日记本')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>今日厨房</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">角峰听从银灰的吩咐，单独为崖心准备午餐。
+顺手给前来觅食的伊桑也做了菜的角峰没有料到，伊桑竟也为他准备了一份惊喜。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st03', ' 今日厨房')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>流浪者的归宿</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">芙蓉姐妹将带回的流浪者托付给火神暂时照料，火神替其取名叫做刻俄柏。
+现在，是需要刻俄柏自己判断，是否加入罗德岛的时候了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st04', ' 流浪者的归宿')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>自讨苦吃</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">面对犹豫是否应该转入后勤部门的梓兰，月见夜讲述了关于自己过去的故事。
+不论过去如何，重要的是现在，自己想要的是怎样的生活。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st05', ' 自讨苦吃')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>向前走</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">芬与米格鲁、克洛斯一起来到杜宾的房间，无意中发现了杜宾房中破旧的铭牌。
+杜宾很少诉说过去，今天却恰好有了兴致。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act7d5/level_act7d5_st06', ' 向前走')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act10d5">
+<h2>乌萨斯的孩子们</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>习惯</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">坚雷指出古米攻击时的奇怪习惯，古米尝试克服，却没能成功。
+她的习惯都是过去经历留下的疤痕，想要淡化，或许还需要一点点时间。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st01', ' 习惯')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>被选择的</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">真理在宿舍内尝试自我诊疗，正巧此时干员梅敲门拜访。
+与梅一同前来的，还有乌萨斯学生自治团中的另一成员娜塔莉娅。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st02', ' 被选择的')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>在梦中相遇</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">凛冬在噩梦中无法醒来。
+她总是会做这样的梦。她会一直做这样的梦。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st03', ' 在梦中相遇')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>表里不一</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">凛冬找上自治团的同伴娜塔莉娅，两人都怀有想要询问的问题，也有想要向他人倾诉的心事。
+问题未被解决，但今后她们会一起走。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st04', ' 表里不一')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>胡言秘语</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">喝蜂蜜饮料喝醉了的烈夏，向猎蜂能讲述她曾经历的“光辉事迹”。
+其中有一些事，可能就连自治团的其他成员，也并不知情。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st05', ' 胡言秘语')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>一切照常</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">阿米娅收到一份转调前线申请，来自凛冬小团体中唯一还留在后勤部门的娜塔莉娅。
+商议之后，博士决定去看一看这个递交申请的女孩。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st06', ' 一切照常')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>在春天之前</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">卓娅从被占领的学校中逃出，途中遇到父亲的同僚，自对方口中得知了现状。
+母亲生死未卜，父亲为救援学生，已前往彼得海姆中学。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act10d5/level_act10d5_st07', ' 在春天之前')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="act13d0">
+<h2>踏寻往昔之风</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>归处</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">史尔特尔和陨星一起来到了任务地点——偏远的矿区聚落，贝尼罗村。
+除了完成罗德岛的任务，史尔特尔还要在这里寻找自己过去的痕迹。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st01', ' 归处')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>域外同族</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">芳汀需要去工坊办理证明，但此时工坊中只有学徒安德切尔，不想白跑一趟的芳汀请同族检查武器，顺带聊些萨科塔人的话题。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st02', ' 域外同族')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>不知返</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">和清流讨论着炎国传统节日的极境，遇到为保养武器向棘刺讨教的苦艾，在交谈中，极境回忆起自己的故乡。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st03', ' 不知返')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p> 回首</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">泥岩带领小队会到卡兹戴尔，却遭到了神秘术师的截杀，前进还是回望过去的深渊，他们必须做出选择。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st04', '  回首')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>四月的歌</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">任务归来的四月，恰好见到了和信使交谈的安赛尔，好奇的她上前和安赛尔谈。交谈过后，她明白了一些过去不曾想到的事情。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st05', ' 四月的歌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>交错光影</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">在Ms.Christine的带领下，人事干员找到傀影并向其询问档案相关的问题。傀影的回答并非谎言，却让在场的人感到困惑。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st06', ' 交错光影')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>天空的故事</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">故事吸引故事，然后带来更多的故事。小干员们在节日宴会间隙所讲述的，乃是古代流传下来的，属于天空的故事。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('activities/act13d0/level_act13d0_st07', ' 天空的故事')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+</div>
+<hr>
+
+<h1>主线剧情</h1>
+<div class="block" id="main">
+
+<div class="act" id="main_0">
+<h2>黑暗时代·上</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>序章·上</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">切尔诺伯格核心区，少女将棺中之人——博士唤醒。
+名为阿米娅的少女试图向博士解释现状，整合运动却在这时对他们发动了袭击。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/guide/beg/0_welcome_to_guide', ' 序章·上')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p></p>
+        <p>序章·下</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">带队赶来救援的杜宾向众人阐明现状。
+谈话间，罗德岛的后勤管理系统PRTS与阿米娅建立了联系，并将博士重新纳入系统之中。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/guide/beg/2_gudie_to_home', ' 序章·下')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-1</p>
+        <p>坍塌</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">切尔诺伯格中一片混乱，整合运动四处烧杀掠夺，秩序已然崩溃。
+明知应该撤退，但为了救人，罗德岛还是毅然出手。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-01_beg', '0-1 坍塌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-1</p>
+        <p>坍塌</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">解决了敌人之后，阿米娅却因感染者的身份被平民恐惧。
+为了让博士了解现状，阿米娅和杜宾简单解释了感染者和罗德岛的状况。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-01_end', '0-1 坍塌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-2</p>
+        <p>守卫</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">电视中播放着胜利的喜讯，然而现实中，一切都在预示着切尔诺伯格的毁灭。
+但对小心谨慎的罗德岛来说，他们尚有一线生机——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-02_beg', '0-2 守卫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-2</p>
+        <p>守卫</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">博士一行遭遇了乌萨斯军警，一触即发之际，杀出一队有头领的特殊整合运动。
+面对整合运动，乌萨斯军警放过了罗德岛一行。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-02_end', '0-2 守卫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-4</p>
+        <p>混战</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">撤退还在继续。博士一行终于与赶来支援的Ace完成汇合。
+Ace接受了博士失忆的事实，并表示依然愿意接受指挥。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-04_beg', '0-4 混战')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-6</p>
+        <p>强击</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">整合运动的残酷让干员们心寒。
+然而，无论整合运动在天灾降临之际掀起争端意味着什么。眼下的当务之急，依然是撤离。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-06_end', '0-6 强击')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-7</p>
+        <p>感染</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">喘息之际，众人讨论起整合运动的古怪行动。
+在短暂的讨论中，杜宾指出，如果对方的领袖如她所想，那么一切或许只是刚刚开始。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-07_beg', '0-7 感染')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-7</p>
+        <p>感染</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">失去联络的恐慌在队员之间传播。
+与此同时，刚才遭遇的整合运动头领再次出现在博士一行面前，并且这一次，来的不只有她。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-07_end', '0-7 感染')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-8</p>
+        <p>狩猎</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">名为弑君者的女人嗤笑着离开，而名为梅菲斯特的男孩则拦在了博士一行面前。
+梅菲斯特带着不可一世的狂妄，向罗德岛发出邀请。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-08_beg', '0-8 狩猎')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-9</p>
+        <p>临光</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">梅菲斯特拥有与他的狂妄相匹的实力。在他的指挥下，罗德岛小队竟显出颓势。
+危急时刻，耀骑士临光，及时赶到。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-09_end', '0-9 临光')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-10</p>
+        <p>困境</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">临光的讽刺激怒了梅菲斯特，名为浮士德的狙击手悍然出手。
+浮士德的精湛狙击技巧令人惊叹，但既然对方已经出手，自然就有应对之法。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-10_beg', '0-10 困境')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>0-11</p>
+        <p>突围</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">突围成功，不过，敌方的实力在众人心中留下了深刻印象。
+而另一边，梅菲斯特与浮士德稍作休整，重新投入了他们的事业之中。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_00-11_end', '0-11 突围')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_1">
+<h2>黑暗时代·下</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>1-1</p>
+        <p>孤岛</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">天灾的压力不断啃噬着博士一行的精神力，而临光闹出的小小插曲稍微打消了一点紧张的气氛。
+回家的路途还在继续。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-01_beg', '1-1 孤岛')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-1</p>
+        <p>孤岛</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">博士一行途经一家名为阿撒兹勒的诊所。
+曾几何时的交流与如今人去楼空的荒凉，勾起了阿米娅对于感染者处境的一些想法。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-01_end', '1-1 孤岛')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-3</p>
+        <p>狂奔</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">站在教官的立场上，杜宾对于阿米娅有更高期望。不过她也承认了博士的指挥能力。
+留给众人的时间已经不多了，博士决定正面突破。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-03_beg', '1-3 狂奔')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-3</p>
+        <p>狂奔</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">没有时间犹豫，众人继续向前冲刺。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-03_end', '1-3 狂奔')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-4</p>
+        <p>先兆</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">博士一行来到一处空地，整合运动正在对平民施暴，阿米娅想要救援却被Ace制止。
+他们有更重要的事要做，他们必须继续前进。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-04_beg', '1-4 先兆')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-6</p>
+        <p>灾难</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">一个女人站在高楼之上，将博士一行的奋战收入眼底。
+随后，在她唱诗般的言语中，天空陷入血色。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-06_beg', '1-6 灾难')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-7</p>
+        <p>暴君</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">为了救助医疗干员，博士将自己暴露在危险之中，所幸被临光救下。
+而在这种情况之下，整合运动依然发动了攻击。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-07_beg', '1-7 暴君')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-7</p>
+        <p>暴君</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">整合运动从各个角落涌现出来，将博士一行困在了广场当中。
+然后，整合运动的暴君——塔露拉，向他们缓缓走来。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-07_end', '1-7 暴君')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-8</p>
+        <p>意志</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">面对塔露拉的强横，阿米娅选择了■ ■ ■ ■。
+但阿米娅终究还是无法阻止塔露拉。就在她要坚持不住时，Ace站在了她的身前——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-08_beg', '1-8 意志')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-10</p>
+        <p>残留</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">杜宾与临光哀叹扼腕，阿米娅在博士怀中默默无声。
+她们都知道，Ace再也回不来了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-10_end', '1-10 残留')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-12</p>
+        <p>代价</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">眼看着就要完成撤退，名为W的不速之客出现在了博士一行的面前。
+面对她嘲弄般的质问，阿米娅毫不退缩，给出了自己的答案。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-12_beg', '1-12 代价')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>1-12</p>
+        <p>代价</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">一番交战过后，W突然放博士一行离开，而塔露拉竟也下令不再追逐。
+带着疑惑、悲伤和深深的疲惫，众人终于踏上了回家的道路。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_01-12_end', '1-12 代价')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_2">
+<h2>异卵同生</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>2-1</p>
+        <p>龙门之行</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">
+接踵而至的任务并没有给博士太多休息的时间。
+在切城的行动后，罗德岛收到了龙门的合作协议，下一步无疑需要前往龙门了。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-01_beg', '2-1 龙门之行')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-1</p>
+        <p>龙门之行</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">龙门5区检疫口，博士一行与龙门近卫局的陈会面。
+在陈的带领下，几人踏入龙门首脑魏彦吾的办公室，而在那里，谈判已经开始。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-01_end', '2-1 龙门之行')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-2</p>
+        <p>兵不接刃</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">谈判的目的是建立龙门与罗德岛关于处理整合运动的合作关系。
+过程中，魏彦吾提出，要确认罗德岛的军事实力。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-02_beg', '2-2 兵不接刃')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-2</p>
+        <p>兵不接刃</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在陈的描述之下，罗德岛的实力得到肯定，但魏彦吾认为罗德岛要价太高。
+阿米娅冷静地发表一番言论，魏彦吾似乎终于被说服。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-02_end', '2-2 兵不接刃')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-3</p>
+        <p>无罪推定</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">龙门贫民窟中，在与雷蛇和芙兰卡汇合后，一行接到了陈的通讯，要求寻找一名名叫米莎的乌萨斯少女。
+罗德岛决定展开行动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-03_beg', '2-3 无罪推定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-3</p>
+        <p>无罪推定</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在废弃的大楼中，罗德岛一行找到了米莎。
+一番交谈后，米莎虽然不情愿，但还是选择了跟随罗德岛离开。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-03_end', '2-3 无罪推定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-4</p>
+        <p>企鹅物流</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">米莎的事让雷蛇有些疑虑，但眼下也只能按照要求行动。
+与企鹅物流的能天使汇合后，能天使指出一个事实——她们被围堵了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-04_beg', '2-4 企鹅物流')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-4</p>
+        <p>企鹅物流</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">为了确认路线，能天使前去探路。
+等待期间，米莎得知罗德岛的目的是把自己移交给近卫局后，认为阿米娅欺骗了自己。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-04_end', '2-4 企鹅物流')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-5</p>
+        <p>高空坠物</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">企鹅物流的另一名员工——德克萨斯带来了撤退路线的信息。
+然而，这股整合运动的表现让众人感到不安——他们的首领似乎认识米莎。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-05_beg', '2-5 高空坠物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-5</p>
+        <p>高空坠物</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">一行带着米莎撤退，而名为碎骨的整合运动首领没有追赶。
+另一边，能天使让众人往楼顶集合，她选择的路线竟然是......
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-05_end', '2-5 高空坠物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-6</p>
+        <p>握紧扶手</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">龙门贫民窟楼顶之间似乎确实可以用跳跃来进行转移。
+然而，本以为万无一失的妙招，似乎整合运动也想到了，战斗也在所难免。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-06_beg', '2-6 握紧扶手')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-6</p>
+        <p>握紧扶手</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">突破了整合运动之后，罗德岛一行完成了转移。
+然而似乎是无法适应此前高强度的移动，米莎的身体状况出现了问题。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-06_end', '2-6 握紧扶手')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-7</p>
+        <p>注意卫生</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">医疗小队认为米莎的矿石病属于急性，需要马上接受治疗。
+但另一边，整合运动和普通感染者发生了矛盾。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-07_beg', '2-7 注意卫生')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-7</p>
+        <p>注意卫生</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">虽然救下了人，但他们被毁掉的家园已经无法复原，众人心中怅然。
+而为了完成与龙门的约定，一行需要继续前进。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-07_end', '2-7 注意卫生')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-8</p>
+        <p>不做约定</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">与陈汇合后，罗德岛将米莎移交给龙门。做下再会的约定后，阿米娅与米莎挥手告别。
+事情暂时告一段落。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-08_beg', '2-8 不做约定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-8</p>
+        <p>不做约定</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">阿米娅直觉事情不会这么简单结束。
+另一边，弑君者与塔露拉的对话，似乎预示着，有什么事即将发生。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-08_end', '2-8 不做约定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-9</p>
+        <p>操作暗箱</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">混入龙门的整合运动数量远超想象，并且他们的行动越来越不掩饰。
+在碎骨的带领下，他们竟然主动向罗德岛发起进攻。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-09_beg', '2-9 操作暗箱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-9</p>
+        <p>操作暗箱</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">阿米娅决定撤退，然而，碎骨却早已带队等候着她们。
+另一边，转移过程中，陈对米莎说出她被寻找的理由，殊不知，危机正在靠近。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-09_end', '2-9 操作暗箱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-10</p>
+        <p>病入膏肓</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">随着碎骨的步步紧逼，罗德岛逐渐被逼入一条死胡同。
+面对碎骨饱含仇恨的指责与质问，阿米娅也作出了铿锵的回应，战斗一触即发。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-10_beg', '2-10 病入膏肓')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>2-10</p>
+        <p>病入膏肓</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">整合运动撤退了，却不是因为战力上的原因而撤退的。
+另一边，激战中的陈却被告知，所有增援全都被拦住，而对方仅有一人。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_02-10_end', '2-10 病入膏肓')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_3">
+<h2>二次呼吸</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>3-1</p>
+        <p>会合</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">汇合后，罗德岛得知米莎被W劫走。在阿米娅的追问下，陈终于说出了米莎的秘密。
+这一次，近卫局决定与罗德岛联手。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-01_beg', '3-1 会合')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-1</p>
+        <p>会合</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">整合运动的渗透令人防不胜防，众人再次明确，首要目标是夺回米莎。
+罗德岛先锋，企鹅物流辅助，近卫局主攻，行动正式开始。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-01_end', '3-1 会合')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-2</p>
+        <p>记忆</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">近卫局特别督查组的星熊带领小队赶来与众人汇合。
+性格豪迈的她直率地称赞了罗德岛，并毫不犹豫地投入了战斗之中。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-02_beg', '3-2 记忆')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-2</p>
+        <p>记忆</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">米莎和碎骨终于重逢，然而一切都已经不再像从前那样。
+碎骨带着满腔的仇恨控诉着一切，故人的剧变令米莎感到陌生，却又有一丝感同身受。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-02_end', '3-2 记忆')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-3</p>
+        <p>回旋</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">能天使、德克萨斯二人组在敌人阵中大闹一场，吸引了对方绝大部分的注意力。
+而另一边，罗德岛的队伍也终于赶到，投入战局——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-03_beg', '3-3 回旋')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-3</p>
+        <p>回旋</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">罗德岛的袭击使得碎骨不得不做出行动，面对米莎的迟疑，碎骨毫不犹豫地做出了否定。
+而W更是在此时献上了一条计谋。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-03_end', '3-3 回旋')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-4</p>
+        <p>龟裂</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">整合运动的埋伏被芙兰卡轻易看破，罗德岛决定乘胜追击。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-04_beg', '3-4 龟裂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-4</p>
+        <p>龟裂</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">被看破的埋伏只是障眼法，一切都是在为那瞄准博士的一击做准备。
+即使第一击被挡住，处心积虑的第二击也终于向着博士激射而去——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-04_end', '3-4 龟裂')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-5</p>
+        <p>呼叫</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">阿米娅悍然出手，电光火石之间，碎骨已经倒在了地上。
+整合运动也开始了行动，他们竟然折返了回来，只是为了夺回碎骨的尸体。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-05_beg', '3-5 呼叫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-5</p>
+        <p>呼叫</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">W被罗德岛包围，而她的目的竟是为了将一个移动电话交到阿米娅手中。
+电话中传来米莎的声音，而这一次，她的声音带着一种决绝。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-05_end', '3-5 呼叫')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-6</p>
+        <p>决定</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">时间并不会停下等人，眼下能做的，只有继续行动。
+侦察到整合运动的行踪后，罗德岛与近卫局制定好计划，展开了分头行动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-06_beg', '3-6 决定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-6</p>
+        <p>决定</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">碎骨奄奄一息，拥有治愈能力的梅菲斯特不见踪影。
+W断言这支队伍已经失去希望，让米莎跟随她离开，但米莎却不这么认为。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-06_end', '3-6 决定')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-7</p>
+        <p>轰鸣</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">芙兰卡、雷蛇、星熊三人各自在战场上大显身手。
+与攻破侧翼的阿米娅队伍汇合后，眼前只剩下整合运动最后的阵地——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-07_beg', '3-7 轰鸣')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-7</p>
+        <p>轰鸣</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">芙兰卡搜索了一遍营地，却没有找到米莎的踪迹。
+而不远处，本应死去的碎骨，居然重新站在了众人面前。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-07_end', '3-7 轰鸣')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-8</p>
+        <p>黄昏</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">双方的思绪如同平行线，虽然笔直，却没有交点。
+即使阿米娅认出了“碎骨”，一切也已经没有了挽回的余地。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-08_beg', '3-8 黄昏')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>3-8</p>
+        <p>黄昏</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">“碎骨”再次倒下，但没有人露出笑容。陈没有安慰阿米娅，只是难得吐露了一些心声。
+带着各种各样的思绪，众人踏上归途。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_03-08_end', '3-8 黄昏')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_4">
+<h2>急性衰竭</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>4-1</p>
+        <p>免费拥抱</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">回到罗德岛的阿米娅似乎有一些疲惫与迷茫，凯尔希也向博士暗示了阿米娅身上的秘密。
+短暂的休息后，新的事情又在等待着他们。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-01_beg', '4-1 免费拥抱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-1</p>
+        <p>免费拥抱</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">切城分城废墟中，陨星、霜叶、杰西卡组成的小队正在执行探索任务。
+罗德岛舰桥上，阿米娅也与黑钢和企鹅物流完成了暂时的告别。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-01_end', '4-1 免费拥抱')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-2</p>
+        <p>雨中漫步</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">废墟中，陨星小队遭遇了残留在城里的整合运动。
+向凯尔希报告后，她们继续行动，而霜叶发现，周围气温似乎有些诡异。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-02_beg', '4-2 雨中漫步')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-2</p>
+        <p>雨中漫步</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">贫民窟中阿米娅遇到了一个感染者孩童，对方的活泼令她又一次动摇。
+而后，她遇到了陈，而这一次，陈似乎和平时不太一样。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-02_end', '4-2 雨中漫步')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-3</p>
+        <p>人工制冷</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">与博士汇合的阿米娅似乎有了一些变化，她虽然依然带着迷茫，但已经有了一些方向。
+与此同时，凯尔希发来通讯，有新的情况发生。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-03_beg', '4-3 人工制冷')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-3</p>
+        <p>人工制冷</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">废城中，陨星小队发现了一支与众不同的整合运动队伍。
+这支队伍正是让气温下降的元凶，而这让霜叶回想起了一个有关雪怪的传闻。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-03_end', '4-3 人工制冷')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-4</p>
+        <p>不要恐慌</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">与陈交换情报后，阿米娅提出与近卫局联合行动，却被陈拒绝。
+这时，杰西卡发来通讯，她们发现了整合运动的两个首领，W与梅菲斯特。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-04_beg', '4-4 不要恐慌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-4</p>
+        <p>不要恐慌</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">被发现后，陨星小队试图反击，却被梅菲斯特无情压制，并且雪怪小队也在靠近。
+危急之下，霜叶向阿米娅发出警告——不要来。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-04_end', '4-4 不要恐慌')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-5</p>
+        <p>官僚主义</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">不止陨星小队，其他侦查队伍也遭到了袭击。
+即使是陈，也不得不承认，情况刻不容缓。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-05_beg', '4-5 官僚主义')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-5</p>
+        <p>官僚主义</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">陈终于松口，决定与罗德岛合作。
+而与凯尔希交流过后，阿米娅决定前去营救陨星小队。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-05_end', '4-5 官僚主义')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-6</p>
+        <p>少见多怪</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">罗德岛一行来到分城废墟，城里的状况令人在意。
+交谈中，有什么人引起了陈的注意，她独自追去，一行想要跟上却被整合运动阻拦。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-06_beg', '4-6 少见多怪')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-6</p>
+        <p>少见多怪</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">交战后，陈已然不见身影。
+面对前方的源石丛多生地段，与星熊交流过后，阿米娅决定带领罗德岛突入，近卫局则留在外围支援。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-06_end', '4-6 少见多怪')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-7</p>
+        <p>各取所需</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">发现陨星小队留下的战斗痕迹令人多少有些安心，凯尔希传来的情报则喜忧参半。
+一行继续前进，而凯尔希似乎也打算有所行动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-07_beg', '4-7 各取所需')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-7</p>
+        <p>各取所需</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">一行终于找到了陈，并说服她返回与近卫局汇合。
+而罗德岛还需要营救陨星小队，也就是说，接下来，罗德岛又将孤军奋战。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-07_end', '4-7 各取所需')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-8</p>
+        <p>应激反应</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">来到坐标位置，一行首先与霜叶汇合。
+霜叶表示情况复杂，难以马上解释，当务之急，是先去营救陨星她们。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-08_beg', '4-8 应激反应')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-8</p>
+        <p>应激反应</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在霜叶的带领下，一行找到了陨星与杰西卡，但杰西卡却因为此前的经历而陷入了巨大的恐惧。
+在阿米娅的引导下，她逐渐走出了恐惧。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-08_end', '4-8 应激反应')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-9</p>
+        <p>彻入骨髓</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">不等众人松一口气，梅菲斯特再次出现，在他的话语下，整合运动再一次向世人宣告了自己的存在。
+这一次，阿米娅决定不再后退。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-09_beg', '4-9 彻入骨髓')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-9</p>
+        <p>彻入骨髓</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对阿米娅等人的势如破竹，梅菲斯特却依然游刃有余。
+眼看就要触及梅菲斯特，一切却似乎在这一瞬间降至冰点。霜星来了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-09_end', '4-9 彻入骨髓')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-10</p>
+        <p>灯火将熄</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">面对霜星压倒性的强大，一行陷入了苦战。
+但无论如何，现在也不是退缩的时候。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-10_beg', '4-10 灯火将熄')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>4-10</p>
+        <p>灯火将熄</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">霜叶的努力为阿米娅争取到了一个破局的机会，众人终于得以撤退。
+然而等待她们的，却是龙门危险的消息......
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_04-10_end', '4-10 灯火将熄')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_5">
+<h2>靶向药物</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>5-1</p>
+        <p>冤家易结</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">噩梦中醒来的陈，发现自己身处罗德岛舰内，而在她身边的是同僚诗怀雅。
+从诗怀雅的描述来看，是陈之前被敌人袭击了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-01_beg', '5-1 冤家易结')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-1</p>
+        <p>冤家易结</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在与诗怀雅的斗嘴中，陈逐渐掌握了自己与龙门的状况。
+一切似乎都显得很糟糕。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-01_end', '5-1 冤家易结')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-2</p>
+        <p>有口难言</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">诗怀雅并不如她表现的那样刻薄，但情况确实如她所说的糟糕。
+在一则机密通讯过后，陈决定请求罗德岛的协助。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-02_beg', '5-2 有口难言')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-2</p>
+        <p>有口难言</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对责难与质疑，陈给出了自己的回答，却被星熊看出了她的迟疑。
+不过无论如何，她至少知道自己在做什么。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-02_end', '5-2 有口难言')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-3</p>
+        <p>义胆凡躯</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">为了营救线人阿发，陈和星熊开始了行动。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-03_beg', '5-3 义胆凡躯')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-3</p>
+        <p>义胆凡躯</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">尽管陈和星熊已经足够迅速，但她们终究还是晚到一步。
+说着遗言，阿发缓缓闭上双眼。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-03_end', '5-3 义胆凡躯')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-4</p>
+        <p>没人在家</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">陈和星熊来到线报指示的位置，打算从这里开始入手。
+在发现整合运动后，两人迅速展开行动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-04_beg', '5-4 没人在家')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-4</p>
+        <p>没人在家</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">制服整合运动后，陈发现这里正是自己过去的家。
+在家中回忆一番过去后，她的心情似乎有所好转，并有了一些头绪。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-04_end', '5-4 没人在家')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-6</p>
+        <p>疑兵之计</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">龙门商场内，占领这里的整合运动开始对龙门内的状况感到疑惑。
+但他们的疑惑永远不会得到结果了，因为近卫局已经攻进了这里。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-06_beg', '5-6 疑兵之计')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-6</p>
+        <p>疑兵之计</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">近卫局一行迅速解决了面前的敌人，但是远处的术士却引爆了埋藏在陈脚下的爆炸物。
+陈从高楼上坠落了下去。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-06_end', '5-6 疑兵之计')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-7</p>
+        <p>生死与共</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">陈从昏迷中醒来，星熊为她撑起断壁与瓦砾，她得救了，虽然两人都带了伤。
+面对汹涌而来的敌人，两人像往常一样举起武器。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-07_beg', '5-7 生死与共')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-7</p>
+        <p>生死与共</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">将星熊的位置报告给医疗队后，陈继续前进。
+和手下以及诗怀雅通讯完毕后，她与手下汇合，向着近卫局进发。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-07_end', '5-7 生死与共')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-9</p>
+        <p>孽生恶物</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">整合运动的状况令人感到诡异，但这并不是阻止近卫局前进的理由。
+而在楼顶，梅菲斯特早已等候多时。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-09_beg', '5-9 孽生恶物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-9</p>
+        <p>孽生恶物</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">梅菲斯特眼看已经无路可退，然而随着他的话语，异变陡生！
+形势顷刻间逆转，但是，陈也并非没有后手——
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-09_end', '5-9 孽生恶物')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-10</p>
+        <p>长夜终尽</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">赤霄终于出鞘，天平又一次倒向近卫局一方。
+然而一时的杂念却引得赤霄失控，危急时刻，罗德岛终于赶到。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-10_beg', '5-10 长夜终尽')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-10</p>
+        <p>长夜终尽</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">罗德岛精英干员煌的出现让战局变得明朗，眼看事不可为，浮士德带着梅菲斯特撤离了战场。
+事情似乎告一段落。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_05-10_end', '5-10 长夜终尽')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>5-11</p>
+        <p>棋胜后着</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">魏彦吾的算计与冷血令人胆寒，但他确实展现了身为龙门总督的手腕。
+为了自身的目标，罗德岛选择了继续合作。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_05-01', '5-11 棋胜后着')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_6">
+<h2>局部坏死</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>6-1</p>
+        <p>僵局</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">罗德岛与近卫局针对整合运动的联合行动正式开始。
+而在龙门某处，带着抱怨，煌站在了一队整合运动的面前。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-01_beg', '6-1 僵局')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-1</p>
+        <p>僵局</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">煌解决了敌人并与阿米娅汇合，跟在阿米娅身边的干员灰喉似乎与她有过节。
+另一边，陈与诗怀雅则是久违的并肩作战。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-01_end', '6-1 僵局')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-2</p>
+        <p>一些误会</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">被灰喉勾起的过往回忆让煌产生了一些想法。
+不过当务之急还是应对眼前的整合运动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-02_beg', '6-2 一些误会')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-2</p>
+        <p>一些误会</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">解决整合运动后，煌拎着博士继续前进。
+另一边，陈和诗怀雅谈起了一个线人，似乎是她们共同的熟人。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-02_end', '6-2 一些误会')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-3</p>
+        <p>同时走失</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">梅菲斯特施展法术，让他的牧群愈发狂躁，甚至开始了无差别攻击。
+不忍目睹这种情况的浮士德决定出手援救己方。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-03_beg', '6-3 同时走失')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-3</p>
+        <p>同时走失</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">灰喉遭遇了浮士德，箭弩拔张之间，灰喉的单纯却让浮士德若有所思。
+他最终没有下杀手，只是让灰喉离开。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-03_end', '6-3 同时走失')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-4</p>
+        <p>溃烂的疮疤</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">近卫局方在神秘长官的帮助下，获得一丝喘息之机。
+而另一边，一支身着黑雨披的神秘部队也在行动，所过之处无人生还。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-04_beg', '6-4 溃烂的疮疤')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-4</p>
+        <p>溃烂的疮疤</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">某个破旧的房间，一名整合运动成员在和一名女性对话。
+他们从历史聊到今天，最后，整合运动成员向女性提出一同离开龙门的邀请。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-04_end', '6-4 溃烂的疮疤')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-5</p>
+        <p>解决谁？</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">面对牧群，阿米娅决心让他们解脱。
+而另一边，陈追上了雨披部队并认出了对方的身份，一番对峙后，对方暂时妥协。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-05_beg', '6-5 解决谁？')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-5</p>
+        <p>解决谁？</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">弑君者被突然袭击。诗怀雅质问林雨霞雨披部队却被挂断电话。梅菲斯特被浮士德的弩手制服带走。
+各处，事情都在发生着。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-05_end', '6-5 解决谁？')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-6</p>
+        <p>别说过去的事</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">浮士德与梅菲斯特的童年，以及他们与塔露拉的相遇。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_06-01', '6-6 别说过去的事')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-7</p>
+        <p>断弦</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">行动顺利进行，煌发现了浮士德的位置。陈在配合行动之余，则打算冒险对雨披部队做些什么。
+而浮士德，他选择为梅菲斯特殿后。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-06_beg', '6-7 断弦')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-7</p>
+        <p>断弦</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">浮士德倒下了。
+灰喉带走了他的弩。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-06_end', '6-7 断弦')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-8</p>
+        <p>只是从天而降！</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">时间拉回罗德岛与霜星的对峙之后。
+整合运动正在对罗德岛穷追不舍，煌及时赶到，仅凭一人拦下霜星与雪怪小队。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-07_beg', '6-8 只是从天而降！')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-8</p>
+        <p>只是从天而降！</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">煌与霜星势均力敌，然而，交战的余波使得建筑开始崩塌，博士与霜星双双落入空洞中。
+罗德岛与雪怪小队暂时休战。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-07_end', '6-8 只是从天而降！')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-9</p>
+        <p>换一个角度</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">时间回到现在。整合运动似乎又找到了主心骨，名为九的女性选择离开龙门。而陈决定将雨披部队引向雪怪小队。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-08_beg', '6-9 换一个角度')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-10</p>
+        <p>解开铃铛</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">面对近卫局和雨披部队的进攻，雪怪小队全力守着唯一的出口。
+霜星发挥自己的能力逼退了敌人，然而她的身体情况已经到达了极限。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-09_end', '6-10 解开铃铛')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-11</p>
+        <p>“这种事”</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">为了保护孩童，灰喉被迫面对一队整合运动的袭击，所幸被煌救下。
+一番交谈后，两人的关系有所缓和。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-10_beg', '6-11 “这种事”')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-11</p>
+        <p>“这种事”</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">红的野性压制了弑君者，凯尔希压倒性的武力更是让她的反抗显得毫无意义。
+但在交谈过后，凯尔希还是给了她一次重新选择的机会。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-10_end', '6-11 “这种事”')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-12</p>
+        <p>冰原之雪</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">
+罗德岛和近卫局一步步清剿剩余整合运动的同时，雪怪小队为了确保霜星的安全，舍命面对了强大的雨披部队。
+
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-11_beg', '6-12 冰原之雪')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-13</p>
+        <p>没有火,没有光</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">废墟之下，被困在其中的博士与霜星的交谈，有关她的过去，她的家人，她的信念。
+并且，她与博士做了一个小小的赌约。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_06-02', '6-13 没有火,没有光')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-14</p>
+        <p>冰原之霜</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">雪怪小队全都被留在了龙门，龙门安全了。
+但凯尔希与博士的交谈，以及霜星醒来后的话语，都在预示着事情还没有结束。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-12_end', '6-14 冰原之霜')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-15</p>
+        <p>不错的回忆</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">时间拉回博士与霜星坠落后。
+为了营救霜星，雪怪小队果断选择了与罗德岛合作。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-13_beg', '6-15 不错的回忆')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-15</p>
+        <p>不错的回忆</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">率先被救出的霜星并没有对博士下杀手，只是期望双方不再相见。
+可是现实总是事与愿违。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-13_end', '6-15 不错的回忆')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-16</p>
+        <p>黑兔子,白兔子</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">无论怎样动人的话语在钢铁般的意志面前也显得那么苍白无力，交谈的终点，只有战斗。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-14_beg', '6-16 黑兔子,白兔子')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-17</p>
+        <p>冬逝</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">霜星永远地闭上了双眼。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_06-15_end', '6-17 冬逝')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>6-18</p>
+        <p>只有你知道</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">龙门安全了。但魏彦吾办公室内发生的质问与责难，凯尔希带来的最新情报——核心城正向龙门撞来。
+事情远没有结束。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_06-03', '6-18 只有你知道')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+<div class="act" id="main_7">
+<h2>苦难摇篮</h2>
+<table border="1">
+
+<tr>
+    <th class="story_title">
+        <p>7-1</p>
+        <p>32:00:00</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">核心城指挥塔上，塔露拉指出了W的背叛，并将她丢下核心城。
+而爱国者选择镇守核心城，等待敌人的来袭。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_07-01', '7-1 32:00:00')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-2</p>
+        <p>别离之夜</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">罗德岛上，博士在将霜星的遗体送入综合生物处理室时，遇到了精英干员——迷迭香，并第一次认识了她。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-01_beg', '7-2 别离之夜')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-2</p>
+        <p>别离之夜</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">魏彦吾的办公室中，对事态的商讨演变成了争执。
+质问，质疑，责难，失望，坚持，叹息。最终，陈选择了孤军奋战。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-01_end', '7-2 别离之夜')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-3</p>
+        <p>变节之刃</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">从一些干员的描述看来，迷迭香对外界的感受方式似乎异于常人。
+而另一边，在陈离开的道路上，星熊挡在了她的面前。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-02_beg', '7-3 变节之刃')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-3</p>
+        <p>变节之刃</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">星熊终究没能拦住陈。
+而魏彦吾的办公室内，在文月的牵线下，罗德岛终于与魏彦吾达成了一项交易，由罗德岛来协助龙门以及——陈。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-02_end', '7-3 变节之刃')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-4</p>
+        <p>并肩之约-1</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">罗德岛内，阿米娅出色地完成了动员。
+谈话间，博士与凯尔希的关系似乎也有所改善。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-03_beg', '7-4 并肩之约-1')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-5</p>
+        <p>并肩之约-2</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">经历了一系列波折后，博士、阿米娅以及其他干员最终顺利登上了切尔诺伯格核心城。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-04_end', '7-5 并肩之约-2')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-6</p>
+        <p>遗忘之地</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">完成与凯尔希的情报汇总后，博士与迷迭香的小队汇合，并目睹了她的战斗方式。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-05_beg', '7-6 遗忘之地')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-6</p>
+        <p>遗忘之地</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">迷迭香的战斗方式残酷而血腥，交谈中，博士才真正了解迷迭香是怎样一个干员。
+另一边，华法琳主动对凯尔希提起了某个预言。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-05_end', '7-6 遗忘之地')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-7</p>
+        <p>26:37:14</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">科西切公爵的阴影始终笼罩着魏彦吾，即使是挚爱也无法挥去。
+但无论如何，他都打算以自己的方式守护龙门。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_07-02', '7-7 26:37:14')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-8</p>
+        <p>沉默者之怒-1</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">核心城内，归来的幻影弩手被塔露拉背弃。
+另一边，罗德岛一行一边增进对敌人的了解，一边缓慢而确实地向前推进着。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-06_beg', '7-8 沉默者之怒-1')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-9</p>
+        <p>沉默者之怒-2</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">罗德岛一行发现了陈的踪迹，她的状况令人担忧。
+而后，一行遇到一名被感染市民，对方的猜忌使得场面僵持不下。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-07_end', '7-9 沉默者之怒-2')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-10</p>
+        <p>暗淡者之火</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">Guard的出现令人意外，而凯尔希对他的突然审判更是出人意料。
+不过被感染市民的态度也终于有所松动。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-08_beg', '7-10 暗淡者之火')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-10</p>
+        <p>暗淡者之火</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">场面终于缓和，随之而来的交谈让博士进一步了解了干员们与爱国者的队伍。
+而为了爱国者，Guard开始行动，但中途却被拦下。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-08_end', '7-10 暗淡者之火')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-13</p>
+        <p>感染者之盾-1</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">中心区域边缘，为了掌握敌人配置，精英干员Raidian与迷迭香开始了联合施术。
+过程中，博士进一步了解了迷迭香的过去。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-11_beg', '7-13 感染者之盾-1')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-17</p>
+        <p>感染者之盾-2</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">在罗德岛一行的紧密配合与强大火力之下，敌人尚未反应过来就被各个击破。
+然而，紧要关头，爱国者终于出现。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-15_end', '7-17 感染者之盾-2')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-18</p>
+        <p>爱国者之死</p>
+    </th>
+    <td class="story_content">
+        <p>行动前</p>
+        <p class="story_info">爱国者如同一座大山拦在罗德岛一行面前，要将其跨过唯有战胜他一途。</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-16_beg', '7-18 爱国者之死')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-18</p>
+        <p>爱国者之死</p>
+    </th>
+    <td class="story_content">
+        <p>行动后</p>
+        <p class="story_info">核心城一角，梅菲斯特走进了石棺之间。
+激战过后，爱国者发现了阿米娅的秘密，他回想起了古老的预言，最终倒下。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_main_07-16_end', '7-18 爱国者之死')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-19</p>
+        <p>11:15:38</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">爱国者的死影响了所有人。W挑衅凯尔希与博士而被甩飞。梅菲斯特在石棺中睡去。鼠王挡在魏彦吾面前。
+龙门下雪了。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_07-03', '7-19 11:15:38')">开始剧情</a>
+    </td>
+</tr>
+
+<tr>
+    <th class="story_title">
+        <p>7-20</p>
+        <p>??:??:??</p>
+    </th>
+    <td class="story_content">
+        <p>幕间</p>
+        <p class="story_info">陈与塔露拉分别之夜，科西切与魏彦吾的对峙。
+以及，摄政王与赦罪师对他们计划的谈论。
+</p>
+    </td>
+    <td class="story_start">
+        <a href="javascript:void(0);" onclick="start_story('obt/main/level_st_07-04', '7-20 ??:??:??')">开始剧情</a>
+    </td>
+</tr>
+
+</table>
+</div>
+
+</div>
+<hr>
+
+</body>
+
+</html>

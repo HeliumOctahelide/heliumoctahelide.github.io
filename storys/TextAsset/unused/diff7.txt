@@ -1,0 +1,167 @@
+12d11
+< 罗德岛  
+14,16c13,22
+< [Character(name="char_007_closre_1",fadetime=2,block=true)]
+< [Delay(time=2)]
+< [name="可露希尔"] 话说，凯尔希，我等会能去看看博士吗？
+---
+> 11:30 A.M.  天气/多云
+> 野外，罗德岛总工程师办公室
+> [Dialog]
+> [Character(name="char_003_kalts_1")]
+> [name="凯尔希"] 这次又要做什么？
+> [Character]
+> [Dialog]
+> [Character(name="char_007_closre_1#5",fadetime=1,block=true)]
+> [Delay(time=1)]
+> [name="可露希尔"] 凯尔希，我等会能去看看博士吗？
+95,97c101,104
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+< [name="可露希尔"] ......第三宿舍区断电啦！和我一起去一下嘛。
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+---
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+> [name="可露希尔"] 别走呀！哎其实......三区有两条走廊断电了。
+> [name="可露希尔"] 一起去看看线路嘛，行不行嘛！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+101,103c108,110
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+< [name="凯尔希"] 平常我让你检查的时候你可都是交给其他干员去做的。
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+---
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+> [name="凯尔希"] 平常我让你检查的时候，你可都是交给其他干员去做的。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+129,131c136,138
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+< [name="可露希尔"] 好乖的孩子！凯尔希，你看看你看看，这些孩子，各个都比你讨人喜欢！
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+---
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+> [name="可露希尔"] 好乖的孩子！凯尔希，你看看你看看，这些孩子，个个都比你讨人喜欢！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=1)]
+133a141,153
+> [name="凯尔希"] 暴雨，给我看一下记录仪。
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+> [name="暴雨"] 是......左臂的，这个吗？
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+> [name="凯尔希"] 嗯。小心点，别碰掉针头。
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+> [name="暴雨"] 好......
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+> [name="凯尔希"] ......数字正常。嗯，血红蛋白也回升了。你恢复的不错。
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=1)]
+> [name="暴雨"] 谢谢凯尔希医生。
+> [Character(name="char_304_hvrain",name2="char_003_kalts_1",focus=2)]
+> [name="凯尔希"] 不要谢我，这只是我的职责，是我该做的事。别为了别人的职责去感谢他。
+142c162,164
+< [name="凯尔希"] 也许你会错意了，暴雨。刚才让你跟着我，是想让你熟悉一下舰内的环境。以后你可能要常来这里。
+---
+> [name="凯尔希"] 也许你会错意了，暴雨。
+> [name="凯尔希"] 刚才让你跟着我，是想让你熟悉一下舰内的环境。以后你可能要常来这里。
+> [name="凯尔希"] 我不需要护卫。
+184c206,210
+< [name="可露希尔"] 等等......上个月你连续七十二个小时呆在手术台旁边，是不是她？
+---
+> [name="可露希尔"] 等等......上个月你连续七十二个小时呆在手术台旁边，那次的手术对象，是不是她？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 确实是。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 手术小组至少轮了八、九班......你却又三天没睡？
+186c212
+< [name="凯尔希"] 确实是。至少她恢复得很快。
+---
+> [name="凯尔希"] 至少她恢复得很快。
+188,189c214,218
+< [name="可露希尔"] 嚯......
+< [name="可露希尔"] 你这点还是不好。我不问，你就永远不会说了，是不是？
+---
+> [name="可露希尔"] 告诉我，凯尔希，你是不是又给自己上试剂了？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 我拒绝回答这个问题。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 我不问，你就永远不会说了，是不是？
+191a221,225
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 你对自己太粗暴了。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 我承受得住。
+> 
+203,205c237,239
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+< [name="可露希尔"] 可不要小看血魔，当然能看见？
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+---
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+> [name="可露希尔"] 可不要小看血魔，我当然能看见啦。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+209c243,248
+< [name="可露希尔"] 说是这么说，哎呀，这，这什么东西！
+---
+> [name="可露希尔"] 说是这么说，我是不是踩到了什么？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=2)]
+> [name="可露希尔"] 哎呀，这，这什么东西！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#6",focus=1)]
+> [name="凯尔希"] 用不着大惊小怪......
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=2)]
+211,212c250,251
+< [name="可露希尔"] 嗯？毛茸茸特别收集款？有二十四种不同的毛茸茸和......天哪，隐藏款，天哪！
+< [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+---
+> [name="可露希尔"] 嗯？毛茸茸特别收集款？有二十四种不同的毛茸茸和......天呐，隐藏款，天呐！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#5",focus=1)]
+219d257
+< 
+226c264
+< [name="可露希尔"] 我好像够不到。要么凯尔希，你来抬一下？我来修一下线路。
+---
+> [name="可露希尔"] 我好像够不到。要么凯尔希，你来抬一下？我修一下线路。
+232c270
+< [name="凯尔希"] 阿米娅非常坚定地做出了选择，任何人都不能说服她。何况，你很清楚精英干员们的倾向。
+---
+> [name="凯尔希"] 阿米娅非常坚定地做出了选择，没人能说服她。何况，你很清楚精英干员们的倾向。
+259,261c297,336
+< 
+< 
+< 
+---
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 可露希尔。
+> [name="凯尔希"] 为什么你要在今天问这些？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+> [name="可露希尔"] 因为我不问，你就不会说啊。
+> [name="可露希尔"] 老是在肚子里憋着，想法会变质的。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+> [name="凯尔希"] 所以我的答案对你来说可有可无？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+> [name="可露希尔"] 我觉得，你说的这些，对你自己可是非~~常重要！
+> [name="可露希尔"] 所以嘛，比起你说了什么，更要紧的是......我一定要亲耳听到你说了才行。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+> [name="凯尔希"] 浪费时间。
+> [name="凯尔希"] 下次说明白点，我会直接给你报告书。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 可那样你就不会来了呀。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 谁说我不会来？
+> [name="凯尔希"] 只要你真的还有灯泡可修。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 那就说好咯？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] 每次都是这样，莫名其妙就和你定了些奇怪的协议。
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+> [name="可露希尔"] 这大概就是工程师的作用吧！
+> [name="可露希尔"] 凯尔希，你看，这颗灯泡！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=1)]
+> [name="凯尔希"] 你要说，真亮？
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1#4",focus=2)]
+> [name="可露希尔"] 嗯，真亮！
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=1)]
+> [name="凯尔希"] ......
+> [name="凯尔希"] 你如果能一直保持这种态度，那我也安心了。
+> [name="凯尔希"] 那样的话，即使我......
+> [Character(name="char_003_kalts_1",name2="char_007_closre_1",focus=2)]
+> [name="可露希尔"] 哎！快住口。别说啦！
+> [name="可露希尔"] 别说别的......趁现在，就赶紧享受下这盏小灯吧。
+> [Character(name="char_003_kalts_1")]
+> [name="凯尔希"] ......
+> [name="凯尔希"] 真是柔和的光芒。

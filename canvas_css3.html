@@ -1,0 +1,47 @@
+<!--
+ * @Author: dx3906
+ * @Date: 2020-05-16 01:42:25
+ * @LastEditors: dx3906
+ * @LastEditTime: 2020-05-16 02:07:10
+-->
+<!DOCTYPE html>
+<html style='background-color: #333333;'>
+
+<head>
+    <meta charset="utf-8">
+    <title>加载内容...</title>
+    <link rel="stylesheet" type="text/css" href="canvas.css" />
+</head>
+
+<body>
+    <div id="headbar" style="position: relative; color: #FFFFFF">
+        你的名字：<input type="text" id="inputname">
+        <input type="button" id="setname" onclick="setname()" value='确定'>
+        <input type="button" id="randomname" onclick="setRandomName()" value='随机名字'>
+        <input type="button" id="showtext" onclick="showText()" value='显示/隐藏文本'>
+        <input type="button" id="auto" onclick="auto()" value='自动播放'>
+
+    </div>
+    <hr>
+    <div onclick='clickme(event)' id="playground"
+        style="width:1280px; height:720px; border:1px solid #FFFFFF; left: 0px; top: 0px; background-color: #000000">
+        <img id='background'></img>
+        <img id='char1'></img>
+        <img id='char2'></img>
+        <img id='img'></img>
+        <img id='block'></img>
+        <img id='text'></img>
+    </div>
+    <div id="loadingdiv"
+        style="position: fixed; border:1px solid #000000; left: 400px; top: 300px; background-color: #FFFFFF;">
+        <p id='loadingimg'>加载图像：0/?</p>
+        <p id='loadingaudio'>加载音频：0/?</p>
+    </div>
+    <pre id="textbox"
+        style="top: 0px; left: 500px; height: 720px; position: absolute; overflow: auto; color: #FFFFFF; display: none;border-style:solid; border-color: #ffffff; background-color: #000000;"></pre>
+</body>
+<script>
+    document.write("<scr" + "ipt src='./main_css3.js' type='text/javascript'></scr" + "ipt>");
+</script>
+
+</html>

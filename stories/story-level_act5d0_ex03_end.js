@@ -1,0 +1,42 @@
+var story = [
+    [],
+    [
+        "m_dia_darkness01_loop",
+        "m_dia_darkness01_intro"
+    ],
+    [
+        "playground.clearDialog();playground.drawCharacter({});voice.playMusic({intro:'m_dia_darkness01_intro', key:'m_dia_darkness01_loop', volume:0.6, crossfade:1.5});delay(1);playground.drawDialog({name:'？？？',text:'这次，是肚子上被开了个洞吧？被那个感觉很酷的老头？'});",
+        "playground.drawDialog({name:'？？？',text:'没错没错。我可是最前排观看的，看得一清二楚。'});",
+        "playground.drawDialog({name:'？？？',text:'你觉得是什么？会是替身吗？还是特效？'});",
+        "playground.drawDialog({name:'？？？',text:'不不不，不可能，完全不可能。你亲眼看看这段录像就知道了......'});",
+        "playground.drawDialog({name:'？？？',text:'唔。这也太逼真了吧！'});",
+        "playground.drawDialog({name:'？？？',text:'再说了，大帝的替身？这也太旷世罕见了吧？'});",
+        "playground.drawDialog({name:'？？？',text:'上一次呢？我记得是他在独自一人购物的时候，被突然窜出来的暴徒用弩枪贯穿了脑袋......'});",
+        "playground.drawDialog({name:'？？？',text:'那可做不到提前排练。'});",
+        "playground.drawDialog({name:'？？？',text:'还有汐斯塔的时候。音乐节上那次，私底下还有过无数人去找过他的麻烦。'});",
+        "playground.drawDialog({name:'？？？',text:'那时候我也在，为了能碰碰运气见到他，我特地订了和他们就隔了一条街的酒店，可热闹了。'});",
+        "playground.drawDialog({name:'？？？',text:'......他不是个歌手吗？就算有钱了点，也不至于这么招人记恨吧？'});",
+        "playground.drawDialog({name:'？？？',text:'那是你不清楚他的行事风格。先说好，我真的很佩服他，但在树敌这方面，他大概也是全泰拉为数不多的天才。'});",
+        "playground.drawDialog({name:'？？？',text:'听说昨晚企鹅物流的仓库发生了事故。他从火焰里冲出来，根本不像受了伤的样子。'});",
+        "playground.drawDialog({name:'？？？',text:'很久以前有人目睹他在贫民窟被榴弹还是炸药一类的东西直接命中，第二天毫发无伤地出现在地下酒吧。'});",
+        "playground.drawDialog({name:'？？？',text:'这都不算什么了。'});",
+        "playground.drawDialog({name:'？？？',text:'啊。但是脑袋被榴弹砸了个包。'});",
+        "playground.drawDialog({name:'？？？',text:'......明明是榴弹？'});",
+        "playground.drawDialog({name:'？？？',text:'说起来，哥伦比亚的音乐界最动荡的那会，有传言他被人枪杀在了街头，引起了巨大的轰动来着。'});",
+        "playground.drawDialog({name:'？？？',text:'不是被毒杀了吗？'});",
+        "playground.drawDialog({name:'？？？',text:'啊！那时候我在哥伦比亚旅游......我本来以为我这辈子都没法再见到偶像了。'});",
+        "playground.drawDialog({name:'？？？',text:'但是他活下来了？'});",
+        "playground.drawDialog({name:'？？？',text:'活下来了，还单枪匹马去找过场子。说是要为那些年轻人报仇。'});",
+        "playground.drawDialog({name:'？？？',text:'什么情况？不死身？'});",
+        "playground.drawDialog({name:'？？？',text:'应该有不少假新闻吧？媒体可不能全信哦。'});",
+        "playground.drawDialog({name:'？？？',text:'但命够硬是肯定的吧。'});",
+        "playground.drawDialog({name:'？？？',text:'不知道，也许把他捆在火山口，让天灾来对付他才有用吧。'});",
+        "playground.drawDialog({name:'？？？',text:'......我怎么感觉就算这样他也活得下来？'});",
+        "playground.drawDialog({name:'？？？',text:'......是啊，我甚至能想象到他对着喷发的火山爆粗口。'});",
+        "playground.drawDialog({name:'？？？',text:'还会很押韵。'});",
+        "playground.drawDialog({name:'？？？',text:'......'});",
+        "playground.drawDialog({name:'？？？',text:'......算啦。'});",
+        "playground.drawDialog({name:'？？？',text:'谁让他是大帝呢？'});",
+        "delay(0.6);playground.clearDialog();blocker.blocker({fadetime:1,block:true});playground.drawImage({});"
+    ]
+];

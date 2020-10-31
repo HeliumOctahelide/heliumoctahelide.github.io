@@ -1,0 +1,46 @@
+var story = [
+    [
+        "bg_infirmary",
+        "char_143_ghost",
+        "char_263_skadi_1"
+    ],
+    [
+        "m_dia_babel_loop",
+        "m_dia_darkness01_loop",
+        "m_dia_darkness01_intro"
+    ],
+    [
+        "background.showImage({});delay(1);voice.playMusic({intro:'m_dia_babel_loop', key:'m_dia_babel_loop', volume:0.8,crossfade:1});playground.clearDialog();playground.drawCharacter({});playground.drawDialog({text:'......我们该把他塞进麻袋，'});",
+        "playground.drawDialog({text:'在黎明时吊上桅杆......'});",
+        "delay(1);playground.drawDialog({text:'......我们该把他喉咙切断，'});",
+        "playground.drawDialog({text:'在暴风雨里献给大海......'});",
+        "playground.clearDialog();delay(2);voice.playMusic({intro:'m_dia_darkness01_intro', key:'m_dia_darkness01_loop', volume:0.8,crossfade:1});delay(1);background.showImage({image:'bg_infirmary', fadetime:2,block:true});playground.drawCharacter({name:'char_143_ghost'});playground.drawDialog({name:'幽灵鲨',text:'呃！'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'......又是这个梦吗。'});",
+        "playground.drawCharacter({name:'char_263_skadi_1'});playground.drawDialog({name:'？？？',text:'......'});",
+        "playground.drawCharacter({name:'char_143_ghost'});playground.drawDialog({name:'幽灵鲨',text:'是谁？'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'——原来是你。唔，不过为什么我想不起来你叫什么名字了。'});",
+        "playground.drawCharacter({name:'char_263_skadi_1'});playground.drawDialog({name:'？？？',text:'这不重要。你把我当成一个普通的罗德岛干员就可以了。'});",
+        "playground.drawDialog({name:'？？？',text:'你看上去似乎很痛苦。'});",
+        "playground.drawCharacter({name:'char_143_ghost'});playground.drawDialog({name:'幽灵鲨',text:'只是噩梦而已。'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'一些盘旋在意识里的黑色碎片，藏在那个破碎教堂的阴影之下。'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'在我接近它的时候，它们化为枷锁将我拖入深邃的海中。'});",
+        "playground.drawCharacter({name:'char_263_skadi_1'});playground.drawDialog({name:'？？？',text:'......'});",
+        "playground.drawDialog({name:'？？？',text:'不过很快你就有办法脱离痛苦了。'});",
+        "playground.drawCharacter({name:'char_143_ghost'});playground.drawDialog({name:'幽灵鲨',text:'是吗，呵呵，那可真是太好了。不过我为什么相信你呢？'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'哦。'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'你身上的气息......我很熟悉。'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'不，不是，是气味。浓烈的气味，血的气味，它们的气味。深邃的海中的气味。'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'熟悉，但又让人厌恶的气味。'});",
+        "playground.drawCharacter({name:'char_263_skadi_1'});playground.drawDialog({name:'？？？',text:'是吗。'});",
+        "playground.drawCharacter({name:'char_143_ghost'});playground.drawDialog({name:'幽灵鲨',text:'能告诉我你的名字吗？'});",
+        "playground.drawCharacter({name:'char_263_skadi_1',fadetime:1});playground.drawDialog({name:'斯卡蒂',text:'斯卡蒂。'});",
+        "playground.drawCharacter({name:'char_143_ghost',name2:'char_263_skadi_1',focus:1});playground.drawDialog({name:'幽灵鲨',text:'有趣。那么你为什么能出现在这里呢？'});",
+        "playground.drawDialog({name:'幽灵鲨',text:'没有凯尔希的许可，你可没法到这个房间里来，除非你也不怕被失去控制的我撕成碎片。'});",
+        "playground.drawCharacter({name:'char_143_ghost',name2:'char_263_skadi_1',focus:2});playground.drawDialog({name:'斯卡蒂',text:'害怕。所有人都害怕。只是我已经习惯了。'});",
+        "playground.drawDialog({name:'斯卡蒂',text:'是时候出发了，回来的时候，情况也许会有所进展。不过，你也可以和以前一样，把我忘了。'});",
+        "playground.drawCharacter({name:'char_143_ghost',name2:'char_263_skadi_1',focus:1});playground.drawDialog({name:'幽灵鲨',text:'你要去哪里？'});",
+        "playground.drawCharacter({name:'char_143_ghost',name2:'char_263_skadi_1',focus:2});playground.drawDialog({name:'斯卡蒂',text:'秘密被埋葬的地方。'});",
+        "playground.drawCharacter({});playground.clearDialog();background.showImage({fadetime:1});delay(2);playground.drawDialog({name:'斯卡蒂',text:'一个离你很远的地方。'});",
+        "delay(0.6);playground.clearDialog();blocker.blocker({fadetime:3,block:true});playground.drawImage({});"
+    ]
+];

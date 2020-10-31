@@ -1,0 +1,53 @@
+var story = [
+    [
+        "bg_lungmen_m",
+        "char_002_amiya_1",
+        "char_010_chen_1",
+        "char_002_amiya_7",
+        "char_136_hsguma",
+        "char_002_amiya_4"
+    ],
+    [
+        "m_dia_mist_loop"
+    ],
+    [
+        "background.showImage({image:'bg_lungmen_m', width:1, height:1, fadetime:1});voice.playMusic({intro:'m_dia_mist_loop', key:'m_dia_mist_loop', volume:0.8, crossfade:1.5, delay:0.5});delay(1);playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:1});playground.drawDialog({name:'阿米娅',text:'事已至此......我们已经没有别的选择。如果陈长官拒绝——'});",
+        "playground.drawDialog({name:'阿米娅',text:'那么罗德岛就会单方面出动。'});",
+        "playground.drawDialog({name:'阿米娅',text:'况且这一行为，并不破坏罗德岛与龙门之间的协约。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:2});playground.drawDialog({name:'陈',text:'近卫局当然会去。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:1});playground.drawDialog({name:'阿米娅',text:'......是，是吗......'});",
+        "playground.drawDialog({name:'阿米娅',text:'......'});",
+        "playground.drawDialog({name:'阿米娅',text:'那我代表罗德岛感谢陈长官——'});",
+        "playground.drawDialog({name:'阿米娅',text:'我知道，感染者对于龙门而言......'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:2});playground.drawDialog({name:'陈',text:'这是小事。'});",
+        "playground.drawDialog({name:'陈',text:'只不过，我对于近卫局各个小队是否能突入分城内部还有一定的疑虑。'});",
+        "playground.drawDialog({name:'陈',text:'我们将见机行事。'});",
+        "playground.drawDialog({name:'陈',text:'如果可能的话，我们一定会帮助你。'});",
+        "playground.drawDialog({name:'陈',text:'但近卫局依然会以处理整合运动这一任务为最优先。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:1});playground.drawDialog({name:'阿米娅',text:'这样......这样就够了。'});",
+        "playground.drawDialog({name:'阿米娅',text:'......谢谢你，陈长官。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', name2:'char_010_chen_1', focus:2});playground.drawDialog({name:'陈',text:'抱歉，我有自己的使命。'});",
+        "playground.drawDialog({name:'陈',text:'设备另一头的那个医生，听到了吗？'});",
+        "playground.drawDialog({name:'陈',text:'我会与罗德岛一起行动。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', focus:-1});playground.drawDialog({name:'凯尔希',text:'阿米娅，小心点。'});",
+        "playground.drawDialog({name:'凯尔希',text:'事情并不单纯。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'我会小心的。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', focus:-1});playground.drawDialog({name:'凯尔希',text:'对了，我陆续建立了一些综合情报。'});",
+        "playground.drawDialog({name:'凯尔希',text:'罗德岛已经派出了救援小队，协助其他参与任务的侦察小队。'});",
+        "playground.drawDialog({name:'凯尔希',text:'只不过陨星他们所在的地方，我们无法深入，无能为力。'});",
+        "playground.drawDialog({name:'凯尔希',text:'这要靠你了。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'只有陨星她们吗......'});",
+        "playground.drawCharacter({name:'char_002_amiya_7'});playground.drawDialog({name:'阿米娅',text:'我明白了。我会去找她们的。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1', focus:-1});playground.drawDialog({name:'凯尔希',text:'我会将把坐标发送给你。'});",
+        "playground.drawDialog({name:'凯尔希',text:'记住，一切以安全为最优先。'});",
+        "playground.drawCharacter({name:'char_002_amiya_7'});playground.drawDialog({name:'阿米娅',text:'我明白。'});",
+        "playground.clearDialog();blocker.blocker({a:1, r:0, g:0, b:0, fadetime:0.6, block:true});playground.drawCharacter({fadetime:0});blocker.blocker({a:0, fadetime:0.6, block:true});playground.drawCharacter({name:'char_136_hsguma', name2:'char_010_chen_1', focus:1});playground.drawDialog({name:'星熊',text:'所以，什么时候出发？'});",
+        "playground.drawCharacter({name:'char_136_hsguma', name2:'char_010_chen_1', focus:2});playground.drawDialog({name:'陈',text:'现在。'});",
+        "playground.drawCharacter({name:'char_136_hsguma', name2:'char_010_chen_1', focus:1});playground.drawDialog({name:'星熊',text:'我去整备。你通知一下近卫局的其他人。'});",
+        "playground.drawCharacter({name:'char_136_hsguma', name2:'char_010_chen_1', focus:2});playground.drawDialog({name:'陈',text:'好。'});",
+        "playground.drawCharacter({name:'char_010_chen_1'});playground.drawDialog({name:'陈',text:'阿米娅，十分钟之后，我们一起出发。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'好的。'});",
+        "background.showImage({fadetime:1, block:true});playground.drawCharacter({name:'char_002_amiya_4'});playground.drawDialog({name:'阿米娅',text:'你们一定要平安无事......'});",
+        "delay(0.6);playground.clearDialog();blocker.blocker({block:true});playground.drawImage({});"
+    ]
+];

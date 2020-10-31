@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyberpunk 2077 Generator</title>
+    <style>
+        #box {
+            width: 320px;
+            height: 80px;
+            position: absolute;
+        }
+
+        #father {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: move;
+        }
+
+        #scale {
+            width: 10px;
+            height: 10px;
+            overflow: hidden;
+            cursor: se-resize;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(122, 191, 238);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Cyberpunk 2077 Generator</h1>
+    <form>
+        <input type="file" id="selectFiles" onchange="dealSelectFile()">
+        <input type="radio" name="1" onclick="changeLanguage(0)" checked>English
+        <input type="radio" name="1" onclick="changeLanguage(1)">中文
+        <button type="button" onclick="clickbutton()">Submit</button>
+        <div>或Ctrl-V直接粘贴图片，QQ聊天内的图片请双击查看后对大图右键复制<br>仅适用于PC<hr></hr>
+        建议选择<a href=https://github.com/unluckyninja>unluckyninja</a>制作的豪华版：<a href=https://unlucky.ninja/cyberpunk2077-mememaker/>点击跳转</a><hr></hr>
+        <div>
+    </form>
+    <div id="father">
+        <div id="box">
+            <img id="cyber" src="cyberpunk_en.png" />
+            <div id="scale"></div>
+        </div>
+    </div>
+    <hr></hr>
+    已生成的图片
+    <script type="text/javascript" src="html2canvas.min.js"></script>
+    <script type="text/javascript">
+        function clickbutton() {
+            scale.style.cssText = "background-color: transparent;";
+            html2canvas(document.getElementById('father')).then(function (canvas) {
+                document.body.appendChild(canvas);
+            });
+            scale.style.cssText = "background-color: rgb(122, 191, 238);";
+            fa.style.cssText = "background-image: url(" + backgroundimage.src + "); width: 1px; height:1px;";
+            box.style.cssText = "width: 1px; height:1px;";
+            alert("生成成功，请右键保存");
+        }
+
+        function changeLanguage(x) {
+            if (x == 0) {
+                document.getElementById("cyber").src =
+                    "cyberpunk_en.png";
+            } else {
+                document.getElementById("cyber").src =
+                    "cyberpunk_zh.png";
+            }
+        }
+
+        var backgroundimage = new Image();
+        backgroundimage.onload = function () {
+            fa.style.cssText = "background-image: url(" + backgroundimage.src + "); width: " + backgroundimage
+                .width + "px; height:" + backgroundimage.height + "px;";
+
+            box.style.cssText = "width: 320px; height:80px;";
+        };
+        // box是装图片的容器,fa是图片移动缩放的范围,scale是控制缩放的小图标
+        var box = document.getElementById("box");
+        var fa = document.getElementById('father');
+        var scale = document.getElementById("scale");
+
+        // 这个博客提供了自由变换代码。感谢他！
+        // https://www.cnblogs.com/steamed-twisted-roll/p/9253077.html
+        function dealSelectFile() {
+            /// get select file.
+            var file = document.getElementById("selectFiles").files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = function () {
+                backgroundimage.src = this.result;
+            }
+        }
+        // 图片移动效果
+        box.onmousedown = function (ev) {
+            var oEvent = ev;
+            // 浏览器有一些图片的默认事件,这里要阻止
+            oEvent.preventDefault();
+            var disX = oEvent.clientX - box.offsetLeft;
+            var disY = oEvent.clientY - box.offsetTop;
+            fa.onmousemove = function (ev) {
+                oEvent = ev;
+                oEvent.preventDefault();
+                var x = oEvent.clientX - disX;
+                var y = oEvent.clientY - disY;
+
+                // 图形移动的边界判断
+                x = x <= 0 ? 0 : x;
+                x = x >= fa.offsetWidth - box.offsetWidth ? fa.offsetWidth - box.offsetWidth : x;
+                y = y <= 0 ? 0 : y;
+                y = y >= fa.offsetHeight - box.offsetHeight ? fa.offsetHeight - box.offsetHeight : y;
+                box.style.left = x + 'px';
+                box.style.top = y + 'px';
+            }
+            // 图形移出父盒子取消移动事件,防止移动过快触发鼠标移出事件,导致鼠标弹起事件失效
+            fa.onmouseleave = function () {
+                fa.onmousemove = null;
+                fa.onmouseup = null;
+            }
+            // 鼠标弹起后停止移动
+            fa.onmouseup = function () {
+                fa.onmousemove = null;
+                fa.onmouseup = null;
+            }
+        }
+        // 图片缩放效果
+        scale.onmousedown = function (e) {
+            // 阻止冒泡,避免缩放时触发移动事件
+            e.stopPropagation();
+            e.preventDefault();
+            var pos = {
+                'w': box.offsetWidth,
+                'h': box.offsetHeight,
+                'x': e.clientX,
+                'y': e.clientY
+            };
+            fa.onmousemove = function (ev) {
+                ev.preventDefault();
+                // 设置图片的最小缩放为30*30
+                var w = Math.max(30, ev.clientX - pos.x + pos.w)
+                var h = Math.max(30, ev.clientY - pos.y + pos.h)
+                // console.log(w,h)
+
+                // 设置图片的最大宽高
+                w = w >= fa.offsetWidth - box.offsetLeft ? fa.offsetWidth - box.offsetLeft : w
+                h = h >= fa.offsetHeight - box.offsetTop ? fa.offsetHeight - box.offsetTop : h
+                box.style.width = w + 'px';
+                box.style.height = h + 'px';
+                // console.log(box.offsetWidth,box.offsetHeight)
+            }
+            fa.onmouseleave = function () {
+                fa.onmousemove = null;
+                fa.onmouseup = null;
+            }
+            fa.onmouseup = function () {
+                fa.onmousemove = null;
+                fa.onmouseup = null;
+            }
+        }
+    </script>
+    <script type="text/javascript" src="pasteImage.js"></script>
+</body>
+
+</html>

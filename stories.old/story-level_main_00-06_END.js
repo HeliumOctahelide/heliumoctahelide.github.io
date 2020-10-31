@@ -1,0 +1,46 @@
+var story = [
+    [
+        "bg_cher_5",
+        "char_130_doberm_ex",
+        "char_013_riop",
+        "char_002_amiya_1",
+        "char_014_riope"
+    ],
+    [
+        "m_dia_escape_loop",
+        "m_dia_escape_intro"
+    ],
+    [
+        "background.showImage({image:'bg_cher_5',fadetime:1,screenadapt:'coverall'});voice.playMusic({intro:'m_dia_escape_intro', key:'m_dia_escape_loop', volume:0.8, crossfade:1.5, delay:0.5});delay(1);playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'哈，哈......'});",
+        "playground.drawDialog({name:'杜宾',text:'整合运动这帮丧心病狂的家伙！居然用，居然用......'});",
+        "playground.drawCharacter({name:'char_013_riop',name2:'char_002_amiya_1',focus:1});playground.drawDialog({name:'近卫干员',text:'那些野兽......'});",
+        "playground.drawDialog({name:'近卫干员',text:'是，是整合运动，布置的吗......'});",
+        "playground.drawCharacter({name:'char_013_riop',name2:'char_002_amiya_1',focus:2});playground.drawDialog({name:'阿米娅',text:'感染的野兽，被整合运动当做士兵驱使......'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'不，那不只是野兽那么简单。'});",
+        "playground.drawDialog({name:'杜宾',text:'我能感受到，那种......'});",
+        "playground.drawDialog({name:'杜宾',text:'那不是单纯的野兽，它们比起野兽，更像我们......'});",
+        "playground.drawCharacter({name:'char_013_riop'});playground.drawDialog({name:'近卫干员',text:'杜宾教官......'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'......'});",
+        "playground.drawCharacter({name:'char_013_riop'});playground.drawDialog({name:'近卫干员',text:'头儿......我们，该怎么办？'});",
+        "playground.drawCharacter({name:'char_014_riope',name2:'char_013_riop',focus:1});playground.drawDialog({name:'Ace',text:'帮它们从痛苦中解脱。'});",
+        "playground.drawCharacter({name:'char_014_riope',name2:'char_013_riop',focus:2});playground.drawDialog({name:'近卫干员',text:'头儿......'});",
+        "playground.drawCharacter({});blocker.blocker({a:1, r:0,g:0, b:0, fadetime:0.6, block:true});playground.clearDialog();blocker.blocker({a:0, fadetime:0.6, block:true});playground.drawCharacter({name:'char_130_doberm_ex',name2:'char_014_riope',focus:2});playground.drawDialog({name:'Ace',text:'战斗已经结束了，杜宾。'});",
+        "playground.drawDialog({name:'Ace',text:'我们同样也和整合运动发生了冲突。'});",
+        "playground.drawDialog({name:'Ace',text:'天灾已经盘旋在我们头顶，随时都可能坠落。'});",
+        "playground.drawDialog({name:'Ace',text:'即使是切尔诺伯格城，在天灾的直接冲击下，也会化作一摊废墟。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'整合运动在这个时候闹事，确实会制造更大的混乱。'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex',name2:'char_014_riope',focus:2});playground.drawDialog({name:'Ace',text:'杜宾，没时间了。'});",
+        "playground.drawDialog({name:'Ace',text:'罗德岛能躲过整合运动的袭击，也能瞒着乌萨斯帝国行动，但面对天灾，我们终归是脆弱的。'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'......'});",
+        "playground.drawDialog({name:'杜宾',text:'够了，走吧。'});",
+        "playground.drawDialog({name:'杜宾',text:'无论整合运动的计划有多疯狂，对于我们来说......'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'各位的安全才是最重要的。'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'是。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1'});playground.drawDialog({name:'阿米娅',text:'整合运动的领袖，可能把这次的事件看作一个标志，一种手段......'});",
+        "playground.drawDialog({name:'阿米娅',text:'对我来说，只是罗德岛的处境，变得越来越危险。'});",
+        "playground.drawCharacter({name:'char_002_amiya_1',name2:'char_014_riope',focus:2});playground.drawDialog({name:'Ace',text:'在这个时间点挑起事端——'});",
+        "playground.drawDialog({name:'Ace',text:'整合运动不是足够狠毒，就是足够疯狂。'});",
+        "playground.drawCharacter({name:'char_130_doberm_ex'});playground.drawDialog({name:'杜宾',text:'也许，两者兼有。'});",
+        "delay(0.6);playground.clearDialog();blocker.blocker({block:true});playground.drawImage({});"
+    ]
+];

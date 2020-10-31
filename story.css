@@ -1,0 +1,15 @@
+.story_content {
+    max-width: 800px;
+    min-width: 400px;
+    height: 120px;
+}
+.story_title {
+    width: 120px;
+    font-weight: bold;
+}
+.options {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-right: 10px;
+}
